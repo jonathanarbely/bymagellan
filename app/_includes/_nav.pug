@@ -1,0 +1,22 @@
+mixin nav(page, invert)
+    if page=='index'
+        section.nav
+            a(href='#')
+                img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
+            //-img.nav__brand--wordmark.hide(src='/assets/images/pixel/magellanmedia-wordmark.png')
+            nav.nav__navigation
+                a.nav__navigation__item.btn.btn--glass(href='#kompetenzen') Kompetenzen
+                a.nav__navigation__item.btn.btn--glass(href='#impressionen') Impressionen
+                a.nav__navigation__item.btn.btn--glass(href='#team') Über mich
+                a.nav__navigation__item.btn.btn--glass(href='#kontakt') Kontakt
+                a.nav__navigation__item.btn(href='#blog') Blog.
+    else
+        section.nav
+            a(href='/')
+                img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
+            nav.nav__navigation
+                a.nav__navigation__item.btn.btn--glass(href='/#kompetenzen') Kompetenzen
+                a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Impressionen
+                a.nav__navigation__item.btn.btn--glass(href='/#team') Über mich
+                a.nav__navigation__item.btn.btn--glass(href='/#kontakt') Kontakt
+                a.nav__navigation__item.btn.btn__inverted(href='/#blog') Blog.

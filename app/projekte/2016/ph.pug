@@ -1,0 +1,66 @@
+include ../../_includes/_pageincludes.pug
+
+doctype html
+html(lang="de")
+    head
+        include ../../_includes/_meta.pug
+        +css()
+        include ../../_includes/_js.pug
+    
+    body
+        header
+            //-img.heroimage(src='/assets/images/pixel/projects/ph/magellan-ph-header.jpg')
+            include ../../_includes/_nav.pug
+            +nav('page')
+            
+            +title('Profi-Homepage', 'Screendesigns für Kunden verschiedenster Branchen.', 'Design', '#startreading')
+            
+        main#startreading
+            
+            .page
+                p.page__author By 
+                    b Jonathan Arbely
+                span.page__date Winter 2015 bis Frühling 2017
+                span.goldbar
+                
+                p.page__text Für die Konstanzer Agentur Profi-Homepage der Mediafavoriten GmbH ist im Laufe unserer Zusammenarbeit eine umfangreiche Kollektion unterschiedlichster Konzepte sowie Screen- & Printdesigns für Kunden verschiedener Branchen entstanden. Die Designs wurden anschließend den Kunden präsentiert und von der Agentur als WordPress-Themes umgesetzt.
+                
+                p.page__text Hinweis: Manche Screendesigns enthalten verpixelte Stellen, um Marken- und/oder Firmennamen unkenntlich zu machen.
+                
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-engineering.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Engineering Theme
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-engineering-concept.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Engineering Theme - Konzept
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-brautmoden.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Brautmoden Theme - Konzept
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-moebel.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Möbelhaus Theme
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-moebel-concept.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Möbelhaus Theme - Konzept
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-ristorante.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Ristorante Theme
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-musikverein.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Musikverein Theme
+                    
+                img(src='../../assets/images/pixel/projects/ph/magellan-ph-kinderartzt.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Kinderarzt Theme
+                
+            section.loadmore.c.loadmore__anime
+                img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
+                a(href='/#impressionen') Zurück zur Übersicht
+    
+    include ../../_includes/_footer.pug

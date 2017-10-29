@@ -1,0 +1,217 @@
+// index.sass
+
+header
+    background-image: url('../../images/pixel/magellanmedia-hero.jpg')
+    
+.knowhow
+    margin-top: 60px
+
+// Defines project specific styling and contains pagespecific additions to global styling
+
+// Skills
+
+#cardFrontend
+    
+    & .card__description__tag
+        color: #282b31
+    
+    & .card__showcase
+        background-color: #282b31
+        background-image: url('../../images/pixel/services/magellan-frontend.png')
+        
+#cardBackend
+    
+    & .card__description__tag
+        color: #13293d
+    
+    & .card__showcase
+        background-color: #13293d
+        background-image: url('../../images/pixel/services/magellan-backend.png')
+        
+#cardPerformance
+    
+    & .card__description__tag
+        color: #cfc0a6
+    
+    & .card__showcase
+        background-color: #cfc0a6
+        background-image: url('../../images/pixel/services/magellan-performance.png')
+        
+#cardScreendesign
+    
+    & .card__description__tag
+        color: #c2cbd4
+    
+    & .card__showcase
+        background-color: #c2cbd4
+        background-image: url('../../images/pixel/services/magellan-screendesign.png')
+        
+#cardPrint
+    
+    & .card__description__tag
+        color: #f7cf9d
+    
+    & .card__showcase
+        background-color: #f7cf9d
+        background-image: url('../../images/pixel/services/magellan-print.png')
+        
+.cat_design
+    display: none
+
+// Projects - Code
+
+#app
+    
+    & .card__description__tag
+        color: #5c5749
+    
+    & .card__showcase
+        background-color: #5c5749
+        background-image: url('../../images/pixel/projects/preview/magellan-roentgenapp.png')
+
+#messmer
+    
+    & .card__description__tag
+        color: #adb0a0
+    
+    & .card__showcase
+        background-color: #e7e7e7
+        background-image: url('../../images/pixel/projects/preview/magellan-messmer.png')
+        
+#tariffuxx
+    
+    & .card__description__tag
+        color: #633eaf
+    
+    & .card__showcase
+        background-color: #633eaf
+        background-image: url('../../images/pixel/projects/preview/magellan-tariffuxx.png')
+        
+#ph
+    
+    & .card__description__tag
+        color: #ae8f67
+    
+    & .card__showcase
+        background-color: #ae8f67
+        background-image: url('../../images/pixel/projects/preview/magellan-screendesigns-ph.png')
+        
+#hallo
+    
+    & .card__description__tag
+        color: #c2cbd4
+    
+    & .card__showcase
+        background-color: #c2cbd4
+        background-image: url('../../images/pixel/projects/preview/magellan-halloapp.png')
+        
+#oculustravel
+    
+    & .card__description__tag
+        color: #272828
+    
+    & .card__showcase
+        background-color: #272828
+        background-image: url('../../images/pixel/projects/preview/magellan-oculustravel.png')
+        
+//#bbev
+    background-image: url('../../images/pixel/projects/preview/magellan-bbev.png')
+    
+#juedmuseum
+    background-image: url('../../images/pixel/projects/preview/magellan-juedmuseum.png')
+    
+#grundschule
+    background-image: url('../../images/pixel/projects/preview/magellan-grundschule.png')
+    
+//#jsg
+    background-image: url('../../images/pixel/projects/preview/magellan-jsg.png')
+    
+#msk
+    background-image: url('../../images/pixel/projects/preview/magellan-msk.png')
+    
+#fewo
+    background-image: url('../../images/pixel/projects/preview/magellan-fewogutjahr.png')
+    
+#derwisch
+    background-image: url('../../images/pixel/projects/preview/magellan-derwisch.png')
+    
+#best
+    background-image: url('../../images/pixel/projects/preview/magellan-best.png')
+    
+// Projects - Design
+
+#medienwerke
+    
+    & .card__description__tag
+        color: #7ac142
+    
+    & .card__showcase
+        background-color: #7ac142
+        background-image: url('../../images/pixel/projects/preview/magellan-medienwerke.png')
+        
+#rezept
+    
+    & .card__description__tag
+        color: #f7cf9d
+    
+    & .card__showcase
+        background-color: #f7cf9d
+        background-image: url('../../images/pixel/projects/preview/magellan-rezept.png')
+        
+#roadtrip
+    
+    & .card__description__tag
+        color: #664632
+    
+    & .card__showcase
+        background-color: #664632
+        background-image: url('../../images/pixel/projects/preview/magellan-roadtrip.png')
+        
+#juedlehrhaus
+    
+    & .card__description__tag
+        color: #2e84b7
+    
+    & .card__showcase
+        background-color: #2e84b7
+        background-image: url('../../images/pixel/projects/preview/magellan-juedlehrhaus.png')
+        
+// Blogposts
+
+#nglrvsntv
+
+    & .poster__showcase
+        background-image: url('../../images/pixel/blog/preview/thesis-devtools.png')
+        
+#wllppr
+
+    & .poster__showcase
+        background-image: url('../../images/pixel/blog/preview/magellan-paris.png')
+        
+// Pagespecific additions to global styling
+
+// drive posters away from each other on hover of container
+//.blog .c // Will be implemented as soon as there are more blog posts
+    
+    & .poster
+        transition: 400ms
+    
+    &:hover
+        
+        & .poster
+            transition: 200ms
+
+            &:first-child
+                transform: rotate(-4deg)
+
+            &:nth-child(2)
+                margin: 0 0 3em 0;
+
+            &:last-child
+                transform: rotate(4deg)
+                margin: 0 0 3em 0;
+
+// Overwrite global styling on this page
+
+.title__cta
+    margin-top: .8em;

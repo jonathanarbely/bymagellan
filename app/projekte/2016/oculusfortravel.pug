@@ -1,0 +1,57 @@
+include ../../_includes/_pageincludes.pug
+
+doctype html
+html(lang="de")
+    head
+        include ../../_includes/_meta.pug
+        +css()
+        include ../../_includes/_js.pug
+    
+    body
+        header
+            img.heroimage(src='/assets/images/pixel/projects/oculus/magellan-oculusfortravel-header.jpg')
+            include ../../_includes/_nav.pug
+            +nav('page')
+            
+            +title('Oculus for Travel', "Projekt: Effizienter Workflow - Von Konzept bis Code", 'UI', '#startreading')
+            
+        main#startreading
+            
+            .page
+                p.page__author By 
+                    b Jonathan Arbely & Sebastian Saier
+                span.page__date August, 2016
+                span.goldbar
+                
+                b.page__text Nominiert für den Annual Multimedia Award 2017
+                
+                p.page__text Im Rahmen der Veranstaltung "Website Prototyping" an der Hochschule Furtwangen University ist das Konzept "Oculus Rift & Virtual Reality für Reisebüros" entstanden. Fokus des Kurses waren Konzeptionierung, Testing & Usability. Parallel zum Projekt – von der ersten Zeichnung bis zur responsiven Website – bildete sich schnell ein effizienter Workflow. Zusammen mit meinem Kommilitonen Sebastian, welcher auch Co-Gründer von Magellan war, fokussierten wir uns zunächst auf eine schnelle Art Ideen auszutauschen und Konzepte zu realisieren. Und welche bessere Methode gibt es, als analoges Pen & Paper? Zu unserem Verblüffen stellte sich diese Konzeptionsweise als anregend, kooperativ und einfach hands-on heraus. Während andere Teams sich noch Gedanken zu möglicher Konzeptionssoftware machten, oder sich mit Benutzeroberflächen auseinandersetzten, konnten wir unsere Ideen schneller umsetzen und Feedback austauschen.
+                
+                img(src='../../assets/images/pixel/projects/oculus/magellan-oculusfortravel-cta.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Call to Action Seite
+                    
+                img(src='../../assets/images/pixel/projects/oculus/magellan-oculusfortravel-landing.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Landingpage
+                    
+                img(src='../../assets/images/pixel/projects/oculus/magellan-oculusfortravel-landing-openvideo.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Auf der Landingpage: Geöffnetes Videomodul
+                
+                p.page__text Anschließend an die sehr gelungene Konzeptionsphase und den fantastisch kooperativen Prozess, den diese für uns dargestellt hat, teilten wir die Umsetzung in Design & Code auf. Wobei ich Ersteres, und Sebastian Letzteres übernommen hatte. Da wir beide über Wissen und Erfahrung in beiden Arbeitsfeldern verfügen, waren auch während der Umsetzung der Austausch und das Implementieren von Feedback stets gegeben.
+                
+                img(src='../../assets/images/pixel/projects/oculus/magellan-oculusfortravel-videobib.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Landingpage
+                
+                p.page__text Zum Schluss wurde unser Prototyp von Probanden in einem Usability-Lab getestet, ein voller Erfolg für uns beide!
+                
+                p.page__text Besagter Prototyp findet sich 
+                    a(href='https://blazingsonic.github.io/website-prototyping/', target='_blank') hier.
+                
+            section.loadmore.c.loadmore__anime
+                img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
+                a(href='/#impressionen') Zurück zur Übersicht
+    
+    include ../../_includes/_footer.pug

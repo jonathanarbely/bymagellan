@@ -1,0 +1,14 @@
+mixin title(h2, h1, a, href, h2br, h1br, invert)
+    section.title
+        h2= h2
+            if h2br
+                br
+                = h2br
+        h1= h1
+            if h1br
+                br
+                = h1br
+        if !invert
+            a.title__cta.btn(href=href)= a
+        else
+            a.title__cta.btn.btn--inverted(href=href)= a

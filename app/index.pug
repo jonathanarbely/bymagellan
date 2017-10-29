@@ -1,0 +1,284 @@
+include _mixins/_card.pug
+include _mixins/_ticket.pug
+include _mixins/_pamphlet.pug
+include _mixins/_poster.pug
+include _mixins/_title.pug
+include _mixins/_css.pug
+
+doctype html
+html(lang="de")
+    head
+        include _includes/_meta.pug
+        +css('index')
+        include _includes/_js.pug
+        script(src='/assets/plugins/jquery-smoothscroll/jquery-smoothscroll.js', type='text/javascript')
+    
+    body
+        header
+            .gradient--top
+            include _includes/_nav.pug
+            +nav('index')
+            
+            +title('Ihr Projekt,', 'Professionelle Web- & Appentwicklung / Pixelperfect UI- & Screendesign / Print / Workflow- & Performance-Consulting / SEO / On Site Presence', 'Meine Kompetenzen', '#kompetenzen', 'meine Ambition.')
+            
+        main
+            section.knowhow#kompetenzen
+                h3 Kompetenzen
+                div.filter
+                    span.petals
+                    a.filter__item.filter__item--active#dev(href='#kompetenzen') Web &amp; App
+                    a.filter__item#design(href='#kompetenzen') Print &amp; Screendesign
+                br
+                br
+                br
+                br
+                div.category#skillsDev
+                    div.category__item.category__item--active#switchFrontend
+                        img(src='assets/images/vector/magellan-iconset/frontend.svg')
+                        h4 Frontend
+                        span.category__item__meta Entwicklung
+                        span.goldbar
+                    div.category__item#switchBackend
+                        img(src='assets/images/vector/magellan-iconset/backend.svg')
+                        h4 Backend
+                        span.category__item__meta Entwicklung
+                        span.goldbar
+                    div.category__item#switchPerformance
+                        img(src='assets/images/vector/magellan-iconset/performance.svg')
+                        h4 Performance
+                        span.category__item__meta Consulting
+                        span.goldbar
+                div.category.category--inactive#skillsDesign
+                    div.category__item.category__item--active#switchDesign
+                        img(src='assets/images/vector/magellan-iconset/frontend.svg')
+                        h4 Screendesign
+                        span.category__item__meta & UI
+                        span.goldbar
+                    div.category__item#switchPrint
+                        img(src='assets/images/vector/magellan-iconset/seo.svg')
+                        h4 Print
+                        span.category__item__meta Design
+                        span.goldbar
+                br
+                br
+                div.c
+                    +card('cardFrontend', 'Webentwicklung', 'Frontend', 'Ich baue responsive, wartbare, hochkompatible und performante Frontenderlebnisse für das moderne Web. Dazu nutze ich ein großes Spektrum modernster Webtechnologien wie Pug (HTML), SASS (+BEM), AngularJS, jQuery und professionelle Workflow-/ Codeversionierungstools wie NPM, Gulp und Git.', '', '')
+                    
+                    +card('cardBackend', 'Web- & Appentwicklung', 'Backend', 'Ich baue Content Management Systeme, serverseitige Software sowie Erweiterungen & Themes für WordPress nach Maß. Dafür setze ich auf PHP und mySQL. Progressive Web-Apps, SPAs und hybride Applikationen plane und realisiere ich auf Basis des ausgezeichneten Backends Firebase sowie der MVC Frontend-Architektur AngularJS und auf Wunsch dem Ionic Framework.', '', '', 'card--inactive')
+                    
+                    +card('cardPerformance', 'Beratung', 'Performance', 'Performance im Web ist ein Muss, um ein über alle Endgeräte & Netzarten hinweg solides Produkt bieten zu können und ein gutes Benutzererlebniss zu schaffen, welches Kunden erfreut & bindet. Auch um Abstufungen durch Google zu vermeiden. Blitzschnelles Above-the-Fold laden, komprimierte Inhalte, GZIP und CDN-Distribution bilden ein Auszug möglicher Maßnahmen.', '', '', 'card--inactive')
+                    
+                    
+                    +card('cardScreendesign', 'Konzeption & Design', 'Screendesign', 'Von der Konzeption bis zum fertigen interaktiven Screendesign (Mockup) über die Integration Ihrer Wünsche & Anforderungen und unter Beachtung der neuesten Erkenntnisse & Trends aus Forschung und Fachmedien gestalte ich iterativ moderne und ansprechende Screendesigns. Auf Wunsch wird der Gestaltungsprozess in einem Styleguide dokumentiert.', '', '', 'card--inactive card--print')
+                    
+                    +card('cardPrint', 'Konzeption & Design', 'Printdesign', 'Von der Konzeption bis zur Drucklegung setze ich digitale und analoge Printprodukte um. Dazu zählen beispielsweise Poster, Flyer und Visitenkarten. Ich verwende professionelle Satz- und Vektorprogramme sowie passende Farbprofile (angepasst an den Drucker/die Druckerei), um einen reibungslosen Druck und ein erstklassiges Ergebnis zu schaffen.', '', '', 'card--inactive card--print')
+
+            hr
+            section.showcase#impressionen
+                h3 Impressionen
+                div.filter
+                    a.filter__item.filter__item--active#code(href='#impressionen') Web &amp; App
+                    a.filter__item#designs(href='#impressionen') Print &amp; Design
+                br
+                br
+                br
+                br
+                br
+                div.c
+                    //- Code Category
+                    
+                    +card('app', 'Designprojekt', 'App: Röntgen', 'Im Rahmen der Veranstaltung "Ambient Media" an der Hochschule Furtwangen University ist das App-Konzept "Röntgen" entstanden. Ziel waren leichte Bedienbarkeit durch klare Benutzeroberfläche und schnelle Informationsvermittlung.', '#impressionen', 'Projekt wird in Kürze veröffentlicht', 'cat_code')
+
+                    +card('messmer', 'Design, Umsetzung & SEO', 'Messmer Pen Karriere', 'Für die Messmer Pen GmbH in Emmendingen wurde ein Karriereportal mit CMS-Anbindung konzipiert, iterativ gestaltet und responsiv umgesetzt. Die Mitarbeiter können alle Inhalte selbst aktualisieren und pflegen.', 'projekte/2017/messmerkarriere.html', 'Case Study lesen', 'cat_code')
+                    
+                    +card('tariffuxx', 'Design & Umsetzung', 'Tariffuxx.de', 'Für den marktführenden B2B-Dienstleister für Tarifvergleiche in der Kommunikationsbranche wurde das CI überarbeitet & vereinheitlicht sowie ein neuer Webauftritt (B2B & erstmals B2C) und Printmaterial entworfen und entwickelt.', '#impressionen', 'Projekt wird in Kürze veröffentlicht', 'cat_code')
+                    
+                    +card('ph', 'Design', 'Profi-Homepage', 'Für die Konstanzer Agentur Profi-Homepage der Mediafavoriten GmbH ist im Laufe unserer Zusammenarbeit eine umfangreiche Kollektion unterschiedlichster Konzepte sowie Screen- & Printdesigns für Kunden versch. Branchen entstanden.', 'projekte/2016/ph.html', 'Screendesigns entdecken', 'cat_code')
+                    
+                    +card('oculustravel', 'Design & Umsetzung', 'Oculus for Travel', 'Im Rahmen einer Veranstaltung an der Hochschule Furtwangen University ist das Konzept "Oculus Rift & Virtual Reality für Reisebüros" entstanden. Parallel zum Projekt – von der ersten Zeichnung bis zur responsiven Website – bildete sich schnell ein effizienter Workflow.', 'projekte/2016/oculusfortravel.html', 'Screendesigns entdecken', 'cat_code')
+                    
+                    +card('hallo', 'Forschung, Design & Umsetzung', 'Hallo App', 'Die auf den aktuellsten Webtechnologien basierende hybrid App "Hallo" entstand als praktischer Teil meiner Bachelorthesis und diente dem Vergleich von nativen und hybriden Apps auf verschiedenen Plattformen und Smartphones. Anhand zahlreicher Messungen wurde...', '#impressionen', 'Die fertige App wird Anfang 2018 präsentiert', 'cat_code')
+                    
+                    //- Design Category
+                    
+                    +card('rezept', 'Printdesign', 'Rezeptvorlage', 'Im Rahmen der Veranstaltung Typographie 1 an der Hochschule Furtwangen ist im Wintersemester 16/17 ein gestalterisches und inhaltliches Konzept zur Darstellung von Texten am Beispiel eines exotischen Kochrezepts entstanden.', 'https://www.dropbox.com/s/lfcks258pevespk/jonathan_arbely_rezept.pdf?dl=0', 'Rezept öffnen (PDF - 7.5MB)', 'cat_design', true)
+                    
+                    +card('medienwerke', 'Printdesign', 'Kursplakat', 'Im Rahmen der Veranstaltung Typographie 1 an der Hochschule Furtwangen ist im Wintersemester 16/17 ein Plakat zur Bewerbung des Kurses während dem "Tag der Medien" an der Fakultät Digitale Medien entstanden.', 'https://www.dropbox.com/s/4artfhni3267sw5/jonathan_arbely_medienwerke-plakat.pdf?dl=0', 'Plakat öffnen (PDF - 21MB)', 'cat_design', true)
+                    
+                    +card('roadtrip', 'Printdesign', 'Buchtitel', 'Im Rahmen der Veranstaltung Typo. 1 an der Hochschule Furtwangen ist eine fiktive Buchtitelgestaltung entstanden. Der Schriftzug "Roadtrip" wurde erst Kalligraphiert und anschließend mit Erde beklebt und gut beleuchtet photographiert. Feinschliff in Photoshop.', 'https://www.dropbox.com/sh/ftlqqkokw2b01cx/AACSOF4ugwVY4IW_18g1U5w5a?dl=0', 'Arbeit entdecken', 'cat_design', true)
+                    
+                    +card('juedlehrhaus', 'Printdesign', 'Flyer', 'Für das Jüdische Lehrhaus Emmendingen wurde ein Flyer im Satzprogramm Adobe InDesign gestaltet, gesetzt und in Druck gegeben. Der Flyer informierte über Veranstaltungen im Winter 2016 bis Frühjahr 2017.', 'http://www.juedisches-museum-emmendingen.de/juedisches-lehrhaus-programm-winter-2016-fruehjahr-2017-5777/', 'Flyer öffnen', 'cat_design', true)
+                br
+                //-div.c
+                    span.loadmore
+                        img.icon.icon--m(src='assets/images/vector/iconset/cloud-computing.svg')
+                        | Mehr hervorgehobene Projekte
+                    //- Onclick, inject a pug generated html structure with more projects
+                br
+                br
+                br
+                br
+                h5 Weitere Projekte
+                br
+                br
+                div.c
+                    //- Code Category
+                
+                    +ticket('grundschule', 'WordPress - 2014', 'Grundschule Windenreute', 'http://www.grundschule-windenreute-maleck.de', 'Website besuchen', 'cat_code')
+                    +ticket('juedmuseum', 'WordPress - 2015', 'Jüd. Museum Emmendingen', 'http://www.juedisches-museum-emmendingen.de', 'Website besuchen', 'cat_code')
+                    +ticket('jsg', 'WordPress - 2017', 'Juristische Studiengesell. KA', 'https://jsg-karlsruhe.de', 'Website besuchen', 'cat_code')
+                    +ticket('msk', 'WordPress & Theme - 2016', 'MSK - Premium Snow Tech.', 'http://www.msk-snow.com', 'Website besuchen', 'cat_code')
+                    +ticket('best', 'HTML5 & CSS3 - 2015', 'B.E.S.T. Büro Service', 'http://buero-express-service-team.com', 'Online ansehen', 'cat_code')
+                    +ticket('fewo', 'HTML5 & CSS3 - 2013', 'Ferienwohnung Gutjahr', 'http://www.ferienwohnung-gutjahr.de', 'Online ansehen', 'cat_code')
+                    +ticket('derwisch', 'WordPress - 2014', 'Derwisch Konstanz', 'http://www.derwisch-pizza-döner.de', 'Website besuchen', 'cat_code')
+                    +ticket('bbev', 'WordPress - 2017', 'Bies Büdie 05 E.V.', 'http://www.bies-büdie.de', 'Online ansehen', 'cat_code')
+                    
+                    //- Design Category
+                    
+                    +ticket('gglmyb', 'Infografik', 'Google My Business', 'https://www.profi-homepage.de/infografik-google-my-business/', 'Online ansehen', 'cat_design')
+                br
+                br
+                br
+                h5 Aktuelle Projekte
+                br
+                div.c
+                    +pamphlet('interchalet', 'Frontend & Design', 'Interchalet Freiburg', 'seit Mai 2017')
+            hr
+            section.team#team
+                h3 Über mich
+                div.subtitle__wrapper
+                    span.subtitle Professionelle Webdienstleistungen, Design & Consulting aus dem Schwarzwald.
+                br
+                br
+                br
+                br
+                div.portfolio__wrapper
+                    div.portfolio
+                        div.portfolio__image
+                        div.portfolio__content
+                            img.portfolio__content__ornament(src='assets/images/vector/ornament.svg')
+                            span.portfolio__content__name Jonathan Arbely
+                            span.portfolio__content__rank Gründer
+                            br
+                            p.portfolio__content__text--quote „Make overachieving a habit.“
+                            p.portfolio__content__text Seit 2013 als freiberuflicher Webentwickler & Gestalter tätig, habe ich mit verschiedenen Kunden zusammengearbeitet sowie an abwechslungsreichen Projekten mitgewirkt. Meine Motivation ist mein Anspruch: Denn für Webenthusiasten ist es selbstverständlich, sich ständig in Themen rund um Entwicklung, Design und Best-Practices weiterzuentwickeln und Neues auszuprobieren. Um dazuzulernen und ein tiefes Verständnis über die Technologien zu behalten, die unsere digitalisierte Welt antreiben.
+                            p.portfolio__content__text--edu Bachelor of Science an der Fakultät „Digitale Medien“ der Hochschule Furtwangen University.
+                            br
+                            img.portfolio__content__leaf(src='assets/images/vector/leaf.svg')
+                            a.portfolio__content__cta.btn.btn--light(href='assets/files/Jonathan Arbely.vcf' target='_blank') Digitale Visitenkarte
+            br
+            hr
+            section.contact#kontakt
+                h3 Kontakt
+                div.subtitle__wrapper
+                    span.subtitle Ob internationaler Konzern oder regionaler Verein,
+                        br
+                        | Ihr Projekt ist meine Ambition.
+                br
+                br
+                br
+                br
+                div.category
+                    div.category__item.category__item--active#switchMail
+                        img(src='assets/images/vector/magellan-iconset/mail.svg')
+                        h4 E-Mail
+                        span.category__item__meta Adresse
+                        span.goldbar
+                    div.category__item#switchPhone
+                        img(src='assets/images/vector/magellan-iconset/mobilephone.svg')
+                        h4 Telefon
+                        span.category__item__meta & Whatsapp
+                        span.goldbar
+                br
+                br
+                br
+                div.c
+                    // Insert mail encoder
+                    div.pamphlet(id='mail')
+                        div.pamphlet__description
+                            span.pamphlet__description__tag E-Mail-Adresse
+                            a.pamphlet__description__title(href='mailto:ahoy@bymagellan.co') ahoy@bymagellan.co
+                            div.pamphlet__description__anchor__wrapper
+                                img.icon.icon--s(src='assets/images/vector/iconset/briefcase.svg')
+                                span.pamphlet__description__anchor Auf gute Zusammenarbeit!
+                    div.pamphlet(id='phony' class='card--inactive')
+                        div.pamphlet__description
+                            span.pamphlet__description__tag Mobilnummer
+                            a.pamphlet__description__title(href='tel:017639200032') 0176 3920 0032
+                            div.pamphlet__description__anchor__wrapper
+                                img.icon.icon--s(src='assets/images/vector/iconset/double-tick.svg')
+                                span.pamphlet__description__anchor Auch WhatsApp
+            hr
+            section.blog#blog
+                h3 Blog
+                div.subtitle__wrapper
+                    span.subtitle Beiträge zu Code & Design, Design Ressourcen und Fotografie
+                br
+                br
+                br
+                br
+                br
+                div.c
+                    //-poster('vrwfnntwcklng', 'SEO', 'Verworfene Entw.', 'Spontane Gestaltungsideen durch zuffälige Inspiration oder verworfene Konzepte stellen sich meiner Erfahrung nach später meist als wertvolle Unterstützung bei zukünftigen UI-Projekten heraus.', '#', 'Beitrag lesen', 'seo')
+                    
+                    +poster('wllppr', 'Wallpaper', "New Year's in Paris", 'Die erste Wallpaperkollektion von Magellan: "Neujahr in Paris". Momente in schwarz & weiß. Die Fotografien sind über die Neu-jahrstage 16/17 in  Kollaboration mit Valeria Raffa entstanden.', '/blog/2017/parisnewyears.html', 'Zur Galerie', 'wallpaper')
+                    
+                    +poster('nglrvsntv', 'Forschung', 'Hybrid vs. Native', 'Ein Teil meiner Bachelorthesis war die Erfor-schung der Performanceunterschiede von nativen und hybriden Apps (auf Basis von AngularJS). Die unterschiedlichen Testdurchläufe wurden dokumentiert...', '#blog', 'Demnächst..', 'research')
+                    
+                    //-poster('rtfmglln', 'UI', 'Art of Magellan', 'Nach vierjährigem Tätigkeit als Selbst-ständiger und etwas über ein Jahr nach der Idee & Initative, Magellan zu Gründen, begann ich mit der umfassenden Neugestaltung unseres Webauftritts.', '#', 'Caste Study lesen', 'ui')
+                //-br
+                //-div.c.loadmore__anime--rtl
+                    span.loadmore Zum Blog
+                    img.icon.icon--s.icon--rtl(src='assets/images/vector/iconset/next.svg')
+            hr
+            section.contact
+                h3 Testimonials
+                div.subtitle__wrapper
+                    span.subtitle Das denken Unternehmen über Magellan
+                .c
+                    span.goldbar
+                br
+                br
+                div.c.quote.quote--tariffuxx
+                    p Ingo Just - Gründer & CEO
+                    p Tariffuxx.de
+                    br
+                    quote Zusammen mit Magellan Media haben wir unseren ersten Web-Relaunch geplant und realisiert. Über einen Zeitraum von 5 Monaten entwickelte sich durch transparente Arbeitsweise, aktivem Austausch und unter Verwendung modernen Projekttools eine gute Zusammenarbeit. Vom Konzept bis zum fertigen Code hatten wir stets genug Einfluss auf die Entwicklung. Änderungen und Verbesserungsvorschläge wurden schnell berücksichtigt und erfolgreich umgesetzt. Wir waren mit der Zusammenarbeit und sind mit dem Ergebnis außerordentlich zufrieden. Besonders das fertige Responsive Design hat uns sehr zugesagt.
+                div.c.quote.quote--messmer.hide
+                    p Diana Markulin - Vertriebsmanagerin & Grafikleitung
+                    p messmer-karriere.de
+                    br
+                    quote Herr Arbely hat unsere Vorstellungen zu einer modernen Karrierewebsite voll erfüllt. Die direkte Absprache und die unkomplizierte Kommunikation, ob telefonisch, per Mail oder auch mal per WhatsApp hat uns sehr gut gefallen. Auch die Umsetzung kleiner Ergänzungen verläuft zügig und erleichtert so unsere Bewerberakquise.
+                div.c.quote.quote--jsg.hide
+                    p Dr. Bettina Brückner - Vorsitzende der Juristischen Studiengesellschaft Karlsruhe
+                    p jsg-karlsruhe.de
+                    br
+                    quote Herr Arbely hat die Homepage für unsere Gesellschaft entworfen und eingerichtet, und zwar innerhalb einer sehr kurzen Zeit von wenigen Wochen. Dabei hat er unsere Wünsche hinsichtlich der Gestaltung und der inhaltlichen Anordnung vollständig umgesetzt; die Zusammenarbeit und Kommunikation war reibungslos. Die Homepage ist sehr bedienungs- und benutzerfreundlich und ist auf viel Lob und Zuspruch gestoßen. Wir sind außerordentlich zufrieden mit dieser Leistung!
+                br
+                br
+                .c.quote.quote__customerbranding
+                    img(src='assets/images/vector/testimonials/tariffuxx.svg').quote__customerbranding.quote__customerbranding--tariffuxx
+                    span.liluzivert.liluzivert--r
+                    img(src='assets/images/vector/testimonials/messmer.svg').quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--messmer
+                    span.liluzivert.liluzivert--r
+                    img(src='assets/images/vector/testimonials/jsg.svg').quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--jsg
+                br
+                br
+                br
+                br
+                br
+                br
+                br
+                div.c
+                    div.factsdontcareaboutyourfeelings
+                        div.factsdontcareaboutyourfeelings__inner
+                            span.factsdontcareaboutyourfeelings__numeri 18
+                            p.factsdontcareaboutyourfeelings__title Zufriedene Kunden
+                        div.factsdontcareaboutyourfeelings__inner
+                            span.factsdontcareaboutyourfeelings__numeri 4
+                            p.factsdontcareaboutyourfeelings__title Jahre Erfahrung
+                        div.factsdontcareaboutyourfeelings__inner
+                            span.factsdontcareaboutyourfeelings__numeri 2
+                            p.factsdontcareaboutyourfeelings__title Faktor Verschlüsselung all unserer Kundendaten durch Kensington® VeriMark™ und Microsoft BitLocker
+        
+        include _includes/_footer.pug

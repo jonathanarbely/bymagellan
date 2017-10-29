@@ -1,0 +1,63 @@
+include ../../_includes/_pageincludes.pug
+
+doctype html
+html(lang="de")
+    head
+        include ../../_includes/_meta.pug
+        +css()
+        include ../../_includes/_js.pug
+    
+    body
+        header
+            img.heroimage(src='/assets/images/pixel/projects/messmer/magellan-messmerkarriere-header.jpg')
+            include ../../_includes/_nav.pug
+            +nav('page')
+            
+            +title('Messmer Pen Karriereportal', "Bewerberakquise im Innen- und Außendienst", 'Design & Umsetzung', '#startreading')
+            
+        main#startreading
+            
+            .page
+                p.page__author By 
+                    b Jonathan Arbely
+                span.page__date Februar, 2017
+                span.goldbar
+                p.page__text Für den Emmendinger Hersteller von Premiumschreibgeräten, der Messmer Pen GmbH, wurde eine moderne, ansprechende und suchmaschinenoptimierte Karriereseite angefertigt. Zu Beginn wurden Anforderungen, Vorstellungen & Wünsche zusammengetragen. Diese wurden anschließend in einem iterativen Designprozess berücksichtigt und über mehrere Feedbackrunden in ständiger Kommunikation mit dem Kunden in ein Screendesign der Startseite umgesetzt. Als OnePager gedacht, fanden alle Inhalte und offenen Stellen auf einer einzelnen Seite Platz, geführt von einem roten Faden durch die einzelnen Sektionen.
+                
+                img(src='../../assets/images/pixel/projects/messmer/magellan-messmerkarriere.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / One-Page Startseite
+                
+                p.page__text
+                    b Die Gestaltung
+                    | , in Form von Farbe, Fläche, Ikonografie und Schrift richtete sich nach dem Styleguide der Marke Messmer Pen und führte, wo zulässig, neue Elemente hinzu, um ein stimmiges und minimalistisches Ersheinungsbild zu erschaffen, welches den Fokus auf die Inhalte legt. Großflächige Bilder, klare typografische Hierarchie und einheitliche Icons sorgen für ein hochwertiges Erscheinungsbild. Ganz im Sinne der Markenphilosophie.
+                    
+                p.page__text Basierend auf dem beliebten Content Management System 
+                    i WordPress
+                    | , sind Inhalte wie Medien und Stellenanzeigen der neuen Karriereseite für Mitarbeiter leicht zu bearbeiten. Automatische Bildminifizierung und Performance steigernde Cachingsmaßnahmen halten Ladezeiten automatisch niedrig. Statistiken informieren über Aufrufszahlen und über Besucher, welche über andere Karriereportale kommen.
+                    
+                img(src='../../assets/images/pixel/projects/messmer/magellan-messmerkarriere-konzept.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Frühes Konzept der Chronik
+                    
+                p.page__text Suchmaschinenoptimierung wurde mit dem Ziel betrieben, die neue Karriereseite mitsamt neuer Domain so schnell wie möglich auf die erste Seite, bzw. neben die Hauptseite messmer-pen.com zu positionieren. Dafür wurden technische wie inhaltliche Anforderungen beliebter Suchmaschinen weitestgehend erfüllt und das Ranking fortwährend mit Tools von Google und Drittanbietern analysiert.
+                
+                p.page__text Innerhalb weniger Monate nach Liveschaltung erreichte das Karriereportal die Plätze 1 bis 4 für die wichtigsten Stichwortgruppen auf Google Search & Microsoft Bing. Ein herausragendes Ergebnis, übertrifft die junge Seite doch schon das Ranking der Karriereseite eines bekannten deutschen Teeherstellers mit fast identischer Markenbezeichnung. Um das Ranking weiter auf einem hohen Niveau zu halten, werden auch in Zukunft erweiterte Maßnahmen und Verbesserungen hinzukommen.
+                
+                b.page__text Entwicklung des Ranking für die folgenden Stichwortpaare:
+                p.page__text Im Zeitraum zwischen Ende Juni 2017 und Ende September 2017. Niedriger ist besser.
+                ul.page__text
+                    li "messmer karriere" - Google Platz 17 🡕 3 & Bing Platz 2 🡒 2
+                    li "messmer karriere emmendingen" - Google Platz 5 🡕 1 & Bing Platz 1 🡒 1
+                    li "messmer pen karriere" - Google Platz 11 🡕 3 & Bing Platz 1 🡒 1
+                    li "messmer karriere" - Google Platz 12 🡕 3 & Bing Platz 3 🡕 2
+                br
+                br
+                p.page__text Besuchen Sie 
+                    a(href='http://messmer-karriere.de', target='_blank') messmer-karriere.de
+                
+            section.loadmore.c.loadmore__anime
+                img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
+                a(href='/#impressionen') Zurück zur Übersicht
+    
+    include ../../_includes/_footer.pug

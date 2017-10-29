@@ -1,0 +1,11 @@
+mixin poster(id, meta, title, text, link, linkText, additionalClass)
+    div.poster(id=id)
+        div.poster__showcase
+        div.poster__description
+            span.poster__description__tag(class=additionalClass)= meta
+            span.poster__description__title= title
+            p= text
+            if link
+                div.poster__description__anchor__wrapper
+                    img.icon(src='assets/images/vector/iconset/eyeglasses.svg')
+                    a.poster__description__anchor(href= link)= linkText
