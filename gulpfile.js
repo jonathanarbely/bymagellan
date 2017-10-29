@@ -1,0 +1,105 @@
+'use strict';
+
+var gulp = require('gulp'),
+    pug = require('gulp-pug'),
+    sass = require('gulp-sass'),
+    maps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+    clean = require('gulp-clean'),
+    connect = require('gulp-connect'),
+    concat = require('gulp-concat');
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+};
+
+gulp.task('hello', function () {
+    console.log('Hello Gulp!')
+});
+
+gulp.task('watch', function() {
+    gulp.watch('app/**/*.pug', ['pug']);
+    gulp.watch('app/assets/stylesheets/**/*.sass', ['sass']);
+    gulp.watch('app/assets/images/pixel/**/*.png', ['copyPNG']);
+    gulp.watch('app/assets/images/pixel/**/*.jpg', ['copyJPG']);
+    gulp.watch('app/assets/images/vector/**/*.svg', ['copySVG']);
+    gulp.watch('app/assets/fonts/**/*', ['copyFonts']);
+    gulp.watch('app/assets/javascript/**/*', ['copyJS']);
+    gulp.watch('app/assets/plugins/**/*', ['copyPlugins']);
+    gulp.watch('app/assets/files/**/*', ['copyFiles']);
+});
+
+gulp.task('pug', function() {
+    gulp.src('app/**/!(_)*.pug')
+        .pipe(pug({
+            pretty: true,
+            basedir: __dirname + '/app'
+        }))
+        .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('sass', function () {
+  return gulp
+    .src('app/assets/stylesheets/**/*.sass')
+    //.pipe(maps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
+    //.pipe(maps.write('./'))
+    .pipe(gulp.dest('dist/assets/stylesheets'));
+});
+
+gulp.task('clean', function () {
+    return gulp.src('dist/*', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('copyfonts', function () {
+    gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts'));
+});
+
+gulp.task('copyPNG', function () {
+    gulp.src(['app/assets/images/pixel/**/!(_)*.png']).pipe(gulp.dest('dist/assets/images/pixel'));
+});
+
+gulp.task('copyJPG', function () {
+    gulp.src(['app/assets/images/pixel/**/!(_)*.jpg']).pipe(gulp.dest('dist/assets/images/pixel'));
+});
+
+gulp.task('copySVG', function () {
+    gulp.src(['app/assets/images/vector/**/!(_)*.svg']).pipe(gulp.dest('dist/assets/images/vector'));
+});
+
+gulp.task('copyFonts', function () {
+    gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts'));
+});
+
+gulp.task('copyJS', function () {
+    gulp.src(['app/assets/javascript/**/!(_)*.js']).pipe(gulp.dest('dist/assets/javascript'));
+});
+
+gulp.task('copyPlugins', function () {
+    gulp.src(['app/assets/plugins/**/*']).pipe(gulp.dest('dist/assets/plugins'));
+});
+
+gulp.task('copyFiles', function () {
+    gulp.src(['app/assets/files/**/*']).pipe(gulp.dest('dist/assets/files'));
+});
+
+gulp.task('c', function() {
+  connect.server({
+    root: 'dist',
+    livereload: false
+  });
+});
+
+// [] are dependencies which are run before the actual task
+// if a task returns something, it can be used in the next task
+gulp.task('default', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
+    console.log('finished running all tasks');
+});
+
+/*gulp.task('build', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyFonts','copyJS'], function () {
+    console.log('finished running all tasks');
+});*/
+
+// lt --port 8080
