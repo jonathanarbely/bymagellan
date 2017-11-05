@@ -65,6 +65,10 @@ gulp.task('copyJPG', function () {
     gulp.src(['app/assets/images/pixel/**/!(_)*.jpg']).pipe(gulp.dest('dist/assets/images/pixel'));
 });
 
+gulp.task('copyICO', function () {
+    gulp.src(['app/assets/images/pixel/**/!(_)*.ico']).pipe(gulp.dest('dist/assets/images/pixel'));
+});
+
 gulp.task('copySVG', function () {
     gulp.src(['app/assets/images/vector/**/!(_)*.svg']).pipe(gulp.dest('dist/assets/images/vector'));
 });
@@ -94,7 +98,7 @@ gulp.task('c', function() {
 
 // [] are dependencies which are run before the actual task
 // if a task returns something, it can be used in the next task
-gulp.task('default', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
+gulp.task('default', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
     console.log('finished running all tasks');
 });
 
