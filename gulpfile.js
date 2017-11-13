@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    minify = require('gulp-minify');
 
 var autoprefixerOptions = {
   browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
@@ -41,10 +42,18 @@ gulp.task('pug', function() {
 gulp.task('sass', function () {
   return gulp
     .src('app/assets/stylesheets/**/*.sass')
-    //.pipe(maps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(maps.init())
+    .pipe(sass({}).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
-    //.pipe(maps.write('./'))
+    .pipe(maps.write('./'))
+    .pipe(gulp.dest('dist/assets/stylesheets'));
+});
+
+gulp.task('buildsass', function () {
+  return gulp
+    .src('app/assets/stylesheets/**/*.sass')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest('dist/assets/stylesheets'));
 });
 
@@ -96,14 +105,26 @@ gulp.task('c', function() {
   });
 });
 
+gulp.task('compress', function() {
+  gulp.src('app/assets/javascript/*.js')
+    .pipe(minify({
+        ext:{
+            src:'.js',
+            min:'.min.js'
+        }
+    }))
+    .pipe(gulp.dest('dist/assets/javascript/'))
+});
+
 // [] are dependencies which are run before the actual task
 // if a task returns something, it can be used in the next task
 gulp.task('default', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
-    console.log('finished running all tasks');
+    console.log('Development env. engaged! 〽️');
 });
 
-/*gulp.task('build', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyFonts','copyJS'], function () {
-    console.log('finished running all tasks');
-});*/
+gulp.task('build', ['pug','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','compress', 'buildsass'], function () {
+    console.log('Successfully finished build! Ready to set sail. ⚓');
+});
 
+// Start Localtunnel:
 // lt --port 8080
