@@ -58,7 +58,7 @@ gulp.task('buildsass', function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src('dist/*', {read: false})
+    return gulp.src('dist/!(CNAME)*', {read: false})
         .pipe(clean());
 });
 
