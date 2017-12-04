@@ -6,6 +6,21 @@
     justify-content: center
     flex-flow: row
     flex-wrap: wrap
+    overflow: hidden
+    
+    &--nowrap
+        flex-wrap: nowrap
+    
+    &__inner
+        
+        &--xscrolling
+            display: flex
+            justify-content: center
+            overflow-x: auto
+            width: 1800px
+            
+            @media (max-width: $phablet-landscape)
+                justify-content: flex-start
 
 // Icons
 .icon
@@ -197,7 +212,7 @@
     font-family: 'Georgia'
     color: $fog
     font-size: 1.2em
-    padding: 0 .8em;
+    padding: 0 .8em
     line-height: 1.5
     
     @media (max-width: 400px)
@@ -215,10 +230,8 @@
     display: flex
     flex-flow: row
     flex-wrap: wrap
-    width: 95%
-    max-width: 600px
+    width: 100%
     border: 1px #EAEAEA solid
-    padding: 0 1em
     
     &__inner
         flex: 0 0 25%
