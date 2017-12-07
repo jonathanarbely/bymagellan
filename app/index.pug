@@ -91,7 +91,7 @@ html(lang="de")
 
                     +card('messmer', 'Design, Umsetzung & SEO', 'Messmer Pen Karriere', 'Für die Messmer Pen GmbH in Emmendingen wurde ein Karriereportal mit CMS-Anbindung konzipiert, iterativ gestaltet und responsiv umgesetzt. Die Mitarbeiter können alle Inhalte selbst aktualisieren und pflegen.', 'projekte/2017/messmerkarriere.html', 'Case Study lesen', 'cat_code')
                     
-                    +card('tariffuxx', 'Design & Umsetzung', 'Tariffuxx.de', 'Für den marktführenden B2B-Dienstleister für Tarifvergleiche in der Kommunikationsbranche wurde das CI überarbeitet & vereinheitlicht sowie ein neuer Webauftritt (B2B & erstmals B2C) und Printmaterial entworfen und entwickelt.', 'https://tariffuxx.de/', 'Fertige Website besuchen', 'cat_code')
+                    +card('tariffuxx', 'Design & Umsetzung', 'Tariffuxx.de', 'Für den marktführenden B2B-Dienstleister für Tarifvergleiche in der Kommunikationsbranche wurde das CI überarbeitet & vereinheitlicht sowie ein neuer Webauftritt (B2B & erstmals B2C) und Printmaterial entworfen und entwickelt.', 'https://tariffuxx.de/', 'Fertige Website besuchen', 'cat_code', true)
                     
                     +card('ph', 'Design', 'Profi-Homepage', 'Für die Konstanzer Agentur Profi-Homepage der Mediafavoriten GmbH ist im Laufe unserer Zusammenarbeit eine umfangreiche Kollektion unterschiedlichster Konzepte sowie Screen- & Printdesigns für Kunden versch. Branchen entstanden.', 'projekte/2016/ph.html', 'Screendesigns entdecken', 'cat_code')
                     
@@ -226,30 +226,22 @@ html(lang="de")
                     span.loadmore Zum Blog
                     img.icon.icon--s.icon--rtl(src='assets/images/vector/iconset/next.svg')
             hr
-            section
+            section.testimonials
                 h3 Testimonials
                 div.subtitle__wrapper
-                    span.subtitle Das denken Unternehmen über Magellan
-                .c
+                    span.subtitle Das denken Unternehmen über Magellan Code & Design
+                //.c
                     span.goldbar
                 br
                 br
-                div.c.quote.quote--tariffuxx
-                    p Ingo Just - Gründer & CEO
-                    p Tariffuxx.de
-                    br
-                    quote Zusammen mit Magellan haben wir unseren ersten Web-Relaunch geplant und realisiert. Über einen Zeitraum von 5 Monaten entwickelte sich durch transparente Arbeitsweise, aktivem Austausch und unter Verwendung modernen Projekttools eine gute Zusammenarbeit. Vom Konzept bis zum fertigen Code hatten wir stets genug Einfluss auf die Entwicklung. Änderungen und Verbesserungsvorschläge wurden schnell berücksichtigt und erfolgreich umgesetzt. Wir waren mit der Zusammenarbeit und sind mit dem Ergebnis außerordentlich zufrieden. Besonders das fertige Responsive Design hat uns sehr zugesagt.
-                div.c.quote.quote--messmer.hide
-                    p Diana Markulin - Vertriebsmanagerin & Grafikleitung
-                    p messmer-karriere.de
-                    br
-                    quote Herr Arbely hat unsere Vorstellungen zu einer modernen Karrierewebsite voll erfüllt. Die direkte Absprache und die unkomplizierte Kommunikation, ob telefonisch, per Mail oder auch mal per WhatsApp hat uns sehr gut gefallen. Auch die Umsetzung kleiner Ergänzungen verläuft zügig und erleichtert so unsere Bewerberakquise.
-                div.c.quote.quote--jsg.hide
-                    p Dr. Bettina Brückner - Vorsitzende der Juristischen Studiengesellschaft Karlsruhe
-                    p jsg-karlsruhe.de
-                    br
-                    quote Herr Arbely hat die Homepage für unsere Gesellschaft entworfen und eingerichtet, und zwar innerhalb einer sehr kurzen Zeit von wenigen Wochen. Dabei hat er unsere Wünsche hinsichtlich der Gestaltung und der inhaltlichen Anordnung vollständig umgesetzt; die Zusammenarbeit und Kommunikation war reibungslos. Die Homepage ist sehr bedienungs- und benutzerfreundlich und ist auf viel Lob und Zuspruch gestoßen. Wir sind außerordentlich zufrieden mit dieser Leistung!
                 br
+                br
+                div.c.c--overflow.quote.quote--tariffuxx
+                    +card('', 'Ingo Just - Gründer & CEO', 'Tariffuxx.de', 'Zusammen mit Magellan haben wir unseren ersten Web-Relaunch geplant und realisiert. Über einen Zeitraum von 5 Monaten entwickelte sich durch transparente Arbeitsweise, aktivem Austausch und unter Verwendung modernen Projekttools eine gute Zusammenarbeit. Vom Konzept bis zum fertigen Code hatten wir stets genug Einfluss auf die Entwicklung. Änderungen und Verbesserungsvorschläge wurden schnell berücksichtigt und erfolgreich umgesetzt. Wir waren mit der Zusammenarbeit und sind mit dem Ergebnis außerordentlich zufrieden. Besonders das fertige Responsive Design hat uns sehr zugesagt.', '', '', '', '', 'noimage')
+                div.c.c--overflow.quote.quote--messmer.hide
+                    +card('', 'Diana Markulin - Vertriebsmanagerin & Grafikleitung', 'messmer-karriere.de', 'Herr Arbely hat unsere Vorstellungen zu einer modernen Karrierewebsite voll erfüllt. Die direkte Absprache und die unkomplizierte Kommunikation, ob telefonisch, per Mail oder auch mal per WhatsApp hat uns sehr gut gefallen. Auch die Umsetzung kleiner Ergänzungen verläuft zügig und erleichtert so unsere Bewerberakquise.', '', '', '', '', 'noimage')
+                div.c.c--overflow.quote.quote--jsg.hide
+                    +card('', 'Dr. Bettina Brückner - Vorsitzende der Juristischen Studiengesellschaft Karlsruhe', 'jsg-karlsruhe.de', 'Herr Arbely hat die Homepage für unsere Gesellschaft entworfen und eingerichtet, und zwar innerhalb einer sehr kurzen Zeit von wenigen Wochen. Dabei hat er unsere Wünsche hinsichtlich der Gestaltung und der inhaltlichen Anordnung vollständig umgesetzt; die Zusammenarbeit und Kommunikation war reibungslos. Die Homepage ist sehr bedienungs- und benutzerfreundlich und ist auf viel Lob und Zuspruch gestoßen. Wir sind außerordentlich zufrieden mit dieser Leistung!', '', '', '', '', 'noimage')
                 br
                 .c.quote.quote__customerbranding
                     img(src='assets/images/vector/testimonials/tariffuxx.svg').quote__customerbranding.quote__customerbranding--tariffuxx
