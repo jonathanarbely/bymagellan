@@ -1,0 +1,104 @@
+include ../../_includes/_pageincludes.pug
+
+-var pageTitle = 'Magellan Code & Design - New Year in Paris Wallpaper Collection'
+
+doctype html
+html(lang="de")
+    head
+        include ../../_includes/_meta.pug
+        +css()
+        include ../../_includes/_js.pug
+    
+    body
+        header
+            img.heroimage(src='/assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-header.jpg')
+            include ../../_includes/_nav.pug
+            +nav('page', true)
+            +title("Bilder automatisch Komprimieren", "Der Kompromiss zwischen Qualität und Performance", 'Performance', '#startreading', false, false, true)
+            
+        main#startreading
+            .page
+                p.page__author By 
+                    b Jonathan Arbely
+                span.page__date 24. Dezember 2017
+                span.goldbar
+                p.page__text Einer der einfachsten Wege, eine Website in der Ladezeit performanter zu machen, liegt in der Reduzierung der Dateigrößen aller verwendeten Pixelbilder.
+                p.page__text In der Regel gilt, zwischen Qualität und Dateigröße sowie ggf. Format einen Kompromiss zu schließen. Bei der üblichen Komprimierung mit gängiger Bildbearbeitungssoftware gehen jedoch oft wichtige Details eines Bildes verloren. Besonders bei der Verwendung des beliebten .jpg Formats.
+                p.page__text Die Website 
+                    a(href='http://optimizilla.com/' target='_blank') Optimizilla.com
+                    | bietet losless Compression für bis zu 20 Bilder der Formate .jpg, .gif und .png gleichzeitig an. Zusätzlich lassen sich die komprimierten Bilder Seite an Seite mit den hochgeladenen Originalen vergleichen, um zu überprüfen, ob die automatische Kompression das gewünschte Ergebnis liefert.
+                p.page__text Wer seinen Workflow mit 
+                    a(href='https://gulpjs.com/' target='_blank') Gulp
+                    |  handhabt, erhält mit den beiden Modulen 
+                    a(href='https://www.npmjs.com/package/gulp-image' target='_blank') gulp-image
+                    |  oder 
+                    a(href='https://www.npmjs.com/package/gulp-imagemin' target='_blank') gulp-imagemin
+                    |  vergleichbar gute Resultate, mit dem zusätzlichen Vorteilen der geschickten Automatisierung, die Gulp möglich macht. Für Grunt gibt es vergleichbare Lösungen.
+                p.page__text Beim Bildformat .png (welches standardmäßig losless ist, aber in der Regel nicht so komprimierbar ist wie andere Formate und daher im Web relativ unbeliebt ist) werden alle im Bild verwendeten Farben indexiert und die Dateigröße deutlich verringert bei wenig optischem Qualitätsverlust:
+                p.page__text „[…] eine Methode zur Speicherung einer Rastergrafik. Bei indizierten Farben enthält die Datenstruktur jedes Pixels nicht direkt die einzelnen Farbwerte, sondern nur einen Index auf einen Eintrag einer sogenannten Farbtabelle oder Farbpalette, die die im Bild verwendeten Farben auflistet. Ein Pixel speichert hierbei – anstelle des Farbwerts – die Nummer des Tabelleneintrags, die diesen Farbwert enthält. Bilder, die nur wenige unterschiedliche Farben enthalten, sparen durch die geringe Größe des Farbindex Speicherplatz ein.“ 
+                    a(href='https://de.wikipedia.org/wiki/Indizierte_Farben' target='_blank') - Indizierte Farben auf Wikipedia
+                p.page__text Diese Lösung eignet sich hervorragend für kleine Bilder und Ikonografie.
+                
+                b.page__text Beispiele:
+                
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-png2.png').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / PNG ohne Optimierung - 113kb - Photoshop CC 2017 Smallest File Format PNG
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-png2-min.png').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / PNG mit Optimierung - 39kb - Optimizilla.com
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-jpg2.jpg').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / JPG ohne Optimierung - 45kb - Photoshop CC 2017 Baseline Optimzied Stufe 10
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-jpg2-min.jpg').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / JPG mit Optimierung - 17.4kb - Optimizilla.com
+                
+                p.page__text Großes Motiv:
+                
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-jpg1.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / JPG ohne Optimierung - 302kb - Photoshop CC 2017 Baseline Optimzied Stufe 10
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-jpg1-min.jpg').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / JPG mit Optimierung - 153kb - Optimizilla.com
+                
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-png1.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / PNG ohne Optimierung - 980kb - Photoshop CC 2017 Smallest File Format PNG
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-png1-min.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / PNG mit Optimierung - 285kb - Optimizilla.com
+                    
+                p.page__text Es zeigt sich, JPG eignet sich deutlich besser zur Anzeige großer Bilder als PNG. Doch gerade bei kleinen Bildern und besonders Icons mit Aplha-Channel (Transparenz) lässt sich so automatisch minimieren, egal wie das Bild vorher angespeichert wurde.
+                
+                p.page__text Mögliche nächste Schritte der Bildoptimierung könnten aus Lazyloading und der Implementierung von Sourcesets bestehen. Für erfahrene Entwickler auch die Verwendung von Googles innovativem Bildformat 
+                    a(href='https://developers.google.com/speed/webp/' target='_blank') WebP
+                    | .
+                
+                br
+                span.goldbar
+                b.page__author Bildmaterial von Unsplash:
+                
+                a.page__text(href='https://unsplash.com/photos/u6BPMXgURuI' target='_blank') Photo by Gabriel Gurrola on Unsplash
+                a.page__text(href='https://unsplash.com/photos/CXy_nGO0MOA' target='_blank') Photo by Rodan Can on Unsplash
+                a.page__text(href='https://unsplash.com/photos/HX9fOoD9xN4' target='_blank') Photo by Kace Rodriguez on Unsplash
+
+            section.loadmore.c.loadmore__anime
+                img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
+                a(href='/#blog') Zurück zur Übersicht
+    
+    include ../../_includes/_footer.pug
