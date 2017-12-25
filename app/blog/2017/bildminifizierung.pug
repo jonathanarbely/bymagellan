@@ -22,11 +22,11 @@ html(lang="de")
                     b Jonathan Arbely
                 span.page__date 24. Dezember 2017
                 span.goldbar
-                p.page__text Einer der einfachsten Wege, eine Website in der Ladezeit performanter zu machen, liegt in der Reduzierung der Dateigrößen aller verwendeten Pixelbilder.
-                p.page__text In der Regel gilt, zwischen Qualität und Dateigröße sowie ggf. Format einen Kompromiss zu schließen. Bei der üblichen Komprimierung mit gängiger Bildbearbeitungssoftware gehen jedoch oft wichtige Details eines Bildes verloren. Besonders bei der Verwendung des beliebten .jpg Formats.
+                p.page__text Einer der einfachsten Wege, eine Website in der Ladezeit performanter zu machen, liegt in der (automatischen) Reduzierung der Dateigrößen aller verwendeten Pixelbilder.
+                p.page__text In der Regel gilt, zwischen Qualität und Dateigröße sowie ggf. Format einen Kompromiss zu schließen. Bei der üblichen Komprimierung mit gängiger Bildbearbeitungssoftware gehen jedoch oft wichtige Details eines Bildes verloren. Ein durchgehend optimales Verhältnis zwischen Qualität und Performance ist ohne Automatisierung oder hilfreichen Tools schwer umzusetzen. Besonders bei der Verwendung des beliebten .jpg Formats.
                 p.page__text Die Website 
                     a(href='http://optimizilla.com/' target='_blank') Optimizilla.com
-                    | bietet losless Compression für bis zu 20 Bilder der Formate .jpg, .gif und .png gleichzeitig an. Zusätzlich lassen sich die komprimierten Bilder Seite an Seite mit den hochgeladenen Originalen vergleichen, um zu überprüfen, ob die automatische Kompression das gewünschte Ergebnis liefert.
+                    |  bietet (nahezu) losless Compression für bis zu 20 Bilder der Formate .jpg und .png gleichzeitig an. Zusätzlich lassen sich die komprimierten Bilder Seite an Seite mit den hochgeladenen Originalen vergleichen, um zu überprüfen, ob die automatische Kompression das gewünschte Ergebnis liefert.
                 p.page__text Wer seinen Workflow mit 
                     a(href='https://gulpjs.com/' target='_blank') Gulp
                     |  handhabt, erhält mit den beiden Modulen 
@@ -34,7 +34,7 @@ html(lang="de")
                     |  oder 
                     a(href='https://www.npmjs.com/package/gulp-imagemin' target='_blank') gulp-imagemin
                     |  vergleichbar gute Resultate, mit dem zusätzlichen Vorteilen der geschickten Automatisierung, die Gulp möglich macht. Für Grunt gibt es vergleichbare Lösungen.
-                p.page__text Beim Bildformat .png (welches standardmäßig losless ist, aber in der Regel nicht so komprimierbar ist wie andere Formate und daher im Web relativ unbeliebt ist) werden alle im Bild verwendeten Farben indexiert und die Dateigröße deutlich verringert bei wenig optischem Qualitätsverlust:
+                p.page__text Beim Bildformat .png (welches standardmäßig losless ist, aber in der Regel nicht so komprimierbar ist wie andere Formate und daher im Web relativ unbeliebt ist) werden alle im Bild verwendeten Farben indexiert und die Dateigröße deutlich verringert, bei geringem optischem Qualitätsverlust:
                 p.page__text „[…] eine Methode zur Speicherung einer Rastergrafik. Bei indizierten Farben enthält die Datenstruktur jedes Pixels nicht direkt die einzelnen Farbwerte, sondern nur einen Index auf einen Eintrag einer sogenannten Farbtabelle oder Farbpalette, die die im Bild verwendeten Farben auflistet. Ein Pixel speichert hierbei – anstelle des Farbwerts – die Nummer des Tabelleneintrags, die diesen Farbwert enthält. Bilder, die nur wenige unterschiedliche Farben enthalten, sparen durch die geringe Größe des Farbindex Speicherplatz ein.“ 
                     a(href='https://de.wikipedia.org/wiki/Indizierte_Farben' target='_blank') - Indizierte Farben auf Wikipedia
                 p.page__text Diese Lösung eignet sich hervorragend für kleine Bilder und Ikonografie.
@@ -83,7 +83,31 @@ html(lang="de")
                 div.page__imagetitle
                     p.page__author / PNG mit Optimierung - 285kb - Optimizilla.com
                     
-                p.page__text Es zeigt sich, JPG eignet sich deutlich besser zur Anzeige großer Bilder als PNG. Doch gerade bei kleinen Bildern und besonders Icons mit Aplha-Channel (Transparenz) lässt sich so automatisch minimieren, egal wie das Bild vorher angespeichert wurde.
+                p.page__text Icon:
+                
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/pickup-truck.jpg').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / JPG ohne Optimierung - 11.9kb - Photoshop CC 2017 Baseline Optimzied Stufe 10
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/pickup-truck-min.jpg').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / JPG mit Optimierung - 0.852kb - Optimizilla.com
+                
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/pickup-truck.png').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / PNG mit Transparenz ohne Optimierung - 2.2kb - Photoshop CC 2017 Smallest File Format PNG
+                    
+                div.page__image--wrapper
+                    img(src='../../assets/images/pixel/blog/imageoptimization/pickup-truck-min.png').page__image.page__image--small
+                div.page__imagetitle
+                    p.page__author / PNG mit Transparenz mit Optimierung - 0.806kb - Optimizilla.com
+                    
+                p.page__text Es zeigt sich, JPG eignet sich deutlich besser zur Anzeige großer Motive als PNG, auch in unoptimiertem Zustand. Doch gerade bei kleinen Bildern und besonders bei Icons mit Alpha-Channel (Transparenz) lässt sich so automatisch optimieren und minifizieren. Dabei spielt es keine Rolle, wie die Bilder ursprünglich abgespeichert wurden.
+                
+                p.page__text Mit der Implementierung solcher Prozesse und der Gewohnheit, Bilder automatisch (mindestens aber regelmäßig manuell) zu optimieren, ist schon ein wichtiger Schritt Richtung durchgehend gute Webperformance getan.
                 
                 p.page__text Mögliche nächste Schritte der Bildoptimierung könnten aus Lazyloading und der Implementierung von Sourcesets bestehen. Für erfahrene Entwickler auch die Verwendung von Googles innovativem Bildformat 
                     a(href='https://developers.google.com/speed/webp/' target='_blank') WebP
@@ -96,6 +120,7 @@ html(lang="de")
                 a.page__text(href='https://unsplash.com/photos/u6BPMXgURuI' target='_blank') Photo by Gabriel Gurrola on Unsplash
                 a.page__text(href='https://unsplash.com/photos/CXy_nGO0MOA' target='_blank') Photo by Rodan Can on Unsplash
                 a.page__text(href='https://unsplash.com/photos/HX9fOoD9xN4' target='_blank') Photo by Kace Rodriguez on Unsplash
+                a.page__text(href='https://www.flaticon.com/' target='_blank') Pickup icon made by Freepik.com
 
             section.loadmore.c.loadmore__anime
                 img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
