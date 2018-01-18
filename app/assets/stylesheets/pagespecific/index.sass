@@ -204,8 +204,8 @@ header
         
 // Pagespecific additions to global styling
 
-// drive posters away from each other on hover of container
-//.blog .c // Will be implemented as soon as there are more blog posts
+// drive posters away from each other on hover of container // Will be implemented as soon as there are more blog posts
+.blog .c 
     
     & .poster
         transition: 400ms
@@ -216,14 +216,14 @@ header
             transition: 200ms
 
             &:first-child
-                transform: rotate(-4deg)
+                transform: rotate(-3deg)
 
             &:nth-child(2)
-                margin: 0 0 3em 0;
+                margin-left: -1em
 
             &:last-child
-                transform: rotate(4deg)
-                margin: 0 0 3em 0;
+                transform: rotate(3deg)
+                margin-left: -1em
 
 .instagram
     
