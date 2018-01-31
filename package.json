@@ -1,8 +1,10 @@
 {
   "name": "magellan code & design portfolio website",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Das Portfolio der Magellan - Code & Design",
   "main": "dist/index.html",
+  "author": "Jonathan Arbely",
+  "license": "MIT",
   "dependencies": {
     "chart.js": "^2.7.0",
     "jquery": "^3.2.1"
@@ -23,10 +25,8 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jonathanarbely/bymagellan"
   },
-  "keywords": [],
   "author": "Jonathan Arbely",
-  "license": "SEE LICENSE IN README.md",
   "homepage": "https://bymagellan.co"
 }
