@@ -57,9 +57,18 @@ gulp.task('buildsass', function () {
     .pipe(gulp.dest('dist/assets/stylesheets'));
 });
 
-gulp.task('clean', function () {
-    return gulp.src('dist/!(CNAME)*', {read: false})
+gulp.task('clean-folders', function () {
+    return gulp.src('dist/*/*', {read: false})
         .pipe(clean());
+});
+
+gulp.task('clean-html', function () {
+    return gulp.src('dist/*.html', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('clean', ['clean-folders','clean-html'], function () {
+    console.log('Successfully cleaned dist.');
 });
 
 gulp.task('copyfonts', function () {
