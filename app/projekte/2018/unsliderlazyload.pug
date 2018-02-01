@@ -1,0 +1,42 @@
+include ../../_includes/_pageincludes.pug
+
+doctype html
+html(lang="de")
+    head
+        include ../../_includes/_meta.pug
+        +css()
+        include ../../_includes/_js.pug
+    
+    body
+        header
+            img.heroimage(src='/assets/images/pixel/projects/ull/magellan-ull-header.jpg')
+            include ../../_includes/_nav.pug
+            +nav('page')
+            +title('Unslider Lazyload & Thumbnails', 'Open Source', 'jQuery Plugin', '#startreading')
+            
+        main#startreading
+            
+            .page
+                p.page__author By 
+                    b Jonathan Arbely
+                span.page__date January, 2018
+                span.goldbar
+                p.page__text Extends unslider.js with lazyloading functionality, enables sourceset usage and introduces Thumbnails. Fully opensource and extendable. Powers websites that are used by thousands every month.
+                
+                script(src="//jsfiddle.net/jarbely/ofbLm6cq/2/embed/result/" async)
+                br
+                script(src="https://gist.github.com/jonathanarbely/66905922101d39ce9f07bca178066e1a.js")
+                br
+                p.page__text This Plugin was developed for 
+                    a(href='https://www.interhome.at/') interhome.at
+                    | .
+                br
+                br
+                p.page__text Visit the 
+                    a(href='https://github.com/jonathanarbely/unslider-lazyload', target='_blank') Github Repository
+                
+            section.loadmore.c.loadmore__anime
+                img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
+                a(href='/#impressionen') Zurück zur Übersicht
+    
+    include ../../_includes/_footer.pug
