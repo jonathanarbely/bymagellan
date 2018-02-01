@@ -15,8 +15,14 @@ $(document).ready(function () {
         $('.cat_code').show();
         $(this).addClass('filter__item--active');
     });
+    $('#plugins').click(function(){
+        resetKnowHow();
+        
+        $('.cat_plugins').addClass('flex');
+        $(this).addClass('filter__item--active');
+    });
     function resetKnowHow() {
-        $('.showcase .cat_code, .showcase .cat_design').removeClass('flex').hide();
+        $('.showcase .cat_code, .showcase .cat_design, .showcase .cat_plugins').removeClass('flex').hide();
         $('.showcase .filter__item').removeClass('filter__item--active');
     }
     
