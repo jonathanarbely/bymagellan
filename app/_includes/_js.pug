@@ -7,8 +7,6 @@ script(src='/assets/javascript/nav.min.js' type='text/javascript' async)
 link(rel='stylesheet' tpe='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css' async)  
 script(src='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js' type='text/javascript' async)
 
-script(type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js')
-
 script.
     window.addEventListener("load", function(){
     window.cookieconsent.initialise({
@@ -30,20 +28,3 @@ script.
         "link": "Mehr Erfahren"
       }
     })});
-    
-    // Initialize library
-    $(function(){
-        SE.init({
-            // Parameters obtained by registering an app, these are specific to the SE
-            //   documentation site
-            clientId: 11943,
-            key: 'eZs803WHeY8Ip5tiQzCODA((',
-            // Used for cross domain communication, it will be validated
-            channelUrl: 'https://api.stackexchange.com/docs/proxy',
-            // Called when all initialization is finished
-            complete: function(data) {
-                console.log('SO data ready');
-                console.dir(data);
-            }
-        });
-    }
