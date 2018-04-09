@@ -144,4 +144,19 @@ $(document).ready(function () {
     Waves.attach('.nav__navigation__item');
     Waves.init();
     
+    // Stack Exchange REST-API Call -> Get Stack Overflow Reputation
+    // This functionality offers no real value, I just woke up one day and decided to play around with REST APIs. Now my jsfiddle is cluttered again.
+    var resultElement = $('#testerman');
+    $.ajax({
+        url: 'https://api.stackexchange.com/2.2/users/4033913?order=desc&sort=reputation&site=stackoverflow',
+        method: 'get',
+        dataType: 'json',
+        success: function (response) {
+            resultElement.attr('title','SO Reputation: ' +response.items[0].reputation);
+        },
+        error: function (err) {
+            console.log('SO RESTget failed: ' +err);
+        }
+    });
+    
 });
