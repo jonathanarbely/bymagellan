@@ -72,11 +72,11 @@ header
     &__image
         margin-top: 1em
         width: 100%
+        box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, .09)
         
         &--large
             width: 1000px
             margin-left: -100px
-            box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.09)
             
             @media (max-width: $tablet-landscape)
                 width: 100%
@@ -84,8 +84,9 @@ header
                 
         &--small
             width: auto
-            //margin-left: -100px
-            box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.09)
+            
+        &--noshadow
+            box-shadow: unset
             
         &--wrapper
             position: relative
@@ -139,3 +140,11 @@ header
     .video
         width: 100%
         height: 351px
+
+.contentpage
+    
+    & h1
+        max-width: 802px
+        
+    & .title__cta
+        min-height: 34px

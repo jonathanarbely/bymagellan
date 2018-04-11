@@ -1,0 +1,103 @@
+include ../../_includes/_pageincludes.pug
+
+doctype html
+html(lang="de")
+    head
+        include ../../_includes/_meta.pug
+        +css()
+        include ../../_includes/_js.pug
+    
+    body.contentpage
+        header
+            img.heroimage(src='/assets/images/pixel/projects/interhome/magellan-ih.jpg')
+            include ../../_includes/_nav.pug
+            +nav('page')
+            +title('Interhome', 'Relaunch der Webpräsenz des Anbieters von über 34.000 qualitätsgeprüften Ferienhäuser und -wohnungen auf der ganzen Welt.', 'Frontend, Design, Performance & Workflow', '#startreading')
+            
+        main#startreading
+            
+            .page
+                p.page__author By 
+                    b Jonathan Arbely
+                span.page__date April, 2018
+                span.goldbar
+                p.page__text Interhome bietet über 33.000 qualitätsgeprüfte Ferienhäuser und -wohnungen online an. Zusammen mit dem Interchalet Team in Freiburg war ich maßgeblich an der Umsetzung der neuen mobiltauglichen Website beteiligt, welche iterativ und agil mit SCRUM umgesetzt wurde.
+                
+                p.page__text Mein Beitrag bestand aus der Gestaltung und Umsetzung von Teilen der Startseite, dem Großteil der Suchseite (Trefferseite) sowie der Detailseite. Jede Seite wurde iterativ Modul für Modul von mir auf Basis von Anforderungen und Feedback gestaltet und präsentiert. Nach Abnahme der Screendesigns wurden die grafischen Konzepte zunächst als statische HTML-Protoypen realisiert und anschließend mit JavaScript alle Frontendinteraktionen programmatisch umgesetzt. Auch hier unter laufender Integration von Feedback und Absprache mit den Teams in Freiburg (DE) und Glattbrugg (CH).
+                br
+                b.page__text Pug.js > HTML
+                p.page__text Um einen effizienteren und modularen HTML-Workflow zu erzielen, schlug ich die Verwendung von 
+                    a(href='https://pugjs.org/api/getting-started.html') PUG.js
+                    |  vor, welches HTML um Includes, Mixins, Variablen, Schleifen und Abfragen erweitert und aus HTML, einer Beschreibungssprache (Markup-Language), eine Programmiersprache macht. Diesen Vorschlag konnte ich mit Erfolg durchsetzen.
+                script(src="https://gist.github.com/jonathanarbely/6b0396f2181e8d670ba4b65e3ae4629f.js")
+                
+                b.page__text Einheitlicher Workflow durch Gulp.js
+                p.page__text Um zwischen den verschiedenen (und ggf. neu hinzukommenden) Entwicklern und Designern einen einheitlichen Workflow zu schaffen, schlug ich aus eigener Initiative das Workflow CLI-Tool Gulp.js vor. Durch ein einheitliches Set aus Befehlen und Buildprozessen kann die Arbeitsweise und die verwendeten Tools vereinheitlicht werden und modular weiterentwickelt und um Plugins erweitert werden. Und das plattformunabhängig (Windows, MacOS, Linux dist. kompatibel). Auch dieser Vorschlag wurde übernommen.
+                script(src="https://gist.github.com/jonathanarbely/2560005d024bb6b1b7d7c77f659f0aa0.js")
+                p.page__text So ist es nun beispielsweise möglich, einen lokalen Entwicklungsserver zu starten, automatisiert einen Proxytunnel zu öffnen, um auf verschiedenen Geräten zu testen, SCSS zu kompilieren und CSS zu komprimieren sowie einiges mehr.
+                br
+                b.page__text Frontendlogik mit JavaScript
+                p.page__text Durch meine Fähigkeit und Erfahrung zur Umsetzung von interaktiven Modulen und Elementen im Frontend mit JavaScript wurde mir die Umsetzung einiger performance- und Usabilitykritischer Module anvertraut.
+                p.page__text 1. Omnibox - Um die UX-Vorteile eines Dropdown-Selektors mit der Schnelligkeit einer Textsuche zu vereinen entwickelte ich eine universell Einsetzbare Omnibox, welche passend zur Eingabe im Textfeld relevante Vorschläge anzeigen kann. Dabei arbeitete ich mit statischen Daten, die später vom Entwicklerteam in Freiburg mit Echtdaten aus der Datenbank erweitert wurde.
+                p.page__text 2. Datepicker - Basierend auf 
+                    a(href='https://github.com/longbill/jquery-date-range-picker' target='_blank') Longbills Daterangepicker
+                    |  und passend zu den Anforderungen integrierte ich das Plugin in die entsprechenden Seiten und erweiterte u. a. die Funktionalität der Tooltips, damit diese verschiedene Zustände annehmen können. So werden beim hover Zustand nicht nur die Anzahl der Nächte berechnet und angezeigt, sondern auch UX steigernde, anweisende Informationen wie "Bitte wählen Sie nun das Abreisedatum aus" oder "Keine Anreise möglich". 
+                    a(href='https://www.interhome.at/oesterreich/kaernten/sirnitz-hochrindl/ferienhaus-sonnkegel-at9571.110.1/') Probieren Sie es aus!
+                p.page__text 3. Bildergalerie - Die Anforderungen an den neuen Bildslider spiegelten die ambitionierten Ziele des ganzen Projekts wieder. Schnelle Interaktion, effizienter Code, erweiterbare Funktionalität und die Einsparung von Bandbreite waren Basisanforderungen an dieses Modul. Nach der Umsetzung des Designs in Photoshop und der statischen Umsetzung des Prototyps, entwickelte ich eine 611 Zeilen lange jQuery-Erweiterung für das beliebte Unslider.js Plugin, welches dieses um Lazyloading, diversen Performanceoptimierungen und einer Thumbnail-Funktionalität erweitert. Diese Erweiterung ist als 
+                    a(href='https://github.com/jonathanarbely/unslider-lazyload' target='_blank') Open Source Projekt auf GitHub zu finden.
+                script(src="//jsfiddle.net/jarbely/ofbLm6cq/2/embed/result/" async)
+                p.page__text 4. UI Elemente - Weniger fordernd, aber auch wichtig war die Programmierung von diversen Interfaceelementen über die gesamte Website verteilt. Von der gesamten Filtersuche auf der Suchergebnisseite auf der linken Seite über die Hauptnavigation mit Flyout bis zur mitscrollenden Sidebar der Detailseite basiert eine maßgebliche Menge aller möglichen Frontendinteraktionen auf meinem Code.
+                br
+                b.page__text Enough Tech Talk - Iteratives Design!
+                p.page__text Basierend auf der Marke, der Zielgruppe und den Vorstellungen & Wünschen des Teams entwarf ich zunächst eine alternative Designsprache zu einem bereits existierenden Entwurf. Modern (und möglichst minimalistisch) zu designen ist eine Herausforderung, wenn das Sicherheitsgefühl des Kunden, einfache, Konventionen befolgende Bedienkonzepte und eine große Menge an Informationen im Vordergrund stehen. Trotzdem sollte das neue Design kein Kompromiss, sondern das neue unverkennbare Gesicht der Marke Interhome im Web sein und ein entsprechendes Look & Feel vermitteln. Mein Konzept fand gefallen und entwickelte sich iterativ durch Feedbackrunden zu dem, was heute online sichtbar ist und Millionen von Nutzern jährlich ab sofort mit Ihrer Lieblingsmarke zur Buchung von Ferienresidenzen verbinden.
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresult.PNG').page__image.page__image--noshadow
+                div.page__imagetitle
+                    p.page__author / Finales Design der Suchergebnisse
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresult-concept.png').page__image.page__image--noshadow
+                div.page__imagetitle
+                    p.page__author / Frühes Konzept eines Suchergebnisses
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresult-concept2.png').page__image.page__image--noshadow
+                div.page__imagetitle
+                    p.page__author / Frühes Konzept eines Suchergebnisses
+                p.page__text Ein professioneller Styleguide ist in Arbeit, damit auch nach meinem Ausscheiden aus dem Projekt ein einheitliches visuelles Gesamtbild fortgeführt wird.
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresults.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Finales Design der Trefferseite (Suchergebnisseite)
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresults-concept.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Frühes Konzept der Trefferseite (Suchergebnisseite)
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresults-topbar-concept.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Konzept der Topbar auf der Trefferseite
+                img(src='../../assets/images/pixel/projects/interhome/ih-searchresults-topbar-concept2.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Alternatives Konzept der Topbar auf der Trefferseite
+                    
+                img(src='../../assets/images/pixel/projects/interhome/ih-detailpage.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Finales Design der Detailseite
+                img(src='../../assets/images/pixel/projects/interhome/ih-detailpage-scrolled.png').page__image.page__image--large
+                div.page__imagetitle
+                    p.page__author / Finales Design der Detailseite im gescrollten Zustand mit sichtbarer Topbar
+                
+                br
+                b.page__text Ikonographie
+                p.page__text Modern & deutlich unterstützen die einheitlichen Icons die schnelle Erfassung von relevanten oder gesuchten Informationen und Werten die Ästhetik weiter auf:
+                img(src='../../assets/images/pixel/projects/interhome/ih-iconset.png').page__image.page__image.page__image--noshadow
+                br
+                script(src="https://gist.github.com/jonathanarbely/59677a8c28292ef74d65dd3f2470c9ae.js")
+                div.page__imagetitle
+                    p.page__author / Einbindung der Icons als eigenständige Klassen nach BEM durch SASS Maps
+                br
+                b.page__text TLDR
+                p.page__text Das Projekt hat mich in all meinen Kompetenzbereichen gefordert. Dank meiner interdisziplinären Erfahrung konnte ich alle Aufgabenstellungen und Hürden meistern und darüber hinaus meine eigenen Verbesserungsvorschläge und Feedback einbringen. Dadurch entstand ein aktives und offenes Arbeitsverhältnis und schließlich ein besseres Endprodukt.
+                p.page__text Notiz: Dieser Beitrag kann nur einen kleinen Teil des Projekts darstellen. Codeausschnitte dienen als Beispiele und sind aus dem Kontext gehoben.
+                br
+                p.page__text
+                    a(href='https://www.interhome.at', target='_blank') Besuchen Sie interhome.at!
+                
+            section.loadmore.c.loadmore__anime
+                img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
+                a(href='/#impressionen') Zurück zur Übersicht
+    
+    include ../../_includes/_footer.pug
