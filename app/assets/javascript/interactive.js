@@ -133,6 +133,11 @@ $(document).ready(function () {
         $(this).removeClass('quote__customerbranding--inactive');
         $('.quote--jsg').removeClass('hide');
     });
+    $('.quote__customerbranding--ic').click(function(){
+        resetTestimonials();
+        $(this).removeClass('quote__customerbranding--inactive');
+        $('.quote--ic').removeClass('hide');
+    });
     
     function resetTestimonials() {
         $('.quote').addClass('hide');
