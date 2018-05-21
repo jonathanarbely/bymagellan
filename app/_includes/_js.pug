@@ -9,6 +9,14 @@ script(src='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieco
 
 script.
     window.addEventListener("load", function(){
+    
+    // Randomize Headerimage
+    var myArray = [
+      "url('/assets/images/pixel/magellanmedia-hero.jpg')",
+      "url('/assets/images/pixel/magellanmedia-hero-ii.jpg')"
+    ];
+    $('header').css('background-image',myArray[Math.floor(Math.random()*myArray.length)]);
+    
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
