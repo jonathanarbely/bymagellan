@@ -238,6 +238,11 @@ header
     
     & .poster__showcase
         background-image: url('../../images/pixel/blog/preview/magellan-imagemin.png')
+        
+#lrnngsntddct
+    
+    & .poster__showcase
+        background-image: url('../../images/pixel/blog/preview/magellan-lrnngsntddct.png')
      
 // Testimonials
 
@@ -254,20 +259,21 @@ header
     & .poster
         transition: 400ms
     
-    &:hover
-        
-        & .poster
-            transition: 200ms
+    @media (min-width: 1201px)    
+        &:hover
 
-            &:first-child
-                transform: rotate(-3deg)
+            & .poster
+                transition: 200ms
 
-            &:nth-child(2)
-                margin-left: -1em
+                &:first-child
+                    transform: rotate(-3deg)
 
-            &:last-child
-                transform: rotate(3deg)
-                margin-left: -1em
+                &:nth-child(2)
+                    margin-left: -1em
+
+                &:last-child
+                    transform: rotate(3deg)
+                    margin-left: -1em
 
 .instagram
     

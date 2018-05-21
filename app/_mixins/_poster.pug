@@ -1,4 +1,4 @@
-mixin poster(id, meta, title, text, link, linkText, additionalClass)
+mixin poster(id, meta, title, text, link, linkText, additionalClass, externalLink)
     div.poster(id=id)
         div.poster__showcase
         div.poster__description
@@ -8,4 +8,7 @@ mixin poster(id, meta, title, text, link, linkText, additionalClass)
             if link
                 div.poster__description__anchor__wrapper
                     img.icon(src='assets/images/vector/iconset/eyeglasses.svg')
-                    a.poster__description__anchor(href= link)= linkText
+                    if externalLink
+                        a.poster__description__anchor(href= link target='_blank')= linkText
+                    else
+                        a.poster__description__anchor(href= link)= linkText
