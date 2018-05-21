@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     minify = require('gulp-minify');
 
 var autoprefixerOptions = {
-  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+  browsers: [   '>0.25%', 'not ie 11', 'not op_mini all']
 };
 
 gulp.task('hello', function () {
