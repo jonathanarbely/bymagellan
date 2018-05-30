@@ -9,31 +9,23 @@ script(src='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieco
 
 script.
     window.addEventListener("load", function(){
-    
-    // Randomize Headerimage
-    var myArray = [
-      "url('/assets/images/pixel/magellanmedia-hero.jpg')",
-      "url('/assets/images/pixel/magellanmedia-hero-ii.jpg')",
-      "url('/assets/images/pixel/magellanmedia-hero-iii.jpg')"
-    ];
-    $('header').css('background-image',myArray[Math.floor(Math.random()*myArray.length)]);
-    
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#ffffff",
-          "text": "#595959"
-        },
-        "button": {
-          "background": "transparent",
-          "border": "#ffcc00",
-          "text": "#ffcc00"
-        }
-      },
-      "position": "bottom-right",
-      "content": {
-        "message": "Wie bei fast jeder anderen Website auch, kommen hier Cookies zum Einsatz.",
-        "dismiss": "Okay",
-        "link": "Mehr Erfahren"
-      }
-    })});
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#ffffff",
+              "text": "#595959"
+            },
+            "button": {
+              "background": "transparent",
+              "border": "#ffcc00",
+              "text": "#ffcc00"
+            }
+          },
+          "position": "bottom-right",
+          "content": {
+            "message": "Wie bei fast jeder anderen Website auch, kommen hier Cookies zum Einsatz.",
+            "dismiss": "Okay",
+            "link": "Mehr Erfahren"
+          }
+        })
+    });
