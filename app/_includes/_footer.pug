@@ -50,16 +50,21 @@ footer.c
             a(href='/') Magellan: Code & Design Consulting - est. 2013
             span.liluzivert.liluzivert--s
             a(href='https://github.com/jonathanarbely' target='_blank' title='Der gesamte Code dieser Website ist OpenSource und in einem Git-Repository einsehbar.')
-                img(src='/assets/images/vector/github.svg')
+                svg
+                    use(xlink:href='#github')
             
         div.footer__more
             a(href='https://medium.com/@jonathanarbely' target='_blank')
-                img(src='/assets/images/vector/medium.svg')
-            a#so(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')
-                img(src='/assets/images/vector/so.svg')
+                svg
+                    use(xlink:href='#medium')
+            a#sorep(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')
+                svg
+                    use(xlink:href='#so')
             a(href='https://dribbble.com/jarbely' target='_blank')
-                img(src='/assets/images/vector/dribbble.svg')
+                svg
+                    use(xlink:href='#dribbble')
             a(href='https://www.instagram.com/jonathanoffroad' target='_blank')
-                img(src='/assets/images/vector/instagram.svg')
+                svg
+                    use(xlink:href='#instagram')
             
     include _plasso.pug

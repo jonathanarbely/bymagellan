@@ -153,7 +153,7 @@ $(document).ready(function () {
     // This functionality offers no real value, I just woke up one day and decided to play around with REST APIs. Now my jsfiddle is cluttered again.
     // The call is only executed when hovering or tapping .footer__more
     $('.footer__more').one('mouseenter', function(){
-        var resultElement = $('#so');
+        var resultElement = $('#sorep');
         $.ajax({
             url: 'https://api.stackexchange.com/2.2/users/4033913?order=desc&sort=reputation&site=stackoverflow',
             method: 'get',
