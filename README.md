@@ -1,4 +1,4 @@
-# Magellan - Code & Design
+# Magellan - Code & Design Consulting
 
 This repository contains the portfolio found at [bymagellan.co](https://bymagellan.co)
 
@@ -69,12 +69,9 @@ If you want to propose a push request, do so via GitHub.
 ## Roadmap & Todos
 
 * HTML lang var
-* Implement Cookie Notification
 * substitute br-Tags
-* improve responsiveness through dynamic media queries
 * EN version
 * Lazyload images using own plugin (that will be published very very soon)
 * img -> pictures
 * improve JS
 * Fix IE11
-* Minimize CSS and JS
