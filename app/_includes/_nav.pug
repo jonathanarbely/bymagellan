@@ -2,7 +2,8 @@ mixin nav(page, invert)
     if page=='index'
         section.nav
             a(href='#')
-                img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
+                svg.nav__brand
+                    use(xlink:href='#magellan-brand')
             //-img.nav__brand--wordmark.hide(src='/assets/images/pixel/magellanmedia-wordmark.png')
             nav.nav__navigation
                 a.nav__navigation__item.btn.btn--glass(href='#kompetenzen') Kompetenzen

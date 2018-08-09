@@ -10,8 +10,10 @@ html(lang="de")
         include _includes/_js.pug
     
     body
+        include _includes/_globalbody.pug
+    
         header
-            include _includes/_nav.pug
+            include /_includes/_nav.pug
             +nav('page', true)
             +title('Impressum & Datenschutz', '§', 'DSVGO aktualisiert', '#startreading', false, false, true)
             
