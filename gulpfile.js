@@ -99,6 +99,10 @@ gulp.task('copyJS', function () {
     gulp.src(['app/assets/javascript/**/!(_)*.js']).pipe(gulp.dest('dist/assets/javascript'));
 });
 
+gulp.task('copySW', function () {
+    gulp.src(['app/worker.js']).pipe(gulp.dest('dist/'));
+});
+
 gulp.task('copyPlugins', function () {
     gulp.src(['app/assets/plugins/**/*']).pipe(gulp.dest('dist/assets/plugins'));
 });
@@ -131,7 +135,7 @@ gulp.task('default', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','co
     console.log('Development env. engaged! 〽️');
 });
 
-gulp.task('build', ['pug','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','compress', 'buildsass'], function () {
+gulp.task('build', ['pug','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','compress', 'buildsass', 'copySW'], function () {
     console.log('Successfully finished build! Ready to set sail. ⚓');
 });
 
