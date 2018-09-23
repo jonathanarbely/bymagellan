@@ -299,10 +299,10 @@ html(lang="de")
                         use(xlink:href='#testimonials--jsg')
                 br
                 br
-                //br
-                //br
-                //hr
-                //section.instagram
+                //-br
+                //-br
+                //-hr
+                //-section.instagram
                     h3 Instagram
                     div.subtitle__wrapper
                         span.subtitle Feed.
@@ -340,6 +340,20 @@ html(lang="de")
                     .c  
                         a.portfolio__content__cta.btn.btn--light(href='https://www.instagram.com/jonathanoffroad' target='_blank') Follow (730+)
                 
-                script(async defer src="https://platform.instagram.com/en_US/embeds.js")
+                //-script(async defer src="https://platform.instagram.com/en_US/embeds.js")
+                
+        
         
         include _includes/_footer.pug
+        
+        script.
+            if ('serviceWorker' in navigator) {
+              console.log('CLIENT: service worker registration in progress.');
+              navigator.serviceWorker.register('/worker.js').then(function() {
+                console.log('CLIENT: service worker registration complete.');
+              }, function() {
+                console.log('CLIENT: service worker registration failure.');
+              });
+            } else {
+              console.log('CLIENT: service worker is not supported.');
+            }
