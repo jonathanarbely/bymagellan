@@ -131,7 +131,7 @@ gulp.task('compress', function() {
 
 // [] are dependencies which are run before the actual task
 // if a task returns something, it can be used in the next task
-gulp.task('default', ['pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
+gulp.task('default', ['c','pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
     console.log('Development env. engaged! 〽️');
 });
 
