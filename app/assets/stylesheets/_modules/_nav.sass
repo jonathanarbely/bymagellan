@@ -21,11 +21,6 @@
             
         @media (max-width: 370px)
             width: 85px
-        
-        //&--wordmark
-            width: 224px
-            height: 13px
-            margin-top: 24px
     
     &__navigation
         height: 75px
@@ -55,9 +50,9 @@
                 background-color: rgba(255, 255, 255, 0.07)
                 @include animate()
 
-            &:last-child
+            &--cta
                 margin: 0 0 0 1.5em
-                text-transform: lowercase
+                text-transform: none
                 letter-spacing: 1px
             
                 @media (max-width: 520px)
@@ -67,10 +62,13 @@
                     @include animate()
                     background-color: $darkness
                 
-            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(5)
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
             
-                @media (max-width: 940px)
+                @media (max-width: 920px)
                     display: none
+        
+        & .lang
+            margin-left: 2em;
 
     &--fixed
         position: fixed
@@ -91,5 +89,8 @@
             &__item
                 color: #2f2f2f
                 
-                &:last-child:hover
+                &--cta:hover
                     color: white
+                
+                &:last-child
+                    display: none

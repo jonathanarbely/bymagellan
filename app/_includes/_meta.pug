@@ -1,5 +1,3 @@
--var pageTitle = 'Magellan Code & Design Consulting - Premium Webdienstleistungen, Apps, Websites & Printdesign aus Freiburg'
-
 // Global site tag (gtag.js) - Google Analytics
 script(src='https://www.googletagmanager.com/gtag/js?id=UA-50961830-5', async)
 script.
@@ -7,19 +5,30 @@ script.
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-50961830-5', {'anonymize_ip': true});
-
-title #{pageTitle}
+    
 meta(charset='utf-8')
 meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
 
-meta(name='description' content='Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten.')
+mixin meta(lang)
+    
+    if !lang
+        title Magellan Code & Design Consulting - Premium Webdienstleistungen, Apps, Websites & Printdesign aus Freiburg
 
-meta(name='keywords' content='webentwicklung, frontend, backend, print, webdesign, design, freiburg, stuttgart, workflow, agentur, medienagentur, gulpjs, pug')
+        meta(name='description' content='Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten.')
 
-//-meta(property='og:image' content='/og-image.png')
+        meta(name='keywords' content='webentwicklung, frontend, backend, print, webdesign, design, freiburg, workflow, agentur, medienagentur, gulpjs, pug, html, css')
 
-meta(property='og:description' content='Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten.')
+        meta(property='og:description' content='Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten.')
+        
+    else
+        title Magellan Code & Design Consulting - Professional Web- & App-Development and Design
 
+        meta(name='description' content='The goal and aspiration of Magellan is to provide best-in-class webdevelopment, design & consulting services.')
+
+        meta(name='keywords' content='webdevelopment, frontend, backend, print, webdesign, design, freiburg, workflow, agency, media, gulpjs, pug, html, css')
+
+        meta(property='og:description' content='The goal and aspiration of Magellan is to provide best-in-class webdevelopment, design & consulting services.')
+        
 //-link(rel="shortcut icon" href="/assets/images/pixel/favicon.ico" type="image/x-icon")
 //-link(rel="icon" href="/assets/images/pixel/favicon.ico" type="image/x-icon")
 link(rel="icon" type="image/png" href="/assets/images/pixel/favicon.png")
