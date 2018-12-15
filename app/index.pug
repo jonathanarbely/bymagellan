@@ -9,6 +9,7 @@ doctype html
 html(lang="de")
     head
         include _includes/_meta.pug
+        +meta()
         +css('index')
         include _includes/_js.pug
         script(src='/assets/plugins/jquery-smoothscroll/jquery-smoothscroll.min.js' type='text/javascript' defer)
