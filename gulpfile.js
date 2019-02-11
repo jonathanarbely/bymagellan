@@ -67,7 +67,12 @@ gulp.task('clean-html', function () {
         .pipe(clean());
 });
 
-gulp.task('clean', ['clean-folders','clean-html'], function () {
+gulp.task('clean-js', function () {
+    return gulp.src('dist/*.js*', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('clean', ['clean-folders','clean-html','clean-js'], function () {
     console.log('Successfully cleaned dist.');
 });
 
@@ -103,6 +108,10 @@ gulp.task('copySW', function () {
     gulp.src(['app/worker.js']).pipe(gulp.dest('dist/'));
 });
 
+gulp.task('copyManifest', function () {
+    gulp.src(['app/manifest.json']).pipe(gulp.dest('dist/'));
+});
+
 gulp.task('copyPlugins', function () {
     gulp.src(['app/assets/plugins/**/*']).pipe(gulp.dest('dist/assets/plugins'));
 });
@@ -135,7 +144,7 @@ gulp.task('default', ['c','pug','sass','copyfonts','copyPNG','copyJPG','copySVG'
     console.log('Development env. engaged! 〽️');
 });
 
-gulp.task('build', ['pug','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','compress', 'buildsass', 'copySW'], function () {
+gulp.task('build', ['pug','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','compress', 'buildsass', 'copySW', 'copyManifest'], function () {
     console.log('Successfully finished build! Ready to set sail. ⚓');
 });
 
