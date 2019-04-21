@@ -21,7 +21,7 @@ html(lang="de")
             .gradient--top
             include _includes/_nav.pug
             +nav('index')
-            +title('Ihr Projekt,', '📱 Professionelle Web- & Appentwicklung / 💎 Pixelperfect UI- & Screendesign / 📚 Printdesign / ⚡ Workflow- & Performance-Consulting / 🔎 SEO / 👨🏼‍💻 On Site Presence', 'Meine Projekte erreichen jährlich Millionen von Nutzern weltweit', '#kompetenzen', 'meine Ambition.', true, '')
+            +title('Ihr Projekt,', 'Professionelle Web- & Appentwicklung / Pixelperfect UI- & Screendesign / Printdesign / Workflow- & Performance-Consulting / SEO / On Site Presence', '⚡ Meine Projekte erreichen jährlich Millionen von Nutzern weltweit.', '#kompetenzen', 'meine Ambition.', true, '')
             .gradient--bottom
         script.
             // Randomize Headerimage
@@ -41,34 +41,45 @@ html(lang="de")
                     a.filter__item#design(href='#kompetenzen') Print &amp; Screendesign
                 br
                 br
-                br
-                br
                 div.category#skillsDev
+                    
                     div.category__item.category__item--active#switchFrontend
                         svg
                             use(xlink:href='#magellan-iconset--frontend')
                         h4 Frontend
                         span.category__item__meta Entwicklung
                         span.goldbar
+                        
+                    div.category__item#switchApp
+                        svg
+                            use(xlink:href='#magellan-iconset--app')
+                        h4 App
+                        span.category__item__meta Entwicklung
+                        span.goldbar
+                    
                     div.category__item#switchBackend
                         svg
                             use(xlink:href='#magellan-iconset--backend')
                         h4 Backend
                         span.category__item__meta Entwicklung
                         span.goldbar
+                    
                     div.category__item#switchPerformance
                         svg
                             use(xlink:href='#magellan-iconset--performance')
                         h4 Performance
                         span.category__item__meta Consulting
                         span.goldbar
+                
                 div.category.category--inactive#skillsDesign
+                    
                     div.category__item.category__item--active#switchDesign
                         svg
                             use(xlink:href='#magellan-iconset--frontend')
                         h4 Screendesign
                         span.category__item__meta & UI
                         span.goldbar
+                    
                     div.category__item#switchPrint
                         svg
                             use(xlink:href='#magellan-iconset--seo')
@@ -76,9 +87,10 @@ html(lang="de")
                         span.category__item__meta Design
                         span.goldbar
                 br
-                br
                 div.c.c--overflow
                     +card('cardFrontend', 'Webentwicklung', '', 'Frontend', 'Ich baue responsive, wartbare, hochkompatible und performante Frontenderlebnisse für das moderne Web. Dazu nutze ich ein großes Spektrum modernster Webtechnologien wie Pug (HTML), SASS (+BEM), AngularJS, jQuery und professionelle Workflow-/ Codeversionierungstools wie NPM, Gulp und Git.', '', '')
+                    
+                    +card('cardApp', 'App Entwicklung', '', 'Native Mobile Apps', 'Ich programmiere native & intuitive mobile Apps für iOS, Android und Windows mithilfe des beliebten Ionic Frameworks und der großen Anzahl verfügbarer nativer Plugins. Dadurch wird größtmögliche Kompatibilität mit OS-nativen User Experience Features und Gewohnheiten sichergestellt. Und all das mit nur einer Codebase. Vom Whiteboard bis zu den Appstores - ein nahtloser Prozess.', '', '', 'card--inactive')
                     
                     +card('cardBackend', 'Web- & Appentwicklung', '', 'Backend', 'Ich baue Content Management Systeme, serverseitige Software sowie Erweiterungen & Themes für WordPress nach Maß. Dafür setze ich auf PHP und mySQL. Progressive Web-Apps, SPAs und hybride Applikationen plane und realisiere ich auf Basis des ausgezeichneten Backends Firebase sowie der MVC Frontend-Architektur AngularJS und auf Wunsch dem Ionic Framework.', '', '', 'card--inactive')
                     

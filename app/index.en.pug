@@ -21,7 +21,7 @@ html(lang="en")
             .gradient--top
             include _includes/_nav.pug
             +nav('index', 'en')
-            +title('Your project,', '📱 Professional Web- & App-Development / 💎 Pixelperfect UI- & Screendesign / 📚 Printdesign / ⚡ Workflow- & Performance-Consulting / 🔎 SEO / 👨🏼‍💻 On Site Presence', 'I have designed and built websites that have reached millions.', '#impressionen', 'my Ambition.', true, '')
+            +title('Your project,', 'Professional Web- & App-Development / Pixelperfect UI- & Screendesign / Printdesign / Workflow- & Performance-Consulting / SEO / On Site Presence', '⚡ I have designed and built websites that have reached millions aroung the globe.', '#impressionen', 'my Ambition.', true, '')
             .gradient--bottom
         script.
             // Randomize Headerimage
@@ -41,34 +41,45 @@ html(lang="en")
                     a.filter__item#design(href='#kompetenzen') Print &amp; Screendesign
                 br
                 br
-                br
-                br
                 div.category#skillsDev
+                    
                     div.category__item.category__item--active#switchFrontend
                         svg
                             use(xlink:href='#magellan-iconset--frontend')
                         h4 Frontend
                         span.category__item__meta Development
                         span.goldbar
+                    
+                    div.category__item#switchApp
+                        svg
+                            use(xlink:href='#magellan-iconset--app')
+                        h4 App
+                        span.category__item__meta Development
+                        span.goldbar
+                    
                     div.category__item#switchBackend
                         svg
                             use(xlink:href='#magellan-iconset--backend')
                         h4 Backend
                         span.category__item__meta Development
                         span.goldbar
+                    
                     div.category__item#switchPerformance
                         svg
                             use(xlink:href='#magellan-iconset--performance')
                         h4 Performance
                         span.category__item__meta Consulting
                         span.goldbar
+                
                 div.category.category--inactive#skillsDesign
+                    
                     div.category__item.category__item--active#switchDesign
                         svg
                             use(xlink:href='#magellan-iconset--frontend')
                         h4 Screendesign
                         span.category__item__meta & UI
                         span.goldbar
+                    
                     div.category__item#switchPrint
                         svg
                             use(xlink:href='#magellan-iconset--seo')
@@ -76,9 +87,10 @@ html(lang="en")
                         span.category__item__meta Design
                         span.goldbar
                 br
-                br
                 div.c.c--overflow
                     +card('cardFrontend', 'Webdevelopment', '', 'Frontend', 'I develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards I make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), AngularJS, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
+                    
+                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'I code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native PlugIns. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
                     
                     +card('cardBackend', 'Web- & Appdevelopment', '', 'Backend', 'I build Content Management Systems, serverside Software as well as Plugins & Themes for WordPress. I develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MVC architecture style frameworks like AngularJS and Ionic.', '', '', 'card--inactive')
                     

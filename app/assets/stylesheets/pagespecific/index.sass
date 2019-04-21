@@ -21,6 +21,15 @@ h1
         background-color: #282b31
         background-image: url('../../images/pixel/services/magellan-frontend.png')
         
+#cardApp
+    
+    & .card__description__tag
+        color: #4b6152
+    
+    & .card__showcase
+        background-color: #4b6152
+        background-image: url('../../images/pixel/services/magellan-app.png')
+        
 #cardBackend
     
     & .card__description__tag
@@ -59,6 +68,16 @@ h1
         
 .cat_design, .cat_plugins
     display: none
+    
+#skillsDev, #skillsDesign
+    @media (max-width: 582px)
+        transform: scale(.9);
+        
+    @media (max-width: 478px)
+        transform: scale(.72);
+        
+    @media (max-width: 360px)
+        transform: scale(.62);
 
 // Projects - Code
 
