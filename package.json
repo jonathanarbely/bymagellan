@@ -6,19 +6,19 @@
   "author": "Jonathan Arbely",
   "license": "MIT",
   "dependencies": {
-    "chart.js": "^2.7.3",
-    "jquery": "^3.2.1"
+    "chart.js": "^2.8.0",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-minify": "^3.1.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.1"
+    "gulp-sourcemaps": "^2.6.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
