@@ -44,48 +44,54 @@ html(lang="en")
                 div.category#skillsDev
                     
                     div.category__item.category__item--active#switchFrontend
-                        svg
-                            use(xlink:href='#magellan-iconset--frontend')
-                        h4 Frontend
-                        span.category__item__meta Development
-                        span.goldbar
+                        a(href='#kompetenzen')
+                            svg
+                                use(xlink:href='#magellan-iconset--frontend')
+                            h4 Frontend
+                            span.category__item__meta Development
+                            span.goldbar
                     
                     div.category__item#switchApp
-                        svg
-                            use(xlink:href='#magellan-iconset--app')
-                        h4 App
-                        span.category__item__meta Development
-                        span.goldbar
+                        a(href='#kompetenzen')
+                            svg
+                                use(xlink:href='#magellan-iconset--app')
+                            h4 App
+                            span.category__item__meta Development
+                            span.goldbar
                     
                     div.category__item#switchBackend
-                        svg
-                            use(xlink:href='#magellan-iconset--backend')
-                        h4 Backend
-                        span.category__item__meta Development
-                        span.goldbar
+                        a(href='#kompetenzen')
+                            svg
+                                use(xlink:href='#magellan-iconset--backend')
+                            h4 Backend
+                            span.category__item__meta Development
+                            span.goldbar
                     
                     div.category__item#switchPerformance
-                        svg
-                            use(xlink:href='#magellan-iconset--performance')
-                        h4 Performance
-                        span.category__item__meta Consulting
-                        span.goldbar
+                        a(href='#kompetenzen')
+                            svg
+                                use(xlink:href='#magellan-iconset--performance')
+                            h4 Performance
+                            span.category__item__meta Consulting
+                            span.goldbar
                 
                 div.category.category--inactive#skillsDesign
                     
                     div.category__item.category__item--active#switchDesign
-                        svg
-                            use(xlink:href='#magellan-iconset--frontend')
-                        h4 Screendesign
-                        span.category__item__meta & UI
-                        span.goldbar
+                        a(href='#kompetenzen')
+                            svg
+                                use(xlink:href='#magellan-iconset--frontend')
+                            h4 Screendesign
+                            span.category__item__meta & UI
+                            span.goldbar
                     
                     div.category__item#switchPrint
-                        svg
-                            use(xlink:href='#magellan-iconset--seo')
-                        h4 Print
-                        span.category__item__meta Design
-                        span.goldbar
+                        a(href='#kompetenzen')
+                            svg
+                                use(xlink:href='#magellan-iconset--seo')
+                            h4 Print
+                            span.category__item__meta Design
+                            span.goldbar
                 br
                 div.c.c--overflow
                     +card('cardFrontend', 'Webdevelopment', '', 'Frontend', 'I develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards I make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), AngularJS, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
@@ -211,27 +217,30 @@ html(lang="en")
                     span.subtitle Whether you're representing an international corporation or a regional club, your project is my ambition.
                         br
                 div.subtitle__wrapper
-                    .gps
-                        .pulse
-                        .dot
-                    span.subtitle.ruby Currently only available on request via E-Mail or WhatsApp
+                    .gps__wrapper.flex
+                        .gps
+                            .pulse
+                            .dot
+                        span.subtitle.ruby Currently only available on request via E-Mail or WhatsApp
                 br
                 br
                 br
                 br
                 div.category
                     div.category__item.category__item--active#switchMail
-                        svg
-                            use(xlink:href='#magellan-iconset--mail')
-                        h4 E-Mail
-                        span.category__item__meta Address
-                        span.goldbar
+                        a(href='#kontakt')
+                            svg
+                                use(xlink:href='#magellan-iconset--mail')
+                            h4 E-Mail
+                            span.category__item__meta Address
+                            span.goldbar
                     div.category__item#switchPhone
-                        svg
-                            use(xlink:href='#magellan-iconset--mobilephone')
-                        h4 Phone
-                        span.category__item__meta & Whatsapp
-                        span.goldbar
+                        a(href='#kontakt')
+                            svg
+                                use(xlink:href='#magellan-iconset--mobilephone')
+                            h4 Phone
+                            span.category__item__meta & Whatsapp
+                            span.goldbar
                 br
                 br
                 br
@@ -280,7 +289,7 @@ html(lang="en")
                     span.loadmore Zum Blog
                     img.icon.icon--s.icon--rtl(src='assets/images/vector/iconset/next.svg')
             hr
-            section.testimonials
+            section.testimonials#testimonials
                 h3 Testimonials
                 div.subtitle__wrapper
                     span.subtitle What Companies think about my work
@@ -292,6 +301,8 @@ html(lang="en")
                 br
                 div.c.c--overflow.quote.quote--tariffuxx.hide
                     +card('', 'Ingo Just - Founder & CEO', '10/2017', 'Tariffuxx.de', 'Together with Magellan, we planned and realized our first web relaunch. Over a period of 5 months a good cooperation developed through transparent working methods, active exchange and using modern project tools. From concept to finished code we always had enough influence on the development. Changes and suggestions for improvement were quickly taken into account and successfully implemented. We liked the close cooperation and are extremely satisfied with the result. Especially the finished responsive design has kept what it promised. (Translated from German)', '', '', '', '', 'noimage')
+                div.c.c--overflow.quote.quote--unsplash.hide
+                    +card('', 'Product Team', '04/2019', 'Unsplash.com', "Jonathan has outlined an issue for our team on how we can significantly improve load times and save data for our users when they're interacting with pictures on our search-results page. Thank you so much for this feedback!", '', '', '', '', 'noimage')
                 div.c.c--overflow.quote.quote--messmer.hide
                     +card('', 'Diana Markulin - Sales & Graphics Manager', '09/2017', 'messmer-karriere.de', 'Mr. Arbely has fully fulfilled our vision for a modern career website. The direct and uncomplicated communication, whether by phone, by mail or even by WhatsApp, was very much appreciated. The implementation of small additions through the WordPress CMS is easy and thus enhances our candidate acquisition. (Translated from German)', '', '', '', '', 'noimage')
                 div.c.c--overflow.quote.quote--jsg.hide
@@ -300,17 +311,25 @@ html(lang="en")
                     +card('', 'Peter Kranz, Head of IT Inter Chalet Freiburg / CIO Holiday Home Division', '04/2018', 'interhome.at', 'Magellan Code & Design Consulting supported the Inter Chalet Ferienhausgesellschaft mbH and Interhome AG in the web development of the new Interhome websites. Here, Mr. Arbely was instrumental in the design and implementation from the start, where he designed the home-, detail- and searchresult-page and made an essential contribution to the successful implementation of the project due to his permanent search for improvements (e.g. performance wise). Our front-end workflow could be adapted and optimized according to the recommendations made. We have benefited greatly from the extensive knowledge of the workflow with Gulp.js by Mr. Arbely. We would like to take this opportunity to thank him for the excellent and successful cooperation. We were very satisfied with the cooperation and the result.', '', '', '', '', 'noimage')
                 br
                 .c.quote.quote__customerbranding
-                    svg.quote__customerbranding.quote__customerbranding--ic
-                        use(xlink:href='#testimonials--interchalet')
+                    a(href='#testimonials')
+                        svg.quote__customerbranding.quote__customerbranding--ic
+                            use(xlink:href='#testimonials--interchalet')
                     span.liluzivert.liluzivert--r
-                    svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--tariffuxx
-                        use(xlink:href='#testimonials--tariffuxx')
+                    a(href='#testimonials')
+                        svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--unsplash
+                            use(xlink:href='#testimonials--unsplash')
                     span.liluzivert.liluzivert--r
-                    svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--messmer
-                        use(xlink:href='#testimonials--messmer')
+                    a(href='#testimonials')
+                        svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--tariffuxx
+                            use(xlink:href='#testimonials--tariffuxx')
                     span.liluzivert.liluzivert--r
-                    svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--jsg
-                        use(xlink:href='#testimonials--jsg')
+                    a(href='#testimonials')
+                        svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--messmer
+                            use(xlink:href='#testimonials--messmer')
+                    span.liluzivert.liluzivert--r
+                    a(href='#testimonials')
+                        svg.quote__customerbranding.quote__customerbranding--inactive.quote__customerbranding--jsg
+                            use(xlink:href='#testimonials--jsg')
                 br
                 br
         

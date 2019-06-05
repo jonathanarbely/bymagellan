@@ -146,6 +146,11 @@ $(document).ready(function () {
         $(this).removeClass('quote__customerbranding--inactive');
         $('.quote--ic').removeClass('hide');
     });
+    $('.quote__customerbranding--unsplash').click(function () {
+        resetTestimonials();
+        $(this).removeClass('quote__customerbranding--inactive');
+        $('.quote--unsplash').removeClass('hide');
+    });
 
     function resetTestimonials() {
         $('.quote').addClass('hide');

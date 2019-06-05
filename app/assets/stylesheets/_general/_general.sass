@@ -60,6 +60,9 @@
     
 .flex
     display: flex !important
+    
+.hide
+    display: hidden
         
 // String containing a link or ajax call
 .loadmore 
@@ -230,6 +233,11 @@
             & .goldbar
                 display: block
                 
+        & a
+            display: flex
+            flex-flow: column
+            align-items: center
+                
     &--inactive
         display: none
 
@@ -304,8 +312,8 @@
             filter: grayscale(100%)
             
         &--tariffuxx
-            height: 25px
-            width: 185px
+            height: 24px
+            width: 179px
             
             @media (max-width: 940px)
                 height: 22px
@@ -318,15 +326,16 @@
                 height: 30px
         
         &--jsg
-            height: 12px
-            width: 295px
-            
-            @media (max-width: 940px)
-                height: 12px
+            height: 33px
+            width: 140px
                 
         &--ic
             height: 22px
             width: 136px
+            
+        &--unsplash
+            height: 24px
+            width: 137px
         
 .liluzivert
     width: 1px

@@ -7,6 +7,9 @@
     justify-content: center
     display: flex
     align-items: center
+    
+    &__wrapper
+        padding: 1em 1em 0 1em
 
 .dot 
     width: 10px
@@ -38,6 +41,9 @@
     left: -25px
     z-index: 1
     opacity: 0
+    
+    @media (max-width: 571px)
+        top: 0
 
 @-moz-keyframes pulse 
  0% 
