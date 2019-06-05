@@ -34,6 +34,7 @@
             text-transform: uppercase
             font-size: 13px
             letter-spacing: 4px
+            white-space: nowrap
             @include animate()
             
             @media (max-width: 1100px)
@@ -62,6 +63,7 @@
                 &:hover
                     @include animate()
                     background-color: $darkness
+            
         
         & .lang
             margin-left: 2em;
@@ -107,3 +109,15 @@
                     letter-spacing: 1px
                     padding-left: .5em
                     padding-right: .5em
+                        
+            &--de
+                    
+                @media (max-width: 911px)
+                    
+                    & a:nth-child(6)
+                        display: none !important
+                    
+                @media (max-width: 732px)
+                    
+                    & a:nth-child(1), a:nth-child(2), a:nth-child(3), a:nth-child(4), a:nth-child(6)
+                        display: none !important
