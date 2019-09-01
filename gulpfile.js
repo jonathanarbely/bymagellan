@@ -14,139 +14,162 @@ var autoprefixerOptions = {
     browsers: ['>0.25%', 'not ie 11', 'not op_mini all']
 };
 
-gulp.task('hello', function () {
-    console.log('Hello Gulp!')
+gulp.task('hello', function (done) {
+    console.log('Hello Gulp!');
+    done();
 });
 
-gulp.task('watch', function() {
-    gulp.watch('app/**/*.pug', ['pug']);
-    gulp.watch('app/assets/stylesheets/**/*.sass', ['sass']);
-    gulp.watch('app/assets/images/pixel/**/*.png', ['copyPNG']);
-    gulp.watch('app/assets/images/pixel/**/*.jpg', ['copyJPG']);
-    gulp.watch('app/assets/images/vector/**/*.svg', ['copySVG']);
-    gulp.watch('app/assets/fonts/**/*', ['copyFonts']);
-    gulp.watch('app/assets/javascript/**/*', ['copyJS']);
-    gulp.watch('app/assets/plugins/**/*', ['copyPlugins']);
-    gulp.watch('app/assets/files/**/*', ['copyFiles']);
-});
+gulp.task('watch', gulp.series(function (done) {
+    gulp.watch('app/**/*.pug', gulp.series('pug'));
+    gulp.watch('app/assets/stylesheets/**/*.sass', gulp.series('sass'));
+    gulp.watch('app/assets/images/pixel/**/*.png', gulp.series('copyPNG'));
+    gulp.watch('app/assets/images/pixel/**/*.jpg', gulp.series('copyJPG'));
+    gulp.watch('app/assets/images/vector/**/*.svg', gulp.series('copySVG'));
+    gulp.watch('app/assets/fonts/**/*', gulp.series('copyFonts'));
+    gulp.watch('app/assets/javascript/**/*', gulp.series('copyJS'));
+    gulp.watch('app/assets/plugins/**/*', gulp.series('copyPlugins'));
+    gulp.watch('app/assets/files/**/*', gulp.series('copyFiles'));
+    done();
+}));
 
-gulp.task('pug', function() {
+gulp.task('pug', gulp.series(function (done) {
     gulp.src('app/**/!(_)*.pug')
         .pipe(pug({
             pretty: true,
             basedir: __dirname + '/app'
         }))
         .pipe(gulp.dest('./dist/'));
-});
+    done();
+}));
 
-gulp.task('sass', function () {
-  return gulp
-    .src('app/assets/stylesheets/**/*.sass')
-    .pipe(maps.init())
-    .pipe(sass({}).on('error', sass.logError))
-    .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(maps.write('./'))
-    .pipe(gulp.dest('dist/assets/stylesheets'));
-});
+gulp.task('sass', gulp.series(function (done) {
+    return gulp
+        .src('app/assets/stylesheets/**/*.sass')
+        .pipe(maps.init())
+        .pipe(sass({}).on('error', sass.logError))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('dist/assets/stylesheets'));
+    done();
+}));
 
-gulp.task('buildsass', function () {
-  return gulp
-    .src('app/assets/stylesheets/**/*.sass')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(gulp.dest('dist/assets/stylesheets'));
-});
+gulp.task('buildsass', gulp.series(function (done) {
+    return gulp
+        .src('app/assets/stylesheets/**/*.sass')
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(gulp.dest('dist/assets/stylesheets'));
+}));
 
-gulp.task('clean-folders', function () {
-    return gulp.src('dist/*/*', {read: false})
+gulp.task('clean-folders', gulp.series(function (done) {
+    return gulp.src('dist/*/*', {
+            read: false
+        })
         .pipe(clean());
-});
+    done();
+}));
 
-gulp.task('clean-html', function () {
-    return gulp.src('dist/*.html', {read: false})
+gulp.task('clean-html', gulp.series(function (done) {
+    return gulp.src('dist/*.html', {
+            read: false
+        })
         .pipe(clean());
-});
+    done();
+}));
 
-gulp.task('clean-js', function () {
-    return gulp.src('dist/*.js*', {read: false})
+gulp.task('clean-js', gulp.series(function (done) {
+    return gulp.src('dist/*.js*', {
+            read: false
+        })
         .pipe(clean());
-});
+    done();
+}));
 
-gulp.task('clean', ['clean-folders','clean-html','clean-js'], function () {
+gulp.task('clean', gulp.series('clean-folders', 'clean-html', 'clean-js', function (done) {
     console.log('Successfully cleaned dist.');
-});
+    done();
+}));
 
-gulp.task('copyfonts', function () {
+gulp.task('copyFonts', gulp.series(function (done) {
     gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts'));
-});
+    done();
+}));
 
-gulp.task('copyPNG', function () {
+gulp.task('copyPNG', gulp.series(function (done) {
     gulp.src(['app/assets/images/pixel/**/!(_)*.png']).pipe(gulp.dest('dist/assets/images/pixel'));
-});
+    done();
+}));
 
-gulp.task('copyJPG', function () {
+gulp.task('copyJPG', gulp.series(function (done) {
     gulp.src(['app/assets/images/pixel/**/!(_)*.jpg']).pipe(gulp.dest('dist/assets/images/pixel'));
-});
+    done();
+}));
 
-gulp.task('copyICO', function () {
+gulp.task('copyICO', gulp.series(function (done) {
     gulp.src(['app/assets/images/pixel/**/!(_)*.ico']).pipe(gulp.dest('dist/assets/images/pixel'));
-});
+    done();
+}));
 
-gulp.task('copySVG', function () {
+gulp.task('copySVG', gulp.series(function (done) {
     gulp.src(['app/assets/images/vector/**/!(_)*.svg']).pipe(gulp.dest('dist/assets/images/vector'));
-});
+    done();
+}));
 
-gulp.task('copyFonts', function () {
-    gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts'));
-});
-
-gulp.task('copyJS', function () {
+gulp.task('copyJS', gulp.series(function (done) {
     gulp.src(['app/assets/javascript/**/!(_)*.js']).pipe(gulp.dest('dist/assets/javascript'));
-});
+    done();
+}));
 
-gulp.task('copySW', function () {
+gulp.task('copySW', gulp.series(function (done) {
     gulp.src(['app/worker.js']).pipe(gulp.dest('dist/'));
-});
+    done();
+}));
 
-gulp.task('copyManifest', function () {
+gulp.task('copyManifest', gulp.series(function (done) {
     gulp.src(['app/manifest.json']).pipe(gulp.dest('dist/'));
-});
+    done();
+}));
 
-gulp.task('copyPlugins', function () {
+gulp.task('copyPlugins', gulp.series(function (done) {
     gulp.src(['app/assets/plugins/**/*']).pipe(gulp.dest('dist/assets/plugins'));
-});
+    done();
+}));
 
-gulp.task('copyFiles', function () {
+gulp.task('copyFiles', gulp.series(function (done) {
     gulp.src(['app/assets/files/**/*']).pipe(gulp.dest('dist/assets/files'));
-});
+    done();
+}));
 
-gulp.task('c', function() {
-  connect.server({
-    root: 'dist',
-    livereload: false
-  });
-});
+gulp.task('c', gulp.series(function (done) {
+    connect.server({
+        root: 'dist',
+        livereload: false
+    });
+    done();
+}));
 
-gulp.task('compress', function() {
-  gulp.src('app/assets/javascript/*.js')
-    .pipe(minify({
-        ext:{
-            src:'.js',
-            min:'.min.js'
-        }
-    }))
-    .pipe(gulp.dest('dist/assets/javascript/'))
-});
+gulp.task('compress', gulp.series(function (done) {
+    gulp.src('app/assets/javascript/*.js')
+        .pipe(minify({
+            ext: {
+                src: '.js',
+                min: '.min.js'
+            }
+        }))
+        .pipe(gulp.dest('dist/assets/javascript/'));
+    done();
+}));
 
 // [] are dependencies which are run before the actual task
 // if a task returns something, it can be used in the next task
-gulp.task('default', ['c','pug','sass','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','watch'], function () {
+gulp.task('default', gulp.series('c', 'pug', 'sass', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'watch', function (done) {
     console.log('Development env. engaged! 〽️');
-});
+    done();
+}));
 
-gulp.task('build', ['pug','copyfonts','copyPNG','copyJPG','copySVG','copyICO','copyFonts','copyJS','copyPlugins','copyFiles','compress', 'buildsass', 'copySW', 'copyManifest'], function () {
+gulp.task('build', gulp.parallel('pug', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'compress', 'buildsass', 'copySW', 'copyManifest', function (done) {
     console.log('Successfully finished build! Ready to set sail. ⚓');
-});
-
-// Start Localtunnel:
-// lt --port 8080
+    done();
+}));
