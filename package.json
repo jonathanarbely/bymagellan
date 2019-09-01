@@ -1,31 +1,30 @@
 {
-  "name": "bymagellancom",
-  "version": "2.7.0",
-  "description": "Online Portfolio of Magellan - Code & Design Consulting",
-  "main": "dist/index.html",
-  "author": "Jonathan Arbely",
-  "license": "MIT",
-  "dependencies": {
-    "chart.js": "^2.8.0",
-    "jquery": "^3.4.1"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-clean": "^0.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-minify": "^3.1.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonathanarbely/bymagellan"
-  },
-  "homepage": "https://bymagellan.co"
+    "name": "bymagellancom",
+    "version": "2.8.0",
+    "description": "Online Portfolio of Magellan - Code & Design Consulting",
+    "main": "dist/index.html",
+    "author": "Jonathan Arbely",
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "^3.4.1"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.0",
+        "gulp-clean": "^0.4.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.7.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-pug": "^4.0.1",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jonathanarbely/bymagellan"
+    },
+    "homepage": "https://bymagellan.co"
 }
