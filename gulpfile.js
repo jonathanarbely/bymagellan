@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
+    modRewrite = require('connect-modrewrite'),
     concat = require('gulp-concat'),
     minify = require('gulp-minify');
 
@@ -142,9 +143,18 @@ gulp.task('copyFiles', gulp.series(function (done) {
     done();
 }));
 
+// https://github.com/avevlad/gulp-connect/issues/225
 gulp.task('c', gulp.series(function (done) {
     connect.server({
         root: 'dist',
+        middleware: function (connect) {
+            return [
+				connect().use(connect.query()),
+				modRewrite([
+					'^.([^\\.]+)$ /$1.html [L]',
+				])
+			];
+        },
         livereload: false
     });
     done();
