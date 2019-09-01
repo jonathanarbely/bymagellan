@@ -16,12 +16,12 @@ mixin nav(page, lang)
             section.nav
                 a(href='/')
                     img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
-                nav.nav__navigation
+                nav.nav__navigation.nav__navigation--de
                     a.nav__navigation__item.btn.btn--glass(href='/#kompetenzen') Kompetenzen
                     a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Impressionen
                     a.nav__navigation__item.btn.btn--glass(href='/#team') Über mich
                     a.nav__navigation__item.btn.btn--glass(href='/#blog') Blog
-                    a.nav__navigation__item.btn(href='#kontakt') Beauftragen.
+                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Beauftragen.
                     a.nav__navigation__item.lang(href='/index.en.html' title='Switch to English') EN
                     
     else
