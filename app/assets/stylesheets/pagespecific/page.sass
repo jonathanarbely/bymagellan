@@ -55,6 +55,9 @@ header
         text-transform: uppercase
         font-size: .8em
         letter-spacing: .05em
+            
+    &__imagetitle
+        line-height: 1.5em
     
     &__text
         
@@ -74,6 +77,18 @@ header
         width: 100%
         box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, .09)
         
+        &--xlarge
+            width: 1370px
+            margin-left: -290px
+            
+            @media (max-width: $probook)
+                width: 1000px
+                margin-left: -100px
+                
+            @media (max-width: $tablet-landscape)
+                width: 100%
+                margin-left: 0
+            
         &--large
             width: 1000px
             margin-left: -100px
