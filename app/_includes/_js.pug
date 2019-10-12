@@ -50,3 +50,13 @@ script.
         window[disableStr] = true;
         //console.log('cookie deleted');
     }
+script(src="https://www.google.com/recaptcha/api.js?render=6Lf7TL0UAAAAAHuw05hkQ1nZ6u39FoBzDwlorVel")
+script.
+    grecaptcha.ready(function() {
+        grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+           ...
+        });
+    });
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lf7TL0UAAAAAHuw05hkQ1nZ6u39FoBzDwlorVel', {action: 'homepage'});
+    });
