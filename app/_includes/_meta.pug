@@ -27,26 +27,21 @@ meta(property='og:type' content='website')
 meta(property='og:image' content='/assets/images/pixel/appicon/m-192.png')
 meta(property='og:url' content='https://bymagellan.co/')
 
-mixin meta(lang)
+mixin meta(lang, title)
+
+    if title
+        title= title
+    else
+        title Magellan Code & Design Consulting - Development & Design Freelancer
     
     if !lang
-        title Magellan Code & Design Consulting - Premium Webdienstleistungen, Apps, Websites & Printdesign aus Freiburg
-
-        meta(name='description' content='Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten.')
-
-        meta(name='keywords' content='webentwicklung, frontend, backend, print, webdesign, design, freiburg, workflow, agentur, medienagentur, gulpjs, pug, html, css')
-
-        meta(property='og:description' content='Ziel und Anspruch von Magellan ist es, branchenbeste digitale Produkte und Dienstleistungen anzubieten.')
+        meta(name='description' content='Ziel und Anspruch von Magellan ist es, branchenbeste Web- & Appentwicklung und bestes Design anzubieten.')
+        meta(name='keywords' content='webentwicklung, frontend, backend, print, webdesign, design, freiburg, workflow, agentur, medienagentur, gulpjs, pug, html, css, ionic, ui, ux')
+        meta(property='og:description' content='Ziel und Anspruch von Magellan ist es, branchenbeste Web- & Appentwicklung und bestes Design anzubieten.')
         
     else
-        title Magellan Code & Design Consulting - Professional Web- & App-Development and Design
-
         meta(name='description' content='The goal and aspiration of Magellan is to provide best-in-class webdevelopment, design & consulting services.')
-
         meta(name='keywords' content='webdevelopment, frontend, backend, print, webdesign, design, freiburg, workflow, agency, media, gulpjs, pug, html, css')
-
         meta(property='og:description' content='The goal and aspiration of Magellan is to provide best-in-class webdevelopment, design & consulting services.')
         
-//-link(rel="shortcut icon" href="/assets/images/pixel/favicon.ico" type="image/x-icon")
-//-link(rel="icon" href="/assets/images/pixel/favicon.ico" type="image/x-icon")
 link(rel="icon" type="image/png" href="/assets/images/pixel/favicon.png")
