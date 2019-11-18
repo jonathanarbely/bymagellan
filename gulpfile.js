@@ -11,10 +11,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     minify = require('gulp-minify');
 
-var autoprefixerOptions = {
-    browsers: ['>0.25%', 'not ie 11', 'not op_mini all']
-};
-
 gulp.task('hello', function (done) {
     console.log('Hello Gulp!');
     done();
@@ -48,7 +44,6 @@ gulp.task('sass', gulp.series(function (done) {
         .src('app/assets/stylesheets/**/*.sass')
         .pipe(maps.init())
         .pipe(sass({}).on('error', sass.logError))
-        .pipe(autoprefixer(autoprefixerOptions))
         .pipe(maps.write('./'))
         .pipe(gulp.dest('dist/assets/stylesheets'));
     done();
@@ -60,7 +55,6 @@ gulp.task('buildsass', gulp.series(function (done) {
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest('dist/assets/stylesheets'));
 }));
 
