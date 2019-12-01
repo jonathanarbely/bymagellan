@@ -5,7 +5,7 @@ include _mixins/_poster.pug
 include _mixins/_title.pug
 include _mixins/_css.pug
 
-doctype html
+doctype html)
 html(lang="en")
     head
         include _includes/_meta.pug
@@ -20,13 +20,12 @@ html(lang="en")
         header
             include _includes/_nav.pug
             +nav('index', 'en')
-            +title('Your project,', 'Professional Web- & App-Development / Pixelperfect UI- & Screendesign / Printdesign / Workflow- & Performance-Consulting / SEO / On Site Presence', '⚡ I have designed and built websites that have reached millions around the globe.', '#impressionen', 'my Ambition.', true, '')
+            +title('Your project,', 'Web & App Development / UI & UX / Printdesign / Workflow & Performance Consulting / SEO / On Site Presence', '⚡ We have designed and built websites that have reached millions around the globe.', '#impressionen', 'Our Ambition.', true, '')
             .gradient--bottom
         script.
             // Randomize Headerimage
             var myArray = [
               "url('/assets/images/pixel/magellanmedia-hero.jpg')",
-              //"url('/assets/images/pixel/magellanmedia-hero-ii.jpg')",
               "url('/assets/images/pixel/magellanmedia-hero-iii.jpg')"
             ];
             $('header').css('background-image',myArray[Math.floor(Math.random()*myArray.length)]);
@@ -93,18 +92,18 @@ html(lang="en")
                             span.goldbar
                 br
                 div.c.c--overflow
-                    +card('cardFrontend', 'Web Development', '', 'Frontend', 'I develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards I make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), AngularJS, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
+                    +card('cardFrontend', 'Web Development', '', 'Frontend', 'We develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards we make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), AngularJS, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
                     
-                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'I code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native PlugIns. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
+                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'We code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native PlugIns. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
                     
-                    +card('cardBackend', 'Serverless & Serverside', '', 'Backend', 'I build Content Management Systems, serverside Software as well as Plugins & Themes for WordPress. I develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MVC architecture style frameworks like AngularJS and Ionic.', '', '', 'card--inactive')
+                    +card('cardBackend', 'Serverless & Serverside', '', 'Backend', 'We build Content Management Systems, serverside Software as well as Plugins & Themes for WordPress. We develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MVC architecture style frameworks like AngularJS and Ionic.', '', '', 'card--inactive')
                     
-                    +card('cardPerformance', 'Consulting', '', 'Performance', 'Performance and the modern web go hand in hand. To create products that perform well on a multitude of devices & network conditions and thus enhance user experience is standard work practice for me. Lightning fast above-the-fold loading, performance oriented workflow, GZIP- and CDN-Distribution of content are just some enhancements I implement.', '', '', 'card--inactive')
+                    +card('cardPerformance', 'Consulting', '', 'Performance', 'Performance and the modern web go hand in hand. To create products that perform well on a multitude of devices & network conditions and thus enhance user experience, are standard work practice for us. Lightning fast above-the-fold loading, performance oriented workflow, GZIP- and CDN-Distribution of content are just some enhancements we implement.', '', '', 'card--inactive')
                     
                     
-                    +card('cardScreendesign', 'Conception & Design', '', 'Screendesign', 'I design clean, sophisticated and friendly user interfaces and build interactive prototypes using state-of-the-art design tools. By doing iterativ design, I keep the customer in the loop throughout the design process, so feedback can be discussed and implemented on a regular basis.', '', '', 'card--inactive card--print')
+                    +card('cardScreendesign', 'Conception & Design', '', 'Screendesign', 'We design clean, sophisticated and friendly user interfaces and build interactive prototypes using state-of-the-art design tools. By doing iterativ design, we keep the customer in the loop throughout the design process, so feedback can be discussed and implemented on a regular basis.', '', '', 'card--inactive card--print')
                     
-                    +card('cardPrint', 'Conception & Design', '', 'Printdesign', 'From concept to final print, I design digital and analog print products like posters, flyers, business cards and magazines. For that I use industry standard desktop publishing and typesetting software. To guarantee the best possible print quality, I directly hand over the files to the printing company.', '', '', 'card--inactive card--print')
+                    +card('cardPrint', 'Conception & Design', '', 'Printdesign', 'From concept to final print, we design digital and analog print products like posters, flyers, business cards and magazines. For that we use industry standard desktop publishing and typesetting software. To guarantee the best possible print quality, we directly hand over the files to the printing company.', '', '', 'card--inactive card--print')
 
             hr
             section.showcase#impressionen
@@ -122,13 +121,17 @@ html(lang="en")
                     //- Highlight
                     
                     +card('nnl', 'Ionic Framework & REST-API', 'ongoing since 02/2019', 'German National Parks App', 'On behalf of EUROPARC Germany e.V., the umbrella organization for the German National Parks, a hybrid app for iOS and Android is being developed. This brings all national parks, biosphere reserves, nature parks and wilderness areas of Germany to mobile devices. With up-to-date UX and elements of gamification, a modern, beautiful, personalized and fast user experience is created for every mobile device. One goal is to engage more young people around the topic "National Natural Landscapes" and make it more tangible and finally to inspire to take action. The app is connected via a REST API to the existing WordPress backend. The release is scheduled for February 2020.', '#kontakt', 'You can request to join the "Closed Beta" testphase', 'cat_code card--highlight')
-                
+                div.c.c--overflow
+                    span.goldbar
+                div.c.c--overflow
+                    br
+                    br
                 div.c.c--overflow
                     //- Code Category
                     
-                    +card('ih', 'Frontend, Design, Performance & Workflow', '02/2018', 'Interhome', 'Interhome offer more than 34k quality-tested vacation-homes online. Working with the Interchalet Team in Freiburg, I significantly contributed to the new  and responsive Website, which was designed and developed implementing SCRUM and iterativ improvement.', 'projekte/2018/interhome', 'Read Project Report (German)', 'cat_code')
+                    +card('ih', 'Frontend, Design, Performance & Workflow', '02/2018', 'Interhome', 'Interhome offer more than 34k quality-tested vacation-homes online. Working with the Interchalet Team in Freiburg, Jonathan significantly contributed to the new and responsive Website, which was designed and developed implementing SCRUM and iterativ improvements.', 'projekte/2018/interhome', 'Read Project Report (German)', 'cat_code')
 
-                    +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen I designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
+                    +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen Jonathan designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
                     
                     +card('tariffuxx', 'Design & Development', '04/2017', 'Tariffuxx.de', 'The German market leader in B2B-Services for tariff comparisons in the communications sector requested a reworked CI, unified and overhauled online design (B2B & B2C) as well as matching print products for a fresh new appearance across multiple digital and analog channels.', 'https://tariffuxx.de/', 'Visit Website', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4502341-Price-Comparison-Website-Design-Bright-Colorful')
                     
@@ -136,13 +139,13 @@ html(lang="en")
                     
                     +card('oculustravel', 'Design & Development', '08/2016', 'Oculus for Travel', 'During a university course for online design and conception, this interactive prototype was designed and coded in team of two. Complete with a real use-case and call-to-action. The workflow was quick and efficient.', 'projekte/2016/oculusfortravel', 'Discover Screendesigns (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4502316-Oculus-Rift-VR-for-Travel-Agencies')
                     
-                    +card('hallo', 'Research, Design & Development', '02/2017', 'Realtime Chat App', 'To accompany the research done in my bachelors thesis, I developed and designed the modern hybrid Chat-App "Hallo" using AngularJS 1.x and Google Firebase. This offered me significant insights into the performance advantages and drawbacks of current web technologies.', '#impressionen', 'Will be published to GitHub.com soon', 'cat_code')
+                    +card('hallo', 'Research, Design & Development', '02/2017', 'Realtime Chat App', "To accompany the research done in Jonathan's bachelors thesis, we developed and designed the modern hybrid Chat-App 'Hallo' using AngularJS 1.x and Google Firebase. This offered significant insights into the performance advantages and drawbacks of current web technologies.", '#impressionen', 'Will be published to GitHub.com soon', 'cat_code')
                     
                     +card('tandem', 'Research, Design & Development', '01/2016', 'Social Network: Tandem', 'The failed startup. The idea: A social network to find people that share similar hobbies & interests and would possibly make good new friends or acquaintances. Perfect e.g. for people who moved to a new area and are having a tough time finding new friends. How it went?', '#impressionen', 'Soon to be published here.', 'cat_code')
                     
                     +card('app', 'UX & Design', '06/2016', 'UX Design Project', 'During the uni course "Ambient Media" at the Furtwangen University, the app-concept "Röntgen" was created. The goal was to create unobtrusive and intuitive UI. Some results can be found here:', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept', 'Open on Dribbble.com', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept')
                     
-                    +card('bymagellan', 'Sophisticated. Minimalist. Perfection.', '10/2017', 'Art of Magellan', "The Design Language developed for our “Magellan Code & Design Consulting” Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Continue to read', 'cat_code')
+                    +card('bymagellan', 'Sophisticated. Minimalist. Perfection.', '10/2017', 'Art of Magellan', "The Design Language developed for our 'Magellan Code & Design Consulting' Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Continue to read', 'cat_code')
                     
                     //- Design Category
                     
@@ -172,7 +175,7 @@ html(lang="en")
                 //-br
                 //-br
                 //-br
-                h5 Weitere Projekte
+                h5 Additional Projects
                 br
                 div.c.c--overflow
                     //- Code Category
@@ -190,16 +193,16 @@ html(lang="en")
                     +ticket('gglmyb', 'Infographic', 'Google My Business', 'https://www.profi-homepage.de/infografik-google-my-business/', 'Discover Online', 'cat_design')
             hr
             section.team#team
-                h3 About
+                h3 About us
                 div.subtitle__wrapper
-                    span.subtitle Professional Webdevelopment, Design & Consulting
+                    span.subtitle Pick your team. One or both.
                 br
                 br
                 br
                 br
                 div.portfolio__wrapper
                     div.portfolio
-                        div.portfolio__image
+                        img.portfolio__image(src='/assets/images/pixel/magellan-jonathanarbely.png')
                         div.portfolio__content
                             svg.portfolio__content__ornament
                                 use(xlink:href='#ornament')
@@ -207,18 +210,34 @@ html(lang="en")
                             span.portfolio__content__rank Freelance Developer & Designer
                             br
                             p.portfolio__content__text--quote „Make overachieving a habit.“
-                            p.portfolio__content__text Since 2013, I'm actively working as a freelance Full-Stack Webdeveloper & Designer. I've worked with different clients coming from a broad range of industries on an array of challenging and interesting projects. As a web enthusiast, I'm constantly developing myself and like delving into topics related to development, design and best practices as well as trying out new things. My goal is to attain and keep a deep understanding of the technologies that power our digitized online world.
-                            p.portfolio__content__text--edu Bachelor of Science at the Faculty of „Digital Media“ at the Furtwangen University.
+                            p.portfolio__content__text Since 2013, I'm actively working as a freelance Full-Stack Web & App Developer & Designer. I've worked with different clients coming from a broad range of industries on an array of challenging and interesting projects. As a web enthusiast, I'm constantly developing myself and like delving into topics related to development, design and best practices as well as trying out new things. My goal is to attain and keep a deep understanding of the technologies that power our digitized online world.
+                            p.portfolio__content__text--edu Bachelor of Science at the Faculty of „Digital Media“ at Furtwangen University.
                             br
                             svg.portfolio__content__leaf
                                 use(xlink:href='#leaf')
-                            a.portfolio__content__cta.btn.btn--light(href='assets/files/Jonathan Arbely.vcf' target='_blank') Digital Business Card
+                            a.portfolio__content__cta.btn.btn--light(href='mailto:jonathan@bymagellan.co' target='_blank') jonathan@bymagellan.co
+                            
+                    div.portfolio
+                        img.portfolio__image(src='/assets/images/pixel/magellan-valeriaraffa.png')
+                        div.portfolio__content
+                            svg.portfolio__content__ornament
+                                use(xlink:href='#ornament')
+                            span.portfolio__content__name Valeria Raffa
+                            span.portfolio__content__rank Freelance Developer
+                            br
+                            p.portfolio__content__text--quote „Clean code is great UX“
+                            p.portfolio__content__text Since 2017, I'm working as a Web & App Developer and UX pro. I specialize in Vue.js, the Ionic Framework and Java applications and have previously done projects for the well known German BOSCH corporation. Additionally, I like to enhance software by doing User Experience research and testing and have optimized a few of the successful projects we have done in the past, which are used by thousands every day. Every day is an opportunity to learn and improve. And that is the mantra we live by!
+                            p.portfolio__content__text--edu Bachelor of Science at the Faculty of „Business Information Systems“ at Furtwangen University (Feb. 2020).
+                            br
+                            svg.portfolio__content__leaf
+                                use(xlink:href='#leaf')
+                            a.portfolio__content__cta.btn.btn--light(href='mailto:valeria@bymagellan.co' target='_blank') valeria@bymagellan.co
             br
             hr
             section.contact#kontakt
                 h3 Contact
                 div.subtitle__wrapper
-                    span.subtitle Whether you're representing an international corporation or a regional club, your project is my ambition.
+                    span.subtitle Whether you're representing an international corporation or a regional club, your project is our ambition.
                         br
                 div.subtitle__wrapper
                     .gps__wrapper.flex
@@ -256,7 +275,7 @@ html(lang="en")
                             div.pamphlet__description__anchor__wrapper
                                 svg.icon.icon--s
                                     use(xlink:href='#iconset--briefcase')
-                                span.pamphlet__description__anchor I'm looking forward to hearing from you!
+                                span.pamphlet__description__anchor We're looking forward to hearing from you!
                     div.pamphlet(id='phony' class='card--inactive')
                         div.pamphlet__description
                             span.pamphlet__description__tag Mobile phone
@@ -269,7 +288,7 @@ html(lang="en")
             section.blog#blog
                 h3 Blog
                 div.subtitle__wrapper
-                    span.subtitle Posts regarding Code & Design, Design Ressoures and Photography (German & English)
+                    span.subtitle Posts regarding Code & Design, Design Resources and Photography (German & English)
                 br
                 br
                 br

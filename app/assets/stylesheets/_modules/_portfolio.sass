@@ -1,19 +1,26 @@
 .portfolio
     width: 573px
-    @include boxshadow()
+    //@include boxshadow()
+    margin: 0 1em
         
     &__wrapper
         display: flex
         justify-content: center
-        padding: 0 1em
+
+        @media (max-width: $phablet-landscape)
+            flex-wrap: wrap
+
+    @media (max-width: $phablet-landscape)
+        &:last-child
+            margin-top: 2em
+        
     
     &__image
-        height: 245px
-        background-image: url(../images/pixel/magellan-jonathanarbely.png)
-        background-repeat: no-repeat
-        background-position: center
+        display: block
+        height: 190px
+        margin: 0 auto
         
-        @media (max-width: 520px)
+        //@media (max-width: 520px)
             height: 235px
         
     &__content

@@ -1,7 +1,7 @@
 {
     "name": "bymagellancom",
-    "version": "2.9.0",
-    "description": "Online Portfolio of Magellan - Code & Design Consulting",
+    "version": "2.0.0",
+    "description": "Online Portfolio of Magellan Code & Design Consulting",
     "main": "dist/index.html",
     "author": "Jonathan Arbely",
     "license": "MIT",

@@ -1,32 +1,32 @@
 mixin nav(page, lang)
     if !lang
         if page=='index'
-            section.nav
+            nav.nav
                 a(href='#')
                     svg.nav__brand
                         use(xlink:href='#magellan-brand')
                 nav.nav__navigation.nav__navigation--de
                     a.nav__navigation__item.btn.btn--glass(href='#kompetenzen') Kompetenzen
                     a.nav__navigation__item.btn.btn--glass(href='#impressionen') Impressionen
-                    a.nav__navigation__item.btn.btn--glass(href='#team') Über mich
+                    a.nav__navigation__item.btn.btn--glass(href='#team') Über uns
                     a.nav__navigation__item.btn.btn--glass(href='#blog') Blog
                     a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Beauftragen.
                     a.nav__navigation__item.lang(href='/en' title='Switch to English') EN
         else
-            section.nav
+            nav.nav
                 a(href='/')
                     img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
                 nav.nav__navigation.nav__navigation--de
                     a.nav__navigation__item.btn.btn--glass(href='/#kompetenzen') Kompetenzen
                     a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Impressionen
-                    a.nav__navigation__item.btn.btn--glass(href='/#team') Über mich
+                    a.nav__navigation__item.btn.btn--glass(href='/#team') Über uns
                     a.nav__navigation__item.btn.btn--glass(href='/#blog') Blog
                     a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Beauftragen.
                     a.nav__navigation__item.lang(href='/en' title='Switch to English') EN
                     
     else
         if page=='index'
-            section.nav
+            nav.nav
                 a(href='#')
                     svg.nav__brand
                         use(xlink:href='#magellan-brand')
@@ -35,10 +35,10 @@ mixin nav(page, lang)
                     a.nav__navigation__item.btn.btn--glass(href='#impressionen') Work
                     a.nav__navigation__item.btn.btn--glass(href='#team') About
                     a.nav__navigation__item.btn.btn--glass(href='#blog') Blog
-                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Hire me.
+                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='#kontakt') Hire us.
                     a.nav__navigation__item.lang(href='/' title='Zur deutschsprachigen Website') DE
         else
-            section.nav
+            nav.nav
                 a(href='/')
                     img.nav__brand(src='/assets/images/vector/magellan-brand.svg')
                 nav.nav__navigation.nav__navigation--de
@@ -46,5 +46,5 @@ mixin nav(page, lang)
                     a.nav__navigation__item.btn.btn--glass(href='/#impressionen') Work
                     a.nav__navigation__item.btn.btn--glass(href='/#team') About
                     a.nav__navigation__item.btn.btn--glass(href='/#blog') Blog
-                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='/en/#kontakt') Hire me.
+                    a.nav__navigation__item.nav__navigation__item--cta.btn(href='/en/#kontakt') Hire us.
                     a.nav__navigation__item.lang(href='/' title='Zur deutschsprachigen Website') DE
