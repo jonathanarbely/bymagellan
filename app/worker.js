@@ -1,6 +1,6 @@
 "use strict";
 console.log("WORKER: executing.");
-var version = "v20::",
+var version = "v21::",
     offlineFundamentals = ['',
                             'assets/stylesheets/artofmagellan.css',
                             'assets/stylesheets/pagespecific/index.css',

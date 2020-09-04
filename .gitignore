@@ -10,3 +10,8 @@ node_modules/
 dist/*
 stuff/*
 dist/
+
+# MacOS specific files
+._*
+*._*
+*.DS_Store
