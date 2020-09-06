@@ -1,6 +1,7 @@
+/* jslint node: true */
 "use strict";
 console.log("WORKER: executing.");
-var version = "v21::",
+var version = "v22::",
     offlineFundamentals = ['',
                             'assets/stylesheets/artofmagellan.css',
                             'assets/stylesheets/pagespecific/index.css',
@@ -12,10 +13,10 @@ var version = "v21::",
                           ];
 self.addEventListener("install", function (e) {
     console.log("WORKER: install event in progress."), e.waitUntil(caches.open(version + "fundamentals").then(function (e) {
-        return e.addAll(offlineFundamentals)
+        return e.addAll(offlineFundamentals);
     }).then(function () {
-        console.log("WORKER: install completed")
-    }))
+        console.log("WORKER: install completed");
+    }));
 }), self.addEventListener("fetch", function (e) {
     return console.log("WORKER: fetch event in progress."), "GET" !== e.request.method ? void console.log("WORKER: fetch event ignored.", e.request.method, e.request.url) : void e.respondWith(caches.match(e.request).then(function (n) {
         function t(n) {
@@ -24,26 +25,26 @@ self.addEventListener("install", function (e) {
                 n.put(e.request, t)
             }).then(function () {
                 console.log("WORKER: fetch response stored in cache.", e.request.url)
-            }), n
+            }), n;
         }
 
         function o() {
             return console.log("WORKER: fetch request failed in both cache and network."), new Response("<h1>Service Unavailable</h1>", {
                 status: 503,
                 statusText: "Service Unavailable"
-            })
+            });
         }
         var s = fetch(e.request).then(t, o)["catch"](o);
-        return console.log("WORKER: fetch event", n ? "(cached)" : "(network)", e.request.url), n || s
+        return console.log("WORKER: fetch event", n ? "(cached)" : "(network)", e.request.url), n || s;
     }))
 }), self.addEventListener("activate", function (e) {
     console.log("WORKER: activate event in progress."), e.waitUntil(caches.keys().then(function (e) {
         return Promise.all(e.filter(function (e) {
-            return !e.startsWith(version)
+            return !e.startsWith(version);
         }).map(function (e) {
-            return caches["delete"](e)
-        }))
+            return caches["delete"](e);
+        }));
     }).then(function () {
-        console.log("WORKER: activate completed.")
-    }))
+        console.log("WORKER: activate completed.");
+    }));
 });
