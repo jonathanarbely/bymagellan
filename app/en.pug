@@ -15,7 +15,7 @@ html(lang="en")
         script(src='/assets/plugins/jquery-smoothscroll/jquery-smoothscroll.min.js' type='text/javascript' defer)
     
     body
-        include /_includes/_globalbody.pug
+        include _includes/_globalbody.pug
     
         header
             include _includes/_nav.pug
@@ -111,7 +111,7 @@ html(lang="en")
                 div.filter
                     a.filter__item.filter__item--active#code(href='#impressionen') Web &amp; App
                     a.filter__item#designs(href='#impressionen') Print &amp; Design
-                    a.filter__item#plugins(href='#impressionen') Plugins
+                    //-a.filter__item#plugins(href='#impressionen') Plugins
                 br
                 br
                 br
@@ -120,32 +120,28 @@ html(lang="en")
                 div.c.c--overflow
                     //- Highlight
                     
-                    +card('nnl', 'Ionic Framework & REST-API', 'ongoing since 02/2019', 'German National Parks App', 'On behalf of EUROPARC Germany e.V., the umbrella organization for the German National Parks, a hybrid app for iOS and Android is being developed. This brings all national parks, biosphere reserves, nature parks and wilderness areas of Germany to mobile devices. With up-to-date UX and elements of gamification, a modern, beautiful, personalized and fast user experience is created for every mobile device. One goal is to engage more young people around the topic "National Natural Landscapes" and make it more tangible and finally to inspire to take action. The app is connected via a REST API to the existing WordPress backend. The release is scheduled for February 2020.', '#kontakt', 'You can request to join the "Closed Beta" testphase', 'cat_code card--highlight')
-                div.c.c--overflow
-                    span.goldbar
-                div.c.c--overflow
-                    br
-                    br
+                    +card('nnl', 'Ionic Framework & REST-API', 'ongoing since 02/2019', 'German National Parks App', 'A hybrid app for iOS and Android is being developed on behalf of the Nationale Naturlandschaften e.V. This brings all German national parks, biosphere reserves, nature parks and certified wilderness areas in Germany to all common mobile devices. Based on latest technologies and with elements of "gamification", a modern, beautiful, customizable and fast user experience is crafted. The main intention is to inspire younger target groups in particular for the topic of "national natural landscapes". The app is connected to the existing WordPress backend of the website via REST API and GraphQL.', '#kontakt', 'You can request to join the "Closed Beta" testphase', 'cat_code card--highlight')
+
                 div.c.c--overflow
                     //- Code Category
                     
                     +card('ih', 'Frontend, Design, Performance & Workflow', '02/2018', 'Interhome', 'Interhome offers more than 34k quality-tested vacation-homes online. Working with the Interchalet Team in Freiburg, we significantly contributed to the new and responsive Website, which was designed and developed implementing SCRUM and iterativ improvements.', 'projekte/2018/interhome', 'Read Project Report (German)', 'cat_code')
 
-                    +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen we designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
-                    
+                    +card('bymagellan', 'Sophisticated. Minimalist. Perfection.', '10/2017', 'Art of Magellan', "The Design Language developed for our 'Magellan Code & Design Consulting' Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Continue to read', 'cat_code')
+
                     +card('tariffuxx', 'Design & Development', '04/2017', 'Tariffuxx.de', 'The German market leader in B2B-Services for tariff comparisons in the communications sector requested a reworked CI, unified and overhauled online design (B2B & B2C) as well as matching print products for a fresh new appearance across multiple digital and analog channels.', 'https://tariffuxx.de/', 'Visit Website', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4502341-Price-Comparison-Website-Design-Bright-Colorful')
+
+                    +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen we designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
                     
                     +card('ph', 'Design', '2016 bis 2017', 'Profi-Homepage', 'For the Constance Agency Profi-Homepage of the Mediafavoriten GmbH in the south of Germany a selection of different Screendesigns have been crafted to serve their need to react quickly to new webdesign assignments coming from different industry sectors.', 'projekte/2016/ph', 'Have a look', 'cat_code')
                     
                     +card('oculustravel', 'Design & Development', '08/2016', 'Oculus for Travel', 'During a university course for online design and conception, this interactive prototype was designed and coded in team of two. Complete with a real use-case and call-to-action. The workflow was quick and efficient.', 'projekte/2016/oculusfortravel', 'Discover Screendesigns (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4502316-Oculus-Rift-VR-for-Travel-Agencies')
                     
-                    +card('hallo', 'Research, Design & Development', '02/2017', 'Realtime Chat App', "To accompany the research done in Jonathan's bachelors thesis, he developed and designed a modern hybrid Chat-App codenamed 'Hallo' using AngularJS & Google Firebase. This offered significant insights into the performance advantages and drawbacks of current web technologies.", '#impressionen', 'Will be published to GitHub soon', 'cat_code')
+                    //-+card('hallo', 'Research, Design & Development', '02/2017', 'Realtime Chat App', "To accompany the research done in Jonathan's bachelors thesis, he developed and designed a modern hybrid Chat-App codenamed 'Hallo' using AngularJS & Google Firebase. This offered significant insights into the performance advantages and drawbacks of current web technologies.", '#impressionen', 'Will be published to GitHub soon', 'cat_code')
                     
                     +card('tandem', 'Research, Design & Development', '01/2016', 'Social Network: Tandem', 'The failed startup. The idea: A social network to find people that share similar hobbies & interests and would possibly make good new friends or acquaintances. Perfect e.g. for people who moved to a new area and are having a tough time finding new friends. How it went?', '#impressionen', 'Soon to be published here', 'cat_code')
                     
-                    +card('app', 'UX & Design', '06/2016', 'UX Design Project', 'During the uni course "Ambient Media" at the Furtwangen University, the app-concept "Röntgen" was created. The goal was to create unobtrusive and intuitive UI. Some results can be found on Dribbble.', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept', 'Open on Dribbble', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept')
-                    
-                    +card('bymagellan', 'Sophisticated. Minimalist. Perfection.', '10/2017', 'Art of Magellan', "The Design Language developed for our 'Magellan Code & Design Consulting' Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Continue to read', 'cat_code')
+                    //-+card('app', 'UX & Design', '06/2016', 'UX Design Project', 'During the uni course "Ambient Media" at the Furtwangen University, the app-concept "Röntgen" was created. The goal was to create unobtrusive and intuitive UI. Some results can be found on Dribbble.', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept', 'Open on Dribbble', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept')
                     
                     //- Design Category
                     
@@ -159,7 +155,7 @@ html(lang="en")
                     
                     //- Plugin Category
                     
-                    +card('ull', 'jQuery Plugin', '01/2018', 'Unslider Lazyload & Thumbnails', 'Extends unslider.js with lazyloading functionality, enables sourceset usage and introduces Thumbnails. Fully opensource and extendable. Powers websites that are used by thousands every month.', 'projekte/2018/unsliderlazyload', 'Demo & Code', 'cat_plugins')
+                    //-+card('ull', 'jQuery Plugin', '01/2018', 'Unslider Lazyload & Thumbnails', 'Extends unslider.js with lazyloading functionality, enables sourceset usage and introduces Thumbnails. Fully opensource and extendable. Powers websites that are used by thousands every month.', 'projekte/2018/unsliderlazyload', 'Demo & Code', 'cat_plugins')
                 br
                 //-div.c
                     span.loadmore

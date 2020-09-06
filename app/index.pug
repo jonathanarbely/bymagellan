@@ -15,7 +15,7 @@ html(lang="de")
         script(src='/assets/plugins/jquery-smoothscroll/jquery-smoothscroll.min.js' type='text/javascript' defer)
     
     body
-        include /_includes/_globalbody.pug
+        include _includes/_globalbody.pug
     
         header
             include _includes/_nav.pug
@@ -112,7 +112,7 @@ html(lang="de")
                 div.filter
                     a.filter__item.filter__item--active#code(href='#impressionen') Web &amp; App
                     a.filter__item#designs(href='#impressionen') Print &amp; Design
-                    a.filter__item#plugins(href='#impressionen') Plugins
+                    //-a.filter__item#plugins(href='#impressionen') Plugins
                 br
                 br
                 br
@@ -121,28 +121,28 @@ html(lang="de")
                 div.c.c--overflow
                     //- Highlight
                     
-                    +card('nnl', 'Ionic Framework & REST-API', '02/2019 bis heute', 'App - Nationale Naturlandschaften', 'Im Auftrag der EUROPARC Deutschland e.V., Dachverband der deutschen Nationalparks, wird eine hybride App für iOS und Android entwickelt. Diese bringt alle Nationalparks, Biosphärenreservate, Naturparks und Wildnisgebiete Deutschlands auf Ihr Mobilgerät. Nach aktuellen UX-Kentnissen und mit Elementen aus der "Gamification"-Forschung wird ein modernes, schönes, personalisiertes und schnelles Benutzererlebnis auf mobilen Geräten erschaffen. Das soll besonders eine junge Zielgruppe für das Thema "Nationale Naturlandschaften" greifbar zu machen und schließlich zu begeistern. Die App ist per REST-API an das bestehende WordPress-Backend der Website angebunden. Der Release ist im Februar 2020 geplant.', '#kontakt', 'Einblicke in die "Closed Beta" auf Anfrage möglich', 'cat_code card--highlight')
+                    +card('nnl', 'Ionic Framework & REST-API', '02/2019 bis heute', 'App - Nationale Naturlandschaften', 'Im Auftrag der Nationale Naturlandschaften e.V. wird eine hybride App für iOS und Android entwickelt. Diese bringt alle deutschen Nationalparks, Biosphärenreservate, Naturparks und zertifizierte Wildnisgebiete Deutschlands auf alle gängigen Mobilgeräte. Nach aktuellen UX-Kenntnissen und mit Elementen der "Gamification" wird ein modernes, schönes, personalisierbares und schnelles Benutzererlebnis auf mobilen Geräten geschaffen. Das soll besonders jüngere Zielgruppen für das Thema "Nationale Naturlandschaften" begeistern. Die App ist per REST-API und GraphQL an das bestehende WordPress-Backend der Website angebunden.', '#kontakt', 'Einblick in die "Closed Beta" auf Anfrage möglich', 'cat_code card--highlight')
                 
                 div.c.c--overflow
                     //- Code Category
                     
                     +card('ih', 'Frontend, Design, Performance & Workflow', '02/2018', 'Interhome', 'Interhome bietet über 34.000 qualitätsgeprüfte Ferien-häuser und -wohnungen online an. Zusammen mit dem Interchalet Team in Freiburg war Jonathan maßgeblich an der Umsetzung der neuen  Website beteiligt, welche iterativ und agil mit SCRUM umgesetzt wurde.', 'projekte/2018/interhome', 'Projektbericht lesen', 'cat_code')
 
-                    +card('messmer', 'Design, Umsetzung & SEO', '02/2017', 'Messmer Pen Karriere', 'Für die Messmer Pen GmbH in Emmendingen wurde ein Karriereportal mit CMS-Anbindung konzipiert, iterativ gestaltet und responsiv umgesetzt. Die Mitarbeiter können alle Inhalte selbst aktualisieren und pflegen.', 'projekte/2017/messmerkarriere', 'Case Study lesen', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
+                    +card('bymagellan', 'Anspruchsvoll. Minimalistisch. Perfekt.', '10/2017', 'Art of Magellan', "The Design Language developed for our “Magellan Code & Design Consulting” Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Weiterlesen', 'cat_code')
                     
                     +card('tariffuxx', 'Design & Umsetzung', '04/2017', 'Tariffuxx.de', 'Für den marktführenden B2B-Dienstleister für Tarifvergleiche in der Kommunikationsbranche wurde das CI überarbeitet & vereinheitlicht sowie ein neuer Webauftritt (B2B & erstmals B2C) und Printmaterial entworfen und entwickelt.', 'https://tariffuxx.de/', 'Fertige Website besuchen', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4502341-Price-Comparison-Website-Design-Bright-Colorful')
+
+                    +card('messmer', 'Design, Umsetzung & SEO', '02/2017', 'Messmer Pen Karriere', 'Für die Messmer Pen GmbH in Emmendingen wurde ein Karriereportal mit CMS-Anbindung konzipiert, iterativ gestaltet und responsiv umgesetzt. Die Mitarbeiter können alle Inhalte selbst aktualisieren und pflegen.', 'projekte/2017/messmerkarriere', 'Case Study lesen', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
                     
                     +card('ph', 'Design', '2016 bis 2017', 'Profi-Homepage', 'Für die Konstanzer Agentur Profi-Homepage der Mediafavoriten GmbH ist im Laufe unserer Zusammenarbeit eine umfangreiche Kollektion unterschiedlichster Konzepte sowie Screen- & Printdesigns für Kunden versch. Branchen entstanden.', 'projekte/2016/ph', 'Screendesigns entdecken', 'cat_code')
                     
                     +card('oculustravel', 'Design & Umsetzung', '08/2016', 'Oculus for Travel', 'Im Rahmen einer Veranstaltung an der Hochschule Furtwangen University ist das Konzept "Oculus Rift & Virtual Reality für Reisebüros" entstanden. Parallel zum Projekt – von der ersten Zeichnung bis zur responsiven Website – bildete sich schnell ein effizienter Workflow.', 'projekte/2016/oculusfortravel', 'Screendesigns entdecken', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4502316-Oculus-Rift-VR-for-Travel-Agencies')
                     
-                    +card('hallo', 'Forschung, Design & Umsetzung', '02/2017', 'Hallo App', 'Die auf den aktuellsten Webtechnologien basierende hybrid App "Hallo" entstand als praktischer Teil meiner Bachelorthesis und diente dem Vergleich von nativen und hybriden Apps auf verschiedenen Plattformen und Smartphones. Anhand zahlreicher Messungen wurde...', '#impressionen', 'Work in Progress', 'cat_code')
+                    //-+card('hallo', 'Forschung, Design & Umsetzung', '02/2017', 'Hallo App', 'Die auf den aktuellsten Webtechnologien basierende hybrid App "Hallo" entstand als praktischer Teil meiner Bachelorthesis und diente dem Vergleich von nativen und hybriden Apps auf verschiedenen Plattformen und Smartphones. Anhand zahlreicher Messungen wurde...', '#impressionen', 'Work in Progress', 'cat_code')
                     
-                    +card('tandem', 'Forschung, Design & Umsetzung', '01/2016', 'Tandem', 'Das gescheiterte Startup. Die Idee: Ein soziales Netzwerk, um Menschen zu finden, die das eigen Hobby teilen, um so neue Freundschaften zu schließen und sich an fremden Orten besser einzuleben. Die Umsetzung? Bald im Projektbericht nachzulesen.', '#impressionen', 'Mai 2018', 'cat_code')
+                    +card('tandem', 'Forschung, Design & Umsetzung', '01/2016', 'Tandem', 'Das gescheiterte Startup. Die Idee: Ein soziales Netzwerk, um Menschen zu finden, die das eigen Hobby teilen, um so neue Freundschaften zu schließen und sich an fremden Orten besser einzuleben. Die Umsetzung?', '#impressionen', 'Bald im Projektbericht nachzulesen.', 'cat_code')
                     
-                    +card('app', 'Designprojekt', '06/2016', 'App: Röntgen', 'Im Rahmen der Veranstaltung "Ambient Media" an der Hochschule Furtwangen University ist das App-Konzept "Röntgen" entstanden. Ziel waren leichte Bedienbarkeit durch klare Benutzeroberfläche und schnelle Informationsvermittlung.', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept', 'Auf Dribbble öffnen', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept')
-                    
-                    +card('bymagellan', 'Anspruchsvoll. Minimalistisch. Perfekt.', '10/2017', 'Art of Magellan', "The Design Language developed for our “Magellan Code & Design Consulting” Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Weiterlesen', 'cat_code')
+                    //-+card('app', 'Designprojekt', '06/2016', 'App: Röntgen', 'Im Rahmen der Veranstaltung "Ambient Media" an der Hochschule Furtwangen University ist das App-Konzept "Röntgen" entstanden. Ziel waren leichte Bedienbarkeit durch klare Benutzeroberfläche und schnelle Informationsvermittlung.', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept', 'Auf Dribbble öffnen', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept')
                     
                     //- Design Category
                     
@@ -156,7 +156,7 @@ html(lang="de")
                     
                     //- Plugin Category
                     
-                    +card('ull', 'jQuery Plugin', '01/2018', 'Unslider Lazyload & Thumbnails', 'Extends unslider.js with lazyloading functionality, enables sourceset usage and introduces Thumbnails. Fully opensource and extendable. Powers websites that are used by thousands every month.', 'projekte/2018/unsliderlazyload', 'Demo & Code', 'cat_plugins')
+                    //-+card('ull', 'jQuery Plugin', '01/2018', 'Unslider Lazyload & Thumbnails', 'Extends unslider.js with lazyloading functionality, enables sourceset usage and introduces Thumbnails. Fully opensource and extendable. Powers websites that are used by thousands every month.', 'projekte/2018/unsliderlazyload', 'Demo & Code', 'cat_plugins')
                 br
                 //-div.c
                     span.loadmore
