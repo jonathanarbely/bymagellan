@@ -1,7 +1,6 @@
 console.log("Please watch over your XSSkiddies in this console area. Only authorized/l33t personell allowed. Parents carry any responibility. Kids may fall into Honeypots. Stay safe, don't get pwned.");
 
 $(document).ready(function () {
-
     // Switch between Categories in the Impressions section
     $('#designs').click(function () {
         resetKnowHow();
@@ -15,15 +14,8 @@ $(document).ready(function () {
         $('.cat_code').show();
         $(this).addClass('filter__item--active');
     });
-    $('#plugins').click(function () {
-        resetKnowHow();
-
-        $('.cat_plugins').addClass('flex');
-        $(this).addClass('filter__item--active');
-    });
-
     function resetKnowHow() {
-        $('.showcase .cat_code, .showcase .cat_design, .showcase .cat_plugins').removeClass('flex').hide();
+        $('.showcase .cat_code, .showcase .cat_design').removeClass('flex').hide();
         $('.showcase .filter__item').removeClass('filter__item--active');
     }
 
@@ -94,7 +86,6 @@ $(document).ready(function () {
         performance.removeClass('card--inactive');
         $(this).addClass('category__item--active');
     });
-
     function resetServices() {
         cardsServices.addClass('card--inactive');
         switchesServices.removeClass('category__item--active');
@@ -107,19 +98,16 @@ $(document).ready(function () {
         switchMail = $('#switchMail'),
         phone = $('#phony'),
         switchPhone = $('#switchPhone');
-
     switchMail.click(function () {
         resetContactView();
         mail.removeClass('card--inactive');
         $(this).addClass('category__item--active');
     });
-
     switchPhone.click(function () {
         resetContactView();
         phone.removeClass('card--inactive');
         $(this).addClass('category__item--active');
     });
-
     function resetContactView() {
         cardsContact.addClass('card--inactive');
         switchesContact.removeClass('category__item--active');
@@ -151,7 +139,6 @@ $(document).ready(function () {
         $(this).removeClass('quote__customerbranding--inactive');
         $('.quote--unsplash').removeClass('hide');
     });
-
     function resetTestimonials() {
         $('.quote').addClass('hide');
         $('.quote__customerbranding').not(':first').addClass('quote__customerbranding--inactive');
@@ -178,6 +165,5 @@ $(document).ready(function () {
                 console.log('SO RESTget failed: ' + err);
             }
         });
-    })
-
+    });
 });

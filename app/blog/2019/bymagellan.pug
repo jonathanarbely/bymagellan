@@ -1,19 +1,19 @@
-include ../../_includes/_pageincludes.pug
+include /_includes/_pageincludes.pug
 
 doctype html
 html(lang="de")
     head
-        include ../../_includes/_meta.pug
+        include /_includes/_meta.pug
         +meta('en', 'BLOG | Magellan Code & Design Consulting - Our Design Language')
         +css()
-        include ../../_includes/_js.pug
+        include /_includes/_js.pug
     
     body
         include /_includes/_globalbody.pug
         
         header
             img.heroimage(src='/assets/images/pixel/blog/bymagellan/bymagellan-header.jpg')
-            include ../../_includes/_nav.pug
+            include /_includes/_nav.pug
             +nav('page', true)
             +title('Our Design Language', '...and how it represents our work-ethic.', 'Sophisticated. Minimalist. Perfection.', '#startreading', false, false, true)
             .gradient--bottom
@@ -118,12 +118,11 @@ html(lang="de")
                           a(href='https://www.instagram.com/bymagellan/', style=' color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;', target='_blank')  Magellan Code &amp; Design Cons.
                           |  (@bymagellan) on 
                           time(style=' font-family:Arial,sans-serif; font-size:14px; line-height:17px;', datetime='2019-06-04T00:25:33+00:00') Jun 3, 2019 at 5:25pm PDT
-                    |  
                     script(async='', src='//www.instagram.com/embed.js')
 
             section.loadmore.c.loadmore__anime
                 img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
                 a(href='/en#impressionen') Back to 'All Projects'
     
-    include ../../_includes/_footer.pug
+    include /_includes/_footer.pug
     +footer('en')

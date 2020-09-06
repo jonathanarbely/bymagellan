@@ -1,19 +1,19 @@
-include ../../_includes/_pageincludes.pug
+include /_includes/_pageincludes.pug
 
 doctype html
 html(lang="de")
     head
-        include ../../_includes/_meta.pug
+        include /_includes/_meta.pug
         +meta()
         +css()
-        include ../../_includes/_js.pug
+        include /_includes/_js.pug
     
     body
         include /_includes/_globalbody.pug
     
         header
             //-img.heroimage(src='/assets/images/pixel/projects/ph/magellan-ph-header.jpg')
-            include ../../_includes/_nav.pug
+            include /_includes/_nav.pug
             +nav('page')
             
             +title('Profi-Homepage', 'Screendesigns für Kunden verschiedenster Branchen.', 'Design', '#startreading')
@@ -66,4 +66,4 @@ html(lang="de")
                 img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
                 a(href='/#impressionen') Zurück zur Übersicht
     
-    include ../../_includes/_footer.pug
+    include /_includes/_footer.pug

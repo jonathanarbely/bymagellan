@@ -1,21 +1,21 @@
-include ../../_includes/_pageincludes.pug
+include /_includes/_pageincludes.pug
 
 -var pageTitle = 'Magellan Code & Design - New Year in Paris Wallpaper Collection'
 
 doctype html
 html(lang="de")
     head
-        include ../../_includes/_meta.pug
+        include /_includes/_meta.pug
         +meta('en', 'BLOG | Magellan Code & Design Consulting - Paris Wallpaper Collection')
         +css()
-        include ../../_includes/_js.pug
+        include /_includes/_js.pug
     
     body
         include /_includes/_globalbody.pug
         
         header
             img.heroimage(src='/assets/images/pixel/blog/wallpaper/magellan-paris-header.jpg')
-            include ../../_includes/_nav.pug
+            include /_includes/_nav.pug
             +nav('page', true)
             +title("New Year in PARIS", "Wallpaper Collection", 'Photography', '#startreading', false, false, true)
             
@@ -149,5 +149,5 @@ html(lang="de")
                 img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
                 a(href='/#blog') Zurück zur Übersicht
     
-    include ../../_includes/_footer.pug
+    include /_includes/_footer.pug
     +footer('en')

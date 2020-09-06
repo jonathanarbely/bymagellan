@@ -14,7 +14,7 @@ html(lang="de")
         include _includes/_globalbody.pug
     
         header
-            include /_includes/_nav.pug
+            include _includes/_nav.pug
             +nav('page', true)
             +title('Impressum & Datenschutz', '§', 'DSVGO aktualisiert', '#startreading', false, false, true)
             
@@ -56,11 +56,11 @@ html(lang="de")
             var gaProperty = 'UA-50961830-5';
             var disableStr = 'ga-disable-' + gaProperty;
             if (document.cookie.indexOf(disableStr + '=true') > -1) {
-            window[disableStr] = true;
+                window[disableStr] = true;
             }
             function gaOptout() {
-            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-            window[disableStr] = true;
+                document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                window[disableStr] = true;
             }
     
     include _includes/_footer.pug

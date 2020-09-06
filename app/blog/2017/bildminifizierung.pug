@@ -1,21 +1,21 @@
-include ../../_includes/_pageincludes.pug
+include /_includes/_pageincludes.pug
 
 -var pageTitle = 'Magellan Code & Design - Blog: Bilder automatisch Komprimieren'
 
 doctype html
 html(lang="de")
     head
-        include ../../_includes/_meta.pug
+        include /_includes/_meta.pug
         +meta(false, 'BLOG | Magellan Code & Design Co. - Bilder automatisch Komprimieren')
         +css()
-        include ../../_includes/_js.pug
+        include /_includes/_js.pug
     
     body
         include /_includes/_globalbody.pug
     
         header
             img.heroimage(src='/assets/images/pixel/blog/imageoptimization/magellan-imageoptimization-header.jpg')
-            include ../../_includes/_nav.pug
+            include /_includes/_nav.pug
             +nav('page', true)
             +title("Bilder automatisch Komprimieren", "Der Kompromiss zwischen Qualität und Performance", 'Performance', '#startreading', false, false, true)
             
@@ -129,4 +129,4 @@ html(lang="de")
                 img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
                 a(href='/#blog') Zurück zur Übersicht
     
-    include ../../_includes/_footer.pug
+    include /_includes/_footer.pug

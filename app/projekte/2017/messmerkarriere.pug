@@ -1,19 +1,19 @@
-include ../../_includes/_pageincludes.pug
+include /_includes/_pageincludes.pug
 
 doctype html
 html(lang="de")
     head
-        include ../../_includes/_meta.pug
+        include /_includes/_meta.pug
         +meta()
         +css()
-        include ../../_includes/_js.pug
+        include /_includes/_js.pug
     
     body
         include /_includes/_globalbody.pug
     
         header
             img.heroimage(src='/assets/images/pixel/projects/messmer/magellan-messmerkarriere-header.jpg')
-            include ../../_includes/_nav.pug
+            include /_includes/_nav.pug
             +nav('page')
             
             +title('Messmer Pen Karriereportal', "Bewerberakquise im Innen- und Außendienst", 'Design & Umsetzung', '#startreading')
@@ -63,4 +63,4 @@ html(lang="de")
                 img.icon.icon--xs(src='../../assets/images/vector/iconset/prev.svg')
                 a(href='/#impressionen') Zurück zur Übersicht
     
-    include ../../_includes/_footer.pug
+    include /_includes/_footer.pug
