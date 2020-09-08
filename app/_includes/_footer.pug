@@ -3,7 +3,7 @@ mixin footer(lang)
         footer.c
             .footer__inner
 
-                div.footer__adress
+                .footer__adress
                     span.ticket__description__title Anschrift
                     br
                     br
@@ -11,13 +11,13 @@ mixin footer(lang)
                     p Vogtsweg 3
                     p 79312 Emmendingen
                     p Baden-Württemberg, DE
-                    p.footer__tax / Diese Adresse dient dem Erhalt physischer Post und ist nicht Standort unseres Büros. Siehe 
+                    p.footer__tax Diese Adresse dient dem Erhalt physischer Post und ist nicht Standort unseres Büros. Siehe 
                         a(href='#kontakt') Kontaktdaten
                         | .
                     br
                     a.footer__tax(href='/impressum.html') / Impressum
 
-                div.footer__aboutmagellan
+                .footer__aboutmagellan
                     span.ticket__description__title Ziel & Anspruch
                     br
                     br
@@ -27,46 +27,52 @@ mixin footer(lang)
                     p Dafür gehen wir die Extrameile.
                     br
                     br
-                    div.factsdontcareaboutyourfeelings
-                        div.factsdontcareaboutyourfeelings__inner
+                    .factsdontcareaboutyourfeelings
+                        .factsdontcareaboutyourfeelings__inner
                             span.factsdontcareaboutyourfeelings__numeri(title='Interchalet Freiburg, Messmer Pen, Grundschule Windenreute-Maleck, Juristische Studiengesellschaft Karlsruhe e.V., Tariffuxx GmbH, Jüdische Gemeinde Emmendingen, Jüdisches Museum Emmendingen, Ferienwohnung Gutjahr, BEST Büro Express Services, AH Consult, Bies Büdie 05 eV., Südkurier Medienhaus GmbH, Metzger Kältetechnik, Codematch, CJS-CDKeys, Marx Reinigungs Service, Derwisch Pizza Döner, Gedenkstaettenverbund, Musikverein Buchholz, Connys Hundekensmanufaktur, Autohaus Mayer Renault/Dacia, start-trading.de, Nationale Naturlandschaften e.V., Mekomaga GmbH') 24
                             p.factsdontcareaboutyourfeelings__title Zufriedene Kunden
-                        div.factsdontcareaboutyourfeelings__inner
+                        .factsdontcareaboutyourfeelings__inner
                             span.factsdontcareaboutyourfeelings__numeri 7
                             p.factsdontcareaboutyourfeelings__title Jahre Erfahrung
-                        div.factsdontcareaboutyourfeelings__inner
+                        .factsdontcareaboutyourfeelings__inner
                             span.factsdontcareaboutyourfeelings__numeri 2
                             p.factsdontcareaboutyourfeelings__title Faktor Verschlüsselung aller Kundendaten
 
                 div.footer__hr
                     hr
 
-                div.footer__branding.footer__more
+                .footer__more.footer__branding
                     a(href='/') Magellan Code & Design Consulting - est. 2013
                     span.liluzivert.liluzivert--s
-                    a(href='https://github.com/jonathanarbely' target='_blank' title='Der gesamte Code dieser Website ist OpenSource und in einem Git-Repository einsehbar.')
+                    a(href='https://github.com/jonathanarbely' target='_blank' title='Der gesamte Code dieser Website ist Open-Source und in einem Git-Repository einsehbar.')
                         svg
                             use(xlink:href='#github')
 
-                div.footer__more
+                .footer__theme
+                    .theme.darkmode
+                        span.theme__label(title='Ihr Betriebssystem befindet sich im "Darkmode". Die Anzeige auf dieser Website passt sich dem an.') 🌑 Dunkelmodus
+                    .theme.lightmode
+                        span.theme__label(title='Ihr Betriebssystem befindet sich in der hellen Standardanzeige.') 🌕 Tagmodus
+                
+                .footer__more
                     a(href='https://medium.com/@jonathanarbely' target='_blank')
                         svg
                             use(xlink:href='#medium')
-                    a#sorep(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')
+                    a(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')#sorep
                         svg
                             use(xlink:href='#so')
                     a(href='https://dribbble.com/jarbely' target='_blank')
-                        svg
+                        svg.footer__sm
                             use(xlink:href='#dribbble')
                     a(href='https://www.instagram.com/bymagellan/' target='_blank')
-                        svg
+                        svg.footer__sm
                             use(xlink:href='#instagram')
     
     else
         footer.c
             .footer__inner
 
-                div.footer__adress
+                .footer__adress
                     span.ticket__description__title Address
                     br
                     br
@@ -74,13 +80,13 @@ mixin footer(lang)
                     p Vogtsweg 3
                     p 79312 Emmendingen
                     p Baden-Württemberg, Germany
-                    p.footer__tax / This address is for the receipt of physical post and is not the location of our office. Reach out us by 
+                    p.footer__tax This address is for the receipt of physical post and is not the location of our office. Reach out us by 
                         a(href='#kontakt') clicking here
                         | .
                     br
                     a.footer__tax(href='/impressum.html') / Legal Information
 
-                div.footer__aboutmagellan
+                .footer__aboutmagellan
                     span.ticket__description__title Claim
                     br
                     br
@@ -101,26 +107,32 @@ mixin footer(lang)
                             span.factsdontcareaboutyourfeelings__numeri 2
                             p.factsdontcareaboutyourfeelings__title Factor encryption of all customer data
 
-                div.footer__hr
+                .footer__hr
                     hr
 
-                div.footer__branding.footer__more
-                    a(href='/') Magellan Code & Design Consulting - est. 2013
+                .footer__more.footer__branding
+                    a(href='/en') Magellan Code & Design Consulting - est. 2013
                     span.liluzivert.liluzivert--s
                     a(href='https://github.com/jonathanarbely' target='_blank' title='The complete codebase of this Website is Open Source and can be found in this Git-Repository.')
                         svg
                             use(xlink:href='#github')
 
-                div.footer__more
+                .footer__theme
+                    .theme.darkmode
+                        span.theme__label(title='Your OS is in "Darkmode". This website automatically adjusts to your preffered theme.') 🌑 Darkmode
+                    .theme.lightmode
+                        span.theme__label(title='Your OS is set to the default "lightmode" view.') 🌕 Lightmode
+
+                .footer__more
                     a(href='https://medium.com/@jonathanarbely' target='_blank')
                         svg
                             use(xlink:href='#medium')
-                    a#sorep(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')
+                    a(href='https://stackoverflow.com/users/4033913/jonathan-arbely?tab=profile' target='_blank')#sorep
                         svg
                             use(xlink:href='#so')
                     a(href='https://dribbble.com/jarbely' target='_blank')
-                        svg
+                        svg.footer__sm
                             use(xlink:href='#dribbble')
                     a(href='https://www.instagram.com/bymagellan/' target='_blank')
-                        svg
+                        svg.footer__sm
                             use(xlink:href='#instagram')

@@ -66,7 +66,7 @@
             
         
         & .lang
-            margin-left: 2em;
+            margin-left: 2em
 
     &--fixed
         position: fixed
@@ -76,17 +76,21 @@
         padding: 0 5em
         top: 0
         left: 0
-        background: linear-gradient(#f1f1f1 0%, rgba(255,255,255,0) 172%)
+        z-index: 99999999
         -webkit-backdrop-filter: saturate(120%) blur(20px)
         backdrop-filter: saturate(120%) blur(20px)
-        z-index: 99999999
+
+        @media (prefers-color-scheme: light)
+            background: linear-gradient($whitewater 0%, $trans 172%)
+        @media (prefers-color-scheme: dark)
+            background: linear-gradient($darkness 0%, $trans 172%)
         
         & .nav__navigation
             height: 55px
         
             &__item
-                color: #2f2f2f
-                display: block !important;
+                color: $darkgrey
+                display: block !important
                 
                 &--cta:hover
                     color: white

@@ -43,13 +43,16 @@
             width: 1.3em
             height: 2.1em
             margin-bottom: .5em
+            
+            @media (prefers-color-scheme: dark)
+                filter: invert(100%) sepia(3%) saturate(230%) hue-rotate(268deg) brightness(115%) contrast(89%) // https://codepen.io/sosuke/pen/Pjoqqp
         
         &__name
+            @include darkmodecolor($grey, $white)
             font-family: 'Montserrat'
             font-weight: bold
             font-size: 1.55em
             letter-spacing: 1px
-            color: $grey
             text-transform: uppercase
             letter-spacing: .075em
             

@@ -1,9 +1,8 @@
 // STYLEGUIDE - for DOM styling
 
 // DOM-Textelements
-
 h1
-    color: #ffffff
+    color: $white
     font-family: 'butlerultralight'
     letter-spacing: .1em
     font-size: 1.1em
@@ -22,7 +21,7 @@ h1
         font-size: .75em
 
 h2
-    color: #ffffff
+    color: $white
     font-family: 'Montserrat'
     font-weight: bold
     font-size: 2.9em
@@ -42,7 +41,7 @@ h2
         font-size: 1.3em
             
 h3
-    color: $darkness
+    @include darkmodecolor($darkness, $white)
     font-family: 'Playfair Display SC'
     font-size: 42px
     text-transform: uppercase
@@ -58,7 +57,7 @@ h3
         font-size: 30px
     
 h4
-    color: $grey
+    @include darkmodecolor($grey, $offwhite)
     font-family: 'Georgia'
     font-size: 23px
     font-weight: normal
@@ -72,7 +71,7 @@ h4
         font-size: 18px
     
 h5
-    color: $darkness
+    @include darkmodecolor($darkness, $ghost)
     font-family: 'Playfair Display SC'
     text-transform: uppercase
     letter-spacing: 3px
@@ -81,7 +80,7 @@ h5
     text-align: center
     
 p, b, ul
-    color: $text
+    @include darkmodecolor($text, $ghost)
     font-family: 'Georgia'
     font-size: 1em
     line-height: 1.7em
@@ -89,21 +88,23 @@ p, b, ul
     margin: .5em 0 .4em 0
         
 a
+    @include darkmodecolor($text, $ghost)
     color: $text
     font-family: 'Georgia'
     
 // DOM-Sections and Divisions
-
 header
     position: relative
-    background-color: #111111
+    background-color: $darkness
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
-    border: 12px solid white
+    border-width: 12px
+    border-style: solid
     height: 75%
     padding: 34px 80px 34px 80px
     overflow: hidden
+    @include darkmodeborder()
     
     @media (max-width: 1100px)
         padding-left: 3em
@@ -120,7 +121,7 @@ header
     
 main
     position: relative
-    background-color: #ffffff
+    @include darkmode()
     
     & section
         margin: 90px 0 90px 0
@@ -129,14 +130,17 @@ main
             margin: 70px 0 70px 0
 
 footer
-    background-color: #f7f7f7
+    @include darkmode($offwhite, $blackhole)
     padding: 4.5em 0 3.5em 0
             
 // DOM Misc.
-
 hr
     border: 0px
-    border-top: 1px #EAEAEA solid
+
+    @media (prefers-color-scheme: light)
+        border-top: 1px $ghost solid
+    @media (prefers-color-scheme: dark)
+        border-top: 1px $darkness solid
     
 quote
     width: 77%
@@ -153,7 +157,6 @@ quote
         font-size: 1em
         
 // Text Selector
-
 ::selection
     background: $gold
 

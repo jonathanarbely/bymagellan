@@ -6,12 +6,14 @@
 html, body
     padding: 0
     margin: 0
-
-html, body
     height: 100%
+
+body
+    @include darkmode()
 
 a, a:hover, a:active, a:focus
     text-decoration: none
 
+// Hide grecaptcha
 .grecaptcha-badge 
     visibility: hidden

@@ -1,0 +1,29 @@
+// Darkmode Toggle
+.lightmode
+    
+    @media (prefers-color-scheme: light)
+        display: block !important
+    @media (prefers-color-scheme: dark)
+        display: none !important
+        
+.darkmode
+    
+    @media (prefers-color-scheme: light)
+        display: none !important
+    @media (prefers-color-scheme: dark)
+        display: block !important
+
+// Theme Indicator
+.theme
+    @include darkmodecolor($darkgrey, $ghost)
+    padding: 0 .75em
+    cursor: help
+
+    &__label
+        font-family: sans-serif
+        font-size: 15px
+        @include darkmodeborder($ghost, $darkness)
+        border-width: 1px
+        border-style: solid
+        border-radius: 8px
+        padding: 7px 14px

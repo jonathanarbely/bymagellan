@@ -2,4 +2,30 @@
     transition: .1s
         
 @mixin boxshadow()
-    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.09)
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, .09)
+
+// Dynamic 🌑-Mode Background
+@mixin darkmode($light: $white, $dark: $black)
+    @media (prefers-color-scheme: light)
+        background-color: $light
+    @media (prefers-color-scheme: dark)
+        background-color: $dark
+
+// Dynamic 🌑-Mode Color
+@mixin darkmodecolor($light: $white, $dark: $black)
+    @media (prefers-color-scheme: light)
+        color: $light
+    @media (prefers-color-scheme: dark)
+        color: $dark !important
+
+// Dynamic 🌑-Mode Bordercolor
+@mixin darkmodeborder($light: $white, $dark: $black)
+    @media (prefers-color-scheme: light)
+        border-color: $light
+    @media (prefers-color-scheme: dark)
+        border-color: $dark !important
+
+// Dynamic 🌑-Mode Filter (for SVGs)
+@mixin darkmodefilter()
+    @media (prefers-color-scheme: dark)
+        filter: invert(53%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(93%) contrast(90%)
