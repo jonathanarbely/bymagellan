@@ -1,4 +1,4 @@
-# Magellan - Code & Design Consulting
+# Magellan Code & Design Consulting
 
 This repository contains the portfolio found at [bymagellan.co](https://bymagellan.co)
 
@@ -13,8 +13,6 @@ You need to have gulp CLI, git and NPM installed globally on your machine. Then 
 ```
 npm install
 ```
-
-Please note that this package runs well on Windows machines and has not been tested on Mac or Linux.
 
 ### Building
 
@@ -57,21 +55,11 @@ If you want to propose a push request, do so via GitHub.
 
 ### Built With
 
-* [Brackets](http://brackets.io/) - The text editor used
+* [VS Code](https://code.visualstudio.com/) - The text editor used
 * [Gulp.js](https://gulpjs.com/) - Workflow tool
-* [Localtunnel](https://localtunnel.github.io/www/) - Local-Webserver Proxy
+* [Localtunnel](https://localtunnel.github.io/www/) - Local webserver Proxy
 * [Unsplash](https://unsplash.com/) - Beautiful, free photos
 
 ### License
 
-(c) Copyright 2017 Jonathan Arbely, all rights reserved.
-
-## Roadmap & Todos
-
-* HTML lang var
-* substitute br-Tags
-* EN version
-* Lazyload images using own plugin (that will be published very very soon)
-* img -> pictures
-* improve JS
-* Fix IE11
+(c) Copyright 2020 Jonathan Arbely, all rights reserved.
