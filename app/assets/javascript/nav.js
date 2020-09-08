@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
 });
 
 function fixedNav() {
-    if (jQuery(window).scrollTop() >= 775) {
+    if (jQuery(window).scrollTop() >= 1000) {
         jQuery('.nav').addClass('nav--fixed');
         jQuery('.nav__brand').hide();
         //jQuery('.nav__brand--wordmark').show();
