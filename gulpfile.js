@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     maps = require('gulp-sourcemaps'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
-    modRewrite = require('connect-modrewrite'),
     concat = require('gulp-concat'),
     minify = require('gulp-minify');
 
