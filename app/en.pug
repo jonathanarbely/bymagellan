@@ -12,7 +12,7 @@ html(lang="en")
         +meta('en')
         +css('index')
         include _includes/_js.pug
-        script(src='/assets/plugins/jquery-smoothscroll/jquery-smoothscroll.min.js' type='text/javascript' defer)
+        script(src='/assets/plugins/jquery-smoothscroll/jquery-smoothscroll.min.js' defer)
     
     body
         include _includes/_globalbody.pug
@@ -25,10 +25,10 @@ html(lang="en")
         script.
             // Randomize Headerimage
             var myArray = [
-              "url('/assets/images/pixel/magellanmedia-hero.jpg')",
-              "url('/assets/images/pixel/magellanmedia-hero-iii.jpg')"
+                "url('/assets/images/pixel/magellanmedia-hero.jpg')",
+                "url('/assets/images/pixel/magellanmedia-hero-iii.jpg')"
             ];
-            $('header').css('background-image',myArray[Math.floor(Math.random()*myArray.length)]);
+            $('header').css('background-image', myArray[Math.floor(Math.random()*myArray.length)]);
             
         main
             section.knowhow#kompetenzen

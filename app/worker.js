@@ -1,7 +1,7 @@
 /* jslint node: true */
 "use strict";
 console.log("WORKER: executing.");
-var version = "v26::",
+var version = "v27::",
     offlineFundamentals = ['',
                             'assets/stylesheets/artofmagellan.css',
                             'assets/stylesheets/pagespecific/index.css',
