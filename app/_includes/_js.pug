@@ -4,53 +4,23 @@ script(src='/assets/plugins/waves/waves.min.js' async)
 script(src='/assets/javascript/interactive.min.js' async)
 script(src='/assets/javascript/nav.min.js' async)
 
-//-link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css')
-//-script(src='https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js')
-script.
-    /*window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#000"
-                },
-                "button": {
-                    "background": "transparent",
-                    "text": "#f1d600",
-                    "border": "#f1d600"
-                }
-            },
-            "type": "opt-out",
-            "content": {
-                "message": "Auf dieser Website kommen Cookies von Google Analytics zum Einsatz. Es werden keine persönliche Daten gespeichert oder verarbeitet.",
-                "dismiss": "Einverstanden",
-                "link": "Mehr Erfahren (Datenschutz)",
-                "deny": "Cookies blockieren",
-                "href": "./impressum.html"
-            }
-        });
-    
-        $('.cc-deny').click(function(){
-            gaOptout();
-            //console.log('cookie opt-out');
-        });
-    });*/
-    
-    // Set to the same value as the web property used on the site
+script. 
+    //- Set to the same value as the web property used on the site
     var gaProperty = 'UA-50961830-5';
 
-    // Disable tracking if the opt-out cookie exists.
+    //- Disable tracking if the opt-out cookie exists.
     var disableStr = 'ga-disable-' + gaProperty;
     if (document.cookie.indexOf(disableStr + '=true') > -1)
         window[disableStr] = true;
     
-    // Opt-out function
+    //- Opt-out function
     function gaOptout() {
         document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
         window[disableStr] = true;
-        //console.log('cookie deleted');
+        //-console.log('cookie deleted');
     }
     
-    // Hotjar Tracking Code
+    //- Hotjar Tracking Code
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:1564606,hjsv:6};
@@ -59,9 +29,3 @@ script.
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-
-//-script(src="https://www.google.com/recaptcha/api.js?render=6Lf7TL0UAAAAAHuw05hkQ1nZ6u39FoBzDwlorVel")
-//-script.
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6Lf7TL0UAAAAAHuw05hkQ1nZ6u39FoBzDwlorVel', {action: 'homepage'});
-    });
