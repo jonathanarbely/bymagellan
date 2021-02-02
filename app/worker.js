@@ -29,9 +29,9 @@ self.addEventListener("install", function (e) {
         }
 
         function o() {
-            return console.log("WORKER: fetch request failed in both cache and network."), new Response("<h1>Service Unavailable</h1>", {
+            return console.log("WORKER: fetch request failed in both cache and network."), new Response("🦖 Keine Internetverbindung / No internet connection 🦕", {
                 status: 503,
-                statusText: "Service Unavailable"
+                statusText: "Connection to the internet lost"
             });
         }
         var s = fetch(e.request).then(t, o)["catch"](o);
