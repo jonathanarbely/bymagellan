@@ -1,0 +1,26 @@
+// Osano
+
+// Custom darkmode
+.osano-cm-info, .osano-cm-header, .osano-cm-info-dialog-header
+    @media (prefers-color-scheme: dark)
+        background: #232323
+        box-shadow: unset
+
+.osano-cm-disclosure__toggle
+    @media (prefers-color-scheme: dark)
+        color: $gold
+
+    &:hover
+        @media (prefers-color-scheme: dark)
+            color: $gold
+
+// CSS overwrite    
+.osano-cm-window__widget
+    display: none !important
+
+ul.osano-cm-dialog__list.osano-cm-list
+
+    & li
+
+        &:first-child, &:nth-child(2)
+            display: none !important
