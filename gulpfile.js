@@ -9,7 +9,10 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat'),
-    minify = require('gulp-minify');
+    minify = require('gulp-minify'),
+    shell = require('gulp-shell'),
+    //rename = require("gulp-rename"),
+    wait = require("gulp-wait");
 
 // Test task
 gulp.task('hello', function (done) {
@@ -47,6 +50,7 @@ gulp.task('sass', gulp.series(function () {
     return gulp
         .src('app/assets/stylesheets/**/*.sass')
         .pipe(maps.init())
+        .pipe(wait(200))
         .pipe(sass({}).on('error', sass.logError))
         .pipe(maps.write('./'))
         .pipe(gulp.dest('dist/assets/stylesheets'));
@@ -56,6 +60,7 @@ gulp.task('sass', gulp.series(function () {
 gulp.task('buildsass', gulp.series(function () {
     return gulp
         .src('app/assets/stylesheets/**/*.sass')
+        .pipe(wait(200))
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -152,14 +157,28 @@ gulp.task('compress', gulp.series(function (done) {
     done();
 }));
 
+// Bundle JS sourced from NPM-Packages - http://browserify.org + https://github.com/hughsk/uglifyify
+var browserifyMain = 'browserify -g uglifyify app/assets/main.js > dist/assets/bundle.js';
+gulp.task('bundleMain', shell.task(browserifyMain));
+gulp.task('bundleMainDev', shell.task(browserifyMain + ' --debug'));
+
+// Copy CSS sourced from NPM-Packages
+gulp.task('copyCSS', gulp.series(function (done) {
+    gulp
+        .src('node_modules/node-waves/src/sass/waves.sass') // Waves
+        //.pipe(rename('waves.scss'))
+        .pipe(gulp.dest('app/assets/stylesheets/_extensions/npm-import/'));
+    done();
+}));
+
 // Default build for active development w/ localhost:8080
-gulp.task('default', gulp.series('pug', 'sass', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'watch', 'c', function (done) {
+gulp.task('default', gulp.series('copyCSS', 'pug', 'sass', 'bundleMainDev', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'watch', 'c', function (done) {
     console.log('Development environment engaged! 〽️');
     done();
 }));
 
 // Build task for production
-gulp.task('build', gulp.parallel('pug', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'compress', 'buildsass', 'copySW', 'copyManifest', function (done) {
+gulp.task('build', gulp.parallel('copyCSS', 'pug', 'bundleMain', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'compress', 'buildsass', 'copySW', 'copyManifest', function (done) {
     console.log('Successfully finished build! Ready to set sail. ⚓');
     done();
 }));
