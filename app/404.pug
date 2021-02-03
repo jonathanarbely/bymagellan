@@ -1,0 +1,47 @@
+include _includes/_pageincludes.pug
+
+//-var pageTitle = 'Error 404 ⚠️ Magellan Magellan Code & Design'
+
+doctype html
+html(lang="de")
+    head
+        include _includes/_meta.pug
+        +meta()
+        +css()
+        include _includes/_js.pug
+    
+    body
+        include _includes/_globalbody.pug
+    
+        header.header--full.header--blend
+            include _includes/_nav.pug
+            +nav('page', true)
+            +title('This page does not exist.', 'Fun fact: In February of 2021 $GME was shortsqueezed by r/WSB degenerates.', 'Error 404', '/', false, false, true)
+        script.
+            // Randomize Headerimage
+            var myArray = [
+                "url('https://i.giphy.com/media/m2Q7FEc0bEr4I/giphy.webp')",
+                "url('https://i.giphy.com/media/HwGF3bAIEoNuU/giphy.webp')",
+                "url('https://i.giphy.com/media/3gWDZyKbddIipMF1E9/giphy.webp')",
+                "url('https://i.giphy.com/media/XjXtEuBHulPcQ/giphy.webp')",
+                "url('https://i.giphy.com/media/RKNNW4sy4SH0vCZ3ar/giphy.webp')",
+                "url('https://i.giphy.com/media/xT0GqGrvB5PgQYSKGc/giphy.webp')",
+                "url('https://i.giphy.com/media/TyPydeCmjKQ2Q/giphy.webp')",
+                "url('https://i.giphy.com/media/KpeVnsvp7kpSo/giphy.webp')",
+                "url('https://i.giphy.com/media/ND6xkVPaj8tHO/giphy.webp')"
+            ];
+            $('header').css('background-image', myArray[Math.floor(Math.random()*myArray.length)]);
+                
+        script.
+            var gaProperty = 'UA-50961830-5';
+            var disableStr = 'ga-disable-' + gaProperty;
+            if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                window[disableStr] = true;
+            }
+            function gaOptout() {
+                document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                window[disableStr] = true;
+            }
+    
+    include _includes/_footer.pug
+    +footer('en')
