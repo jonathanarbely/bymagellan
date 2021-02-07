@@ -19,4 +19,4 @@ mixin card(id, meta, date, title, text, link, linkText, additionalClass, externa
                     else
                         a.card__description__anchor(href= link)= linkText
         if noimage != 'noimage'
-            div.card__showcase
+            div.card__showcase(data-tilt data-tilt-glare='true' data-tilt-scale='.975')

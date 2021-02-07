@@ -146,7 +146,7 @@ gulp.task('c', gulp.series(function (done) {
 
 // Compress .js files
 gulp.task('compress', gulp.series(function (done) {
-    gulp.src('app/assets/javascript/*.js')
+    gulp.src('app/assets/javascript/**/*.js')
         .pipe(minify({
             ext: {
                 src: '.js',

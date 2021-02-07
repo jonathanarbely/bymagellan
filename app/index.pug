@@ -205,8 +205,8 @@ html(lang="de")
                             a.flex(href='https://www.xing.com/profile/Jonathan_Arbely' target='_blank' title='Auf XING vernetzen')
                                 svg.icon.icon--nomargin.icon--s
                                     use(xlink:href='#iconset--xing')
-                        img.portfolio__image.lightmode(src='/assets/images/pixel/magellan-jonathanarbely.png')
-                        img.portfolio__image.darkmode(src='/assets/images/pixel/magellan-jonathanarbely-dark.png')
+                        img.portfolio__image.lightmode(src='/assets/images/pixel/magellan-jonathanarbely.png' data-tilt)
+                        img.portfolio__image.darkmode(src='/assets/images/pixel/magellan-jonathanarbely-dark.png' data-tilt)
                         div.portfolio__content
                             svg.portfolio__content__ornament
                                 use(xlink:href='#ornament')
@@ -222,8 +222,8 @@ html(lang="de")
                             a.portfolio__content__cta.btn.btn--light(href='mailto:jonathan@bymagellan.co' target='_blank') jonathan@bymagellan.co
 
                     div.portfolio
-                        img.portfolio__image.lightmode(src='/assets/images/pixel/magellan-valeriaraffa.png')
-                        img.portfolio__image.darkmode(src='/assets/images/pixel/magellan-valeriaraffa-dark.png')
+                        img.portfolio__image.lightmode(src='/assets/images/pixel/magellan-valeriaraffa.png' data-tilt)
+                        img.portfolio__image.darkmode(src='/assets/images/pixel/magellan-valeriaraffa-dark.png' data-tilt)
                         div.portfolio__content
                             svg.portfolio__content__ornament
                                 use(xlink:href='#ornament')
@@ -249,7 +249,7 @@ html(lang="de")
                         .gps
                             .pulse
                             .dot
-                        span.subtitle.ruby Aktuell remote und onsite verfügbar
+                        span.subtitle.ruby Aktuell verfügbar
                 br
                 br
                 br
@@ -273,7 +273,7 @@ html(lang="de")
                 br
                 br
                 div.c.c--overflow
-                    div.pamphlet(id='mail')
+                    div.pamphlet(data-tilt data-tilt-scale='.975' data-tilt-glare='true' data-tilt-maxglare='.25')#mail
                         div.pamphlet__description
                             span.pamphlet__description__tag E-Mail-Adresse
                             a.pamphlet__description__title(href='mailto:hallo@bymagellan.co') hallo@bymagellan.co
@@ -281,7 +281,7 @@ html(lang="de")
                                 svg.icon.icon--s
                                     use(xlink:href='#iconset--briefcase')
                                 span.pamphlet__description__anchor Auf gute Zusammenarbeit!
-                    div.pamphlet(id='phony' class='card--inactive')
+                    div.pamphlet.card--inactive(data-tilt data-tilt-scale='.975' data-tilt-glare='true' data-tilt-maxglare='.25')#phony
                         div.pamphlet__description
                             span.pamphlet__description__tag Mobilnummer
                             a.pamphlet__description__title(href='tel:017639200032') +49 (0)176 3920 0032

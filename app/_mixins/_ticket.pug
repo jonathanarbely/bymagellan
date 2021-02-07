@@ -1,5 +1,5 @@
 mixin ticket(id, meta, title, link, linkText, additionalClass)
-    div.ticket(id=id class=additionalClass)
+    div.ticket(id=id class=additionalClass data-tilt data-tilt-scale='.975' data-tilt-glare='true' data-tilt-maxglare='.25')
         div.ticket__gradient
         div.ticket__description
             span.ticket__description__tag= meta

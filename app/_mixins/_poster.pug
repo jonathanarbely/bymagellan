@@ -10,6 +10,6 @@ mixin poster(id, meta, title, text, link, linkText, additionalClass, externalLin
                     svg.icon
                         use(xlink:href='#iconset--eyeglasses')
                     if externalLink
-                        a.poster__description__anchor(href= link target='_blank')= linkText
+                        a.poster__description__anchor(href=link target='_blank')= linkText
                     else
-                        a.poster__description__anchor(href= link)= linkText
+                        a.poster__description__anchor(href=link)= linkText
