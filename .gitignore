@@ -10,6 +10,7 @@ node_modules/
 dist/*
 stuff/*
 dist/
+dump/
 
 # MacOS specific files
 ._*
