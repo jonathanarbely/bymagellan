@@ -20,15 +20,14 @@ html(lang="en")
         header
             include _includes/_nav.pug
             +nav('index', 'en')
-            +title('Your project,', 'Web & App Development / UI & UX / Printdesign / Workflow & Performance Consulting / SEO / On Site Presence', '⚡ We have designed and built websites that have reached millions around the globe.', '#impressionen', 'Our Ambition.', true, '')
+            +title('Your project,', 'Web & App Development / WordPress / UI & UX / Print & Product Design / Workflow & Performance Consulting / Serverside Google Tag Manager', '⚡ We have designed and built websites that have reached millions around the globe.', '#impressionen', 'Our Ambition.', true, '')
             .gradient--bottom
         script.
             // Randomize Headerimage
-            var myArray = [
-                "url('/assets/images/pixel/magellanmedia-hero.jpg')",
-                "url('/assets/images/pixel/magellanmedia-hero-iii.jpg')"
+            /*var myArray = [
+                "url('/assets/images/pixel/magellanmedia-hero-iv.webp')"
             ];
-            $('header').css('background-image', myArray[Math.floor(Math.random()*myArray.length)]);
+            $('header').css('background-image', myArray[Math.floor(Math.random()*myArray.length)]);*/
             
         main
             section.knowhow#kompetenzen
@@ -99,7 +98,7 @@ html(lang="en")
                     +card('cardBackend', 'Serverless & Serverside', '', 'Backend', 'We build Content Management Systems, serverside Software as well as Plugins & Themes for WordPress. We develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MVC architecture style frameworks like AngularJS and Ionic.', '', '', 'card--inactive')
                     
                     +card('cardPerformance', 'Consulting', '', 'Performance', 'Performance and the modern web go hand in hand. To create products that perform well on a multitude of devices & network conditions and thus enhance user experience, are standard work practice for us. Lightning fast above-the-fold loading, performance oriented workflow, GZIP- and CDN-Distribution of content are just some enhancements we implement.', '', '', 'card--inactive')
-                    
+
                     
                     +card('cardScreendesign', 'Conception & Design', '', 'Screendesign', 'We design clean, sophisticated and friendly user interfaces and build interactive prototypes using state-of-the-art design tools. By doing iterativ design, we keep the customer in the loop throughout the design process, so feedback can be discussed and implemented on a regular basis.', '', '', 'card--inactive card--print')
                     
@@ -110,8 +109,9 @@ html(lang="en")
                 h3 Work
                 div.filter
                     a.filter__item.filter__item--active#code(href='#impressionen') Web &amp; App
-                    a.filter__item#designs(href='#impressionen') Print &amp; Design
-                    //-a.filter__item#plugins(href='#impressionen') Plugins
+                    a.filter__item#designs(href='#impressionen') Branding
+                    //-a.filter__item#plugins(href='#impressionen') Photography
+                    //-a.filter__item#plugins(href='#impressionen') 3D-Design
                 br
                 br
                 br
@@ -120,14 +120,24 @@ html(lang="en")
                 div.c.c--overflow
                     //- Highlight
 
-                    +card('mkm', 'Vue.js, Dash.js, JWT, Browserify, REST-API, ES6', 'ongoing since 11/2019', '☁️ Mekomaga', 'Collaboration made in Germany — in a team of two a platform for DRM-protected media management was conceptualized, designed and developed from A to Z. Built according to the strictest German data protection laws with the latest DRM technologies and persistent authentication. Collaborate securely — present your media: “Upload files, put together a show and share it with customers and interested parties using a special shareable link. You can combine different file types in one show and you always have control over who can view and comment on them.”', 'https://mekomaga.net', 'Start today: 30 days free trial available', 'cat_code card--highlight', true, '', 'true', 'https://dribbble.com/jarbely/collections/3272747-Mekomaga')
+                    //- Code Category
+                    +card('mp', 'WooCommerce Development & Design, Blender, 3D Product-Configurator', 'ongoing since Summer 2021', '✍🏼 Messmer Pen', "A new webshop for a local brand, that is specializing in crafting high quality, customizable & sustainable design-pens. With almost every pen meticulously re-created in 3D using Blender, then carefully rendered and inserted into the sleak, minimalist website, we've crafted a custom webshop that allows for customization pre-order, animated video previews and higher fidelity marketing images that wouldn't be as effortlessly achievable without the flexibility offered by 'virtual photography'. The selected theme stands back elegantly, highlighting what's most important; every product and content-page. Worldwide shipping & PayPal Checkout.", 'https://messmer-pen.de/', 'Visit live today', 'cat_code card--highlight', true)
 
-                    +card('tc', 'Wordpress Development & Design', 'ongoing since 02/2020', '👩🏼‍⚕️ TeleClinic', "TeleClinic is Germany’s leading doctor on-demand platform with integrated pharmacies. The fastest, safest and most affordable way to see a doctor online and get medication. — I've joined the remote team as a full-stack designer and help heave the web experience to the next level. For that I am to improve every aspect of the frontend experience, by enhancing performance, designing and building new and delightful-to-use landing-pages and modules, streamlining the design language and continue to enhance visual fidelity while keeping in line with the existing style guide.", 'https://teleclinic.com', 'Book your online-doctor appointment today', 'cat_code card--highlight', true)
+                    +card('mkm', 'Vue.js, Dash.js, JWT, Browserify, REST-API, ES6', '11/2019 until Summer 2021', '☁️ Mekomaga', 'Collaboration made in Germany — in a team of two a platform for DRM-protected media management was conceptualized, designed and developed from A to Z. Built according to the strictest German data protection laws with the latest DRM technologies and persistent authentication. Collaborate securely — present your media: “Upload files, put together a show and share it with customers and interested parties using a special shareable link. You can combine different file types in one show and you always have control over who can view and comment on them.”. The project was completed with a complementary, custom Webflow-based homepage.', '', 'Start today: 30 days free trial available', 'cat_code card--highlight', true, '', 'true', 'https://dribbble.com/jarbely/collections/3272747-Mekomaga')
+
+                    +card('tc', 'Wordpress Development & Design, Performance Enhancement, Hosting & CDN Tuning, Serverside GTM', 'ongoing since 02/2021', '👩🏼‍⚕️ TeleClinic', "TeleClinic is Germany’s leading doctor on-demand platform with integrated pharmacies. The fastest, safest and most affordable way to see a doctor online and get medication. — I've joined the remote team as a full-stack designer and help heave the web experience to the next level. For that I am to improve every aspect of the frontend experience, by enhancing performance, designing and building new and delightful-to-use landing-pages and modules, streamlining the design language and continue to enhance visual fidelity while keeping in line with the existing style guide.", 'https://www.teleclinic.com/behandlungen/', 'Book your online-doctor appointment today', 'cat_code card--highlight', true)
                     
-                    +card('nnl', 'Ionic Framework & REST-API', 'ongoing since 02/2019', '🏞 German National Parks App', 'A hybrid app for iOS and Android is being developed on behalf of the Nationale Naturlandschaften e.V. This brings all German national parks, biosphere reserves, nature parks and certified wilderness areas to all common mobile devices. Based on latest tech. and with elements of “gamification”, a modern, beautiful, customizable and fast user experience is crafted. The main intention is to inspire younger target groups in particular for the topic of “national natural landscapes”. The app is connected to the existing WordPress backend of the website via REST API and GraphQL.', '#kontakt', 'You can request to join the "Closed Beta" testphase', 'cat_code card--highlight', false, '', 'true', 'https://dribbble.com/jarbely/collections/4356704-App-Nationale-Naturlandschaften')
+                    +card('nnl', 'Ionic Framework & REST-API', '02/2019 until Spring 2021', '🏞 German National Parks App', 'A hybrid app for iOS and Android is being developed on behalf of the Nationale Naturlandschaften e.V. This brings all German national parks, biosphere reserves, nature parks and certified wilderness areas to all common mobile devices. Based on latest tech. and with elements of “gamification”, a modern, beautiful, customizable and fast user experience is crafted. The main intention is to inspire younger target groups in particular for the topic of “national natural landscapes”. The app is connected to the existing WordPress backend of the website via REST API and GraphQL.', '#kontakt', 'You can request to join the TestFlight testphase on iOS', 'cat_code card--highlight', false, '', 'true', 'https://dribbble.com/jarbely/collections/4356704-App-Nationale-Naturlandschaften')
+
+                    //- Branding Category
+                    +card('imaya', 'Branding', 'Summer 2021', '🌿 Immaya Organics', "Carefully crafted branding and product design for an Indonesian organic-food company that strives to help local farmers and villagers by bringing their high-quality products to customers who seek sophisticated, modern & healthy organic food. IMMAYA products stand out to high-expectation customers and fit their lifestyle choices.", '#', 'Check out the complete creative brief', 'cat_design card--highlight', true)
 
                 div.c.c--overflow
                     //- Code Category
+                    
+                    +card('jotti', 'Shopify, B2G', 'Autumn 2022', 'Flüchtlingsheim.de', 'The customer, JOTTI GmbH, provides products and services that a to quickly and reliably set up housing for those seeking refuge. The target audience for this webshop are provincial governments.', 'https://xn--flchtlingsheim-hsb.de/', 'Visit Shop', 'cat_code', true)
+
+                    +card('em', 'Design', 'since Summer 2022', 'easymoney.com', 'Easymoney offers private individuals the opportunity to invest their money into peer to peer loans backed by UK property in a tax-efficient manner. They are part of the easy® family of companies, one of Europe’s best-known brands. Our newly crafted design prepares users to successfully finish a mandatory quiz when registering and increases the perceived valency of the brand.', '', 'Take a look at the new design', 'cat_code', true)
                     
                     +card('gumb', 'Relaunch, Sys-Admin, Support', 'Winter 2019/20', 'Gumb (Teamplanbuch)', 'Whether you are a sports club, a fishing club or a brass band, with Gumb you have the right app to organize your meetings, gatherings and events. Gumb is a scheduling app available on all your devices.', 'https://gumb.app', 'Visit Website', 'cat_code', true)
                     
@@ -139,25 +149,31 @@ html(lang="en")
 
                     +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen we designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
                     
-                    +card('ph', 'Design', '2016 bis 2017', 'Profi-Homepage', 'For the Constance Agency Profi-Homepage of the Mediafavoriten GmbH in the south of Germany a selection of different Screendesigns have been crafted to serve their need to react quickly to new webdesign assignments coming from different industry sectors.', 'projekte/2016/ph', 'Have a look', 'cat_code')
+                    +card('ph', 'Design', '2016 - 2017', 'Profi-Homepage', 'For the Constance Agency Profi-Homepage of the Mediafavoriten GmbH in the south of Germany a selection of different Screendesigns have been crafted to serve their need to react quickly to new webdesign assignments coming from different industry sectors.', 'projekte/2016/ph', 'Have a look', 'cat_code')
                     
-                    +card('oculustravel', 'Design & Development', '08/2016', 'Oculus for Travel', 'During a university course for online design and conception, this interactive prototype was designed and coded in team of two. Complete with a real use-case and call-to-action. The workflow was quick and efficient.', 'projekte/2016/oculusfortravel', 'Discover Screendesigns (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4502316-Oculus-Rift-VR-for-Travel-Agencies')
+                    //-+card('oculustravel', 'Design & Development', '08/2016', 'Oculus for Travel', 'During a university course for online design and conception, this interactive prototype was designed and coded in team of two. Complete with a real use-case and call-to-action. The workflow was quick and efficient.', 'projekte/2016/oculusfortravel', 'Discover Screendesigns (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4502316-Oculus-Rift-VR-for-Travel-Agencies')
                     
                     //-+card('hallo', 'Research, Design & Development', '02/2017', 'Realtime Chat App', "To accompany the research done in Jonathan's bachelors thesis, he developed and designed a modern hybrid Chat-App codenamed 'Hallo' using AngularJS & Google Firebase. This offered significant insights into the performance advantages and drawbacks of current web technologies.", '#impressionen', 'Will be published to GitHub soon', 'cat_code')
                     
-                    +card('tandem', 'Research, Design & Development', '01/2016', 'Social Network: Tandem', 'The failed startup. The idea: A social network to find people that share similar hobbies & interests and would possibly make good new friends or acquaintances. Perfect e.g. for people who moved to a new area and are having a tough time finding new friends. How it went?', '#impressionen', 'Soon to be published here', 'cat_code')
+                    //-+card('tandem', 'Research, Design & Development', '01/2016', 'Social Network: Tandem', 'The failed startup. The idea: A social network to find people that share similar hobbies & interests and would possibly make good new friends or acquaintances. Perfect e.g. for people who moved to a new area and are having a tough time finding new friends.', '', '', 'cat_code')
                     
                     //-+card('app', 'UX & Design', '06/2016', 'UX Design Project', 'During the uni course "Ambient Media" at the Furtwangen University, the app-concept "Röntgen" was created. The goal was to create unobtrusive and intuitive UI. Some results can be found on Dribbble.', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept', 'Open on Dribbble', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4563908-Augmented-Reality-App-Design-Concept')
                     
-                    //- Design Category
+                    //- Branding Category
                     
-                    +card('rezept', 'Print Design', '11/2016', 'Recipe Template', 'During a Uni. Typography course, this recipe template design was created. The goal was to explain how to quickly prepare a difficult and exotic recipe through the utilization of good print design and typography. This design was done using Adobe InDesign and Illustrator.', 'https://www.dropbox.com/s/lfcks258pevespk/jonathan_arbely_rezept.pdf?dl=0', 'Open Recipe (PDF - 7.5MB)', 'cat_design', true)
+                    +card('memoire', 'Branding', '2023', 'Mémoire', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', 'cat_design', true)
+
+                    //-+card('rasanatura', 'Branding', '2018', 'Rasa Natura.', 'The minimalist, clean, and modern wordmark is a match tor the creative brief, a leaf on the last "a" adds the natural feeling into the logo. With the addition of a supergraphic, it can add much more elements into the brand identity.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Take a look (PDF - 7.5MB)', 'cat_design', true)
+
+                    +card('vimala', 'Branding', '2023', 'Vimala', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', true)
+
+                    //-+card('rezept', 'Print Design', '11/2016', 'Recipe Template', 'During a Uni. Typography course, this recipe template design was created. The goal was to explain how to quickly prepare a difficult and exotic recipe through the utilization of good print design and typography. This design was done using Adobe InDesign and Illustrator.', 'https://www.dropbox.com/s/lfcks258pevespk/jonathan_arbely_rezept.pdf?dl=0', 'Open Recipe (PDF - 7.5MB)', 'cat_design', true)
                     
-                    +card('medienwerke', 'Print Design', '01/2017', 'Course Poster', "This poster was designed to guide visitors of the Furtwangen University's media-exhibition event ''Tag der Medien'' towards all the design work done in a Typography course over one semester.", 'https://www.dropbox.com/s/4artfhni3267sw5/jonathan_arbely_medienwerke-plakat.pdf?dl=0', 'Open Poster (PDF - 21MB)', 'cat_design', true)
+                    //-+card('medienwerke', 'Print Design', '01/2017', 'Course Poster', "This poster was designed to guide visitors of the Furtwangen University's media-exhibition event ''Tag der Medien'' towards all the design work done in a Typography course over one semester.", 'https://www.dropbox.com/s/4artfhni3267sw5/jonathan_arbely_medienwerke-plakat.pdf?dl=0', 'Open Poster (PDF - 21MB)', 'cat_design', true)
                     
-                    +card('roadtrip', 'Print Design', '12/2016', 'Book Cover', 'During a Uni. Typography course, this book cover was designed. The lettering "Roadtrip" was done using calligraphy, then covered with glue and dirt. This design was done using Adobe Illustrator and Photoshop.', 'https://www.dropbox.com/sh/ftlqqkokw2b01cx/AACSOF4ugwVY4IW_18g1U5w5a?dl=0', 'Arbeit entdecken', 'cat_design', true)
+                    //-+card('roadtrip', 'Print Design', '12/2016', 'Book Cover', 'During a Uni. Typography course, this book cover was designed. The lettering "Roadtrip" was done using calligraphy, then covered with glue and dirt. This design was done using Adobe Illustrator and Photoshop.', 'https://www.dropbox.com/sh/ftlqqkokw2b01cx/AACSOF4ugwVY4IW_18g1U5w5a?dl=0', 'Arbeit entdecken', 'cat_design', true)
                     
-                    +card('juedlehrhaus', 'Print Design', '11/2016 & 07/2018', 'Flyer', 'This flyer was designed for the jewish educational center in Emmendingen, Germany. It informed readers of the upcoming series of educational lectures and events. This flyer was prepared in Adobe InDesign.', 'https://1drv.ms/f/s!Av3isFzLcfReiJU_KTqe0E2OXqTBbA', 'Open Flyer', 'cat_design', true)
+                    //-+card('juedlehrhaus', 'Print Design', '11/2016 & 07/2018', 'Flyer', 'This flyer was designed for the jewish educational center in Emmendingen, Germany. It informed readers of the upcoming series of educational lectures and events. This flyer was prepared in Adobe InDesign.', 'https://1drv.ms/f/s!Av3isFzLcfReiJU_KTqe0E2OXqTBbA', 'Open Flyer', 'cat_design', true)
                     
                     //- Plugin Category
                     
@@ -177,12 +193,13 @@ html(lang="en")
                 //-br
                 //-br
                 //-br
-                h5 Additional Projects
+                h5 Other Projects
                 br
                 div.c.c--overflow
                     //- Code Category
+                    +ticket('gwp', 'WordPress - 2021', 'Götz Werner Professur', 'https://gwp.uni-freiburg.de/', 'Visit', 'cat_code')
                     +ticket('cnny', 'Contract Mediation - 2018', 'Connys Hundekeksmanufaktur', 'http://connys-hundekeksmanufaktur.de/', 'Visit', 'cat_code')
-                    //-+ticket('mskbhz', 'Contract Mediation - 2017', 'Music Society Buchholz', 'http://mvbuchholz.de/', 'Visit', 'cat_code')
+                    +ticket('mskbhz', 'Contract Mediation - 2017', 'Music Society Buchholz', 'http://mvbuchholz.de/', 'Visit', 'cat_code')
                     //-+ticket('bbev', 'WordPress - 2017', 'Bies Büdie 05 E.V.', 'http://www.bies-büdie.de', 'Visit', 'cat_code')
                     +ticket('jsg', 'WordPress - 2017', 'Juristische Studiengesell. KA', 'https://jsg-karlsruhe.de', 'Visit', 'cat_code')
                     //-+ticket('msk', 'WordPress & Theme - 2016', 'MSK - Premium Snow Tech.', 'http://www.msk-snow.com', 'Visit', 'cat_code')
@@ -288,8 +305,8 @@ html(lang="en")
                                 svg.icon.icon--s
                                     use(xlink:href='#iconset--double-tick')
                                 span.pamphlet__description__anchor Available via WhatsApp
-            hr
-            section.blog#blog
+            //-hr
+            //-section.blog#blog
                 h3 Blog
                 div.subtitle__wrapper
                     span.subtitle Our thoughts regarding code & design and photography in German & English.
@@ -335,7 +352,7 @@ html(lang="en")
                 div.c.c--overflow.quote.quote--jsg.hide
                     +card('', 'Dr. Bettina Brückner - Chairwoman of the Legal Study Society Karlsruhe', '09/2017', 'jsg-karlsruhe.de', 'Mr. Arbely designed and set up the homepage for our society within a very short time of a few weeks. He has fully implemented our wishes regarding the design and the structure of the content; the cooperation and communication was smooth. The homepage is very easy to use and user-friendly was met with much praise and encouragement. We are extremely satisfied with this cooperation! (Translated from German)', '', '', '', '', 'noimage')
                 div.c.c--overflow.quote.quote--ic
-                    +card('', 'Peter Kranz, ex Head of IT Inter Chalet Freiburg / CIO Holiday Home Division', '04/2018', 'interhome.at', 'Magellan Code & Design Consulting supported the Inter Chalet Ferienhausgesellschaft mbH and Interhome AG in the web development of the new Interhome websites. Here, Mr. Arbely was instrumental in the design and implementation from the start, where he designed the home-, detail- and searchresult-page and made an essential contribution to the successful implementation of the project due to his permanent search for improvements (e.g. performance wise). Our front-end workflow could be adapted and optimized according to the recommendations made. We have benefited greatly from the extensive knowledge of the workflow with Gulp.js by Mr. Arbely. We would like to take this opportunity to thank him for the excellent and successful cooperation. We were very satisfied with the cooperation and the result.', '', '', '', '', 'noimage')
+                    +card('', 'Peter Kranz, ex Head of IT InterChalet Freiburg / CIO Holiday Home Division', '04/2018', 'Interhome.com & Interchalet.de', 'Jonathan supported the InterChalet Ferienhausgesellschaft mbH and Interhome AG in the web development of the new Interhome and Interchalet websites. He was instrumental in the design and implementation right from the start, where he designed the home-, detail- and searchresult-page and made an essential contribution to the successful implementation of the project due to his permanent search for improvements (e.g. performance wise). Our front-end workflow could be adapted and optimized according to the recommendations made. We have benefited greatly from the extensive knowledge of the workflow with Gulp.js by Mr. Arbely. We would like to take this opportunity to thank him for the excellent and successful cooperation. We were very satisfied with the cooperation and the result.', '', '', '', '', 'noimage')
                 br
                 .c.quote.quote__customerbranding
                     a(href='#testimonials')

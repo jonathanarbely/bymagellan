@@ -96,6 +96,10 @@ gulp.task('copyFonts', gulp.series(function (done) {
     gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('dist/assets/fonts'));
     done();
 }));
+gulp.task('copyWEBP', gulp.series(function (done) {
+    gulp.src(['app/assets/images/pixel/**/!(_)*.webp']).pipe(gulp.dest('dist/assets/images/pixel'));
+    done();
+}));
 gulp.task('copyPNG', gulp.series(function (done) {
     gulp.src(['app/assets/images/pixel/**/!(_)*.png']).pipe(gulp.dest('dist/assets/images/pixel'));
     done();
@@ -172,13 +176,13 @@ gulp.task('copyCSS', gulp.series(function (done) {
 }));
 
 // Default build for active development w/ localhost:8080
-gulp.task('default', gulp.series('copyCSS', 'pug', 'sass', 'bundleMainDev', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'watch', 'c', function (done) {
+gulp.task('default', gulp.series('copyCSS', 'pug', 'sass', 'bundleMainDev', 'copyFonts', 'copyWEBP', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'watch', 'c', function (done) {
     console.log('Development environment engaged! 〽️');
     done();
 }));
 
 // Build task for production
-gulp.task('build', gulp.parallel('copyCSS', 'pug', 'bundleMain', 'copyFonts', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'compress', 'buildsass', 'copySW', 'copyManifest', function (done) {
+gulp.task('build', gulp.parallel('copyCSS', 'pug', 'bundleMain', 'copyFonts', 'copyWEBP', 'copyPNG', 'copyJPG', 'copySVG', 'copyICO', 'copyFonts', 'copyJS', 'copyPlugins', 'copyFiles', 'compress', 'buildsass', 'copySW', 'copyManifest', function (done) {
     console.log('Successfully finished build! Ready to set sail. ⚓');
     done();
 }));
