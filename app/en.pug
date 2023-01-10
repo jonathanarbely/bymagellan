@@ -91,9 +91,9 @@ html(lang="en")
                             span.goldbar
                 br
                 div.c.c--overflow
-                    +card('cardFrontend', 'Web Development', '', 'Frontend', 'We develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards we make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), AngularJS, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
+                    +card('cardFrontend', 'Web Development', '', 'Frontend', 'We develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards we make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), Vue, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
                     
-                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'We code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native PlugIns. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
+                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'We code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native Plugins. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
                     
                     +card('cardBackend', 'Serverless & Serverside', '', 'Backend', 'We build Content Management Systems, serverside Software as well as Plugins & Themes for WordPress. We develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MVC architecture style frameworks like AngularJS and Ionic.', '', '', 'card--inactive')
                     
@@ -165,7 +165,7 @@ html(lang="en")
 
                     //-+card('rasanatura', 'Branding', '2018', 'Rasa Natura.', 'The minimalist, clean, and modern wordmark is a match tor the creative brief, a leaf on the last "a" adds the natural feeling into the logo. With the addition of a supergraphic, it can add much more elements into the brand identity.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Take a look (PDF - 7.5MB)', 'cat_design', true)
 
-                    +card('vimala', 'Branding', '2023', 'Vimala', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', true)
+                    +card('vimala', 'Branding', '2023', 'Vimala', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', 'cat_design', true)
 
                     //-+card('rezept', 'Print Design', '11/2016', 'Recipe Template', 'During a Uni. Typography course, this recipe template design was created. The goal was to explain how to quickly prepare a difficult and exotic recipe through the utilization of good print design and typography. This design was done using Adobe InDesign and Illustrator.', 'https://www.dropbox.com/s/lfcks258pevespk/jonathan_arbely_rezept.pdf?dl=0', 'Open Recipe (PDF - 7.5MB)', 'cat_design', true)
                     
@@ -197,6 +197,8 @@ html(lang="en")
                 br
                 div.c.c--overflow
                     //- Code Category
+                    +ticket('unreleased', 'ongoing since 2013', 'Unpublished projects', 'https://bit.ly/secret-trove-bymagellan', 'Take a sneak peek')
+
                     +ticket('gwp', 'WordPress - 2021', 'Götz Werner Professur', 'https://gwp.uni-freiburg.de/', 'Visit', 'cat_code')
                     +ticket('cnny', 'Contract Mediation - 2018', 'Connys Hundekeksmanufaktur', 'http://connys-hundekeksmanufaktur.de/', 'Visit', 'cat_code')
                     +ticket('mskbhz', 'Contract Mediation - 2017', 'Music Society Buchholz', 'http://mvbuchholz.de/', 'Visit', 'cat_code')
@@ -304,7 +306,7 @@ html(lang="en")
                             div.pamphlet__description__anchor__wrapper
                                 svg.icon.icon--s
                                     use(xlink:href='#iconset--double-tick')
-                                span.pamphlet__description__anchor Available via WhatsApp
+                                span.pamphlet__description__anchor Available via WhatsApp, Signal & iMessage
             //-hr
             //-section.blog#blog
                 h3 Blog
