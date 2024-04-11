@@ -20,9 +20,9 @@ html(lang="en")
         header
             include _includes/_nav.pug
             +nav('index', 'en')
-            +title('Your project,', 'Web & App Development / WordPress / UI & UX / Print & Product Design / Workflow & Performance Consulting / Serverside Google Tag Manager', '⚡ We have designed and built websites that have reached millions around the globe.', '#impressionen', 'Our Ambition.', true, '')
+            +title('Your project,', 'Web & App Development / WordPress / UI & UX / Print & Product Design / Workflow & Performance Consulting / Serverside Google Tag Manager', '⚡ I have designed and built websites that have reached millions around the globe.', '#impressionen', 'My Ambition.', true, '')
             .gradient--bottom
-        script.
+        //-script.
             // Randomize Headerimage
             /*var myArray = [
                 "url('/assets/images/pixel/magellanmedia-hero-iv.webp')"
@@ -91,25 +91,25 @@ html(lang="en")
                             span.goldbar
                 br
                 div.c.c--overflow
-                    +card('cardFrontend', 'Web Development', '', 'Frontend', 'We develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards we make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), Vue, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
+                    +card('cardFrontend', 'Web Development', '', 'Frontend', 'I develop responsive, maintainable, fast and cutting-edge Frontend Experiences for the modern Web. To achieve these standards I make use of a broad spectrum of modern web technologies like Pug (HTML), SASS (+BEM), Vue, jQuery and professional workflow- & version-control tools like NPM, Gulp and Git.', '', '')
                     
-                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'We code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native Plugins. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
+                    +card('cardApp', 'App Development', '', 'Native Mobile Apps', 'I code native & fluid mobile Apps for iOS, Android and Windows using the popular Ionic Framework and its vast library of native Plugins. This ensures great compatibility with OS native User Experience features and habits. All while maintaining the app through one codebase. From whiteboard to appstore - one seamless process.', '', '', 'card--inactive')
                     
-                    +card('cardBackend', 'Serverless & Serverside', '', 'Backend', 'We build Content Management Systems, serverside Software as well as Plugins & Themes for WordPress. We develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MVC architecture style frameworks like AngularJS and Ionic.', '', '', 'card--inactive')
+                    +card('cardBackend', 'Serverless & Serverside', '', 'Backend', 'I build Content Management Systems, serverside Software, Plugins & Themes for WordPress and develop both classic solutions using PHP & mySQL and Progressive Web-Apps, SPAs and hybrid Apps using Realtime DB Systems like Firebase and MV* architecture style frameworks like Vue.', '', '', 'card--inactive')
                     
-                    +card('cardPerformance', 'Consulting', '', 'Performance', 'Performance and the modern web go hand in hand. To create products that perform well on a multitude of devices & network conditions and thus enhance user experience, are standard work practice for us. Lightning fast above-the-fold loading, performance oriented workflow, GZIP- and CDN-Distribution of content are just some enhancements we implement.', '', '', 'card--inactive')
+                    +card('cardPerformance', 'Consulting', '', 'Performance', 'Performance and the modern web go hand in hand. To create products that perform well on a multitude of devices & network conditions and thus enhance user experience, are standard work practice for me. Lightning fast above-the-fold loading, performance oriented workflow, GZIP- and CDN-Distribution of content are just some of the enhancements I implement.', '', '', 'card--inactive')
 
                     
-                    +card('cardScreendesign', 'Conception & Design', '', 'Screendesign', 'We design clean, sophisticated and friendly user interfaces and build interactive prototypes using state-of-the-art design tools. By doing iterativ design, we keep the customer in the loop throughout the design process, so feedback can be discussed and implemented on a regular basis.', '', '', 'card--inactive card--print')
+                    +card('cardScreendesign', 'Conception & Design', '', 'Screendesign', 'I design clean, sophisticated, friendly user interfaces and build interactive prototypes using state-of-the-art design tools. By doing iterativ design, I keep the customer in the loop throughout the process so feedback can be discussed and implemented on a regular basis.', '', '', 'card--inactive card--print')
                     
-                    +card('cardPrint', 'Conception & Design', '', 'Printdesign', 'From concept to final print, we design digital and analog print products like posters, flyers, business cards and magazines. For that we use industry standard desktop publishing and typesetting software. To guarantee the best possible print quality, we directly hand over the files to the printing company.', '', '', 'card--inactive card--print')
+                    +card('cardPrint', 'Conception & Design', '', 'Printdesign', 'From concept to final print, I design digital and analog print products like posters, flyers, business cards and magazines. For that I use industry standard desktop publishing and typesetting software. To guarantee the best possible print quality, I directly hand over the files to the printing service.', '', '', 'card--inactive card--print')
 
             hr
             section.showcase#impressionen
                 h3 Work
                 div.filter
                     a.filter__item.filter__item--active#code(href='#impressionen') Web &amp; App
-                    a.filter__item#designs(href='#impressionen') Branding
+                    //-a.filter__item#designs(href='#impressionen') Branding
                     //-a.filter__item#plugins(href='#impressionen') Photography
                     //-a.filter__item#plugins(href='#impressionen') 3D-Design
                 br
@@ -121,33 +121,33 @@ html(lang="en")
                     //- Highlight
 
                     //- Code Category
-                    +card('mp', 'WooCommerce Development & Design, Blender, 3D Product-Configurator', 'ongoing since Summer 2021', '✍🏼 Messmer Pen', "A new webshop for a local brand, that is specializing in crafting high quality, customizable & sustainable design-pens. With almost every pen meticulously re-created in 3D using Blender, then carefully rendered and inserted into the sleak, minimalist website, we've crafted a custom webshop that allows for customization pre-order, animated video previews and higher fidelity marketing images that wouldn't be as effortlessly achievable without the flexibility offered by 'virtual photography'. The selected theme stands back elegantly, highlighting what's most important; every product and content-page. Worldwide shipping & PayPal Checkout.", 'https://messmer-pen.de/', 'Visit live today', 'cat_code card--highlight', true)
+                    +card('mp', 'WooCommerce Development & Design, Blender, 3D Product-Configurator', '2021', '✍🏼 Messmer Pen', "A new webshop for a local brand, that is specializing in crafting high quality, customizable & sustainable design-pens. With almost every pen meticulously re-created in 3D using Blender, then carefully rendered and inserted into the sleak, minimalist website, we've crafted a custom webshop that allows for customization pre-order, animated video previews and higher fidelity marketing images that wouldn't be as effortlessly achievable without the flexibility offered by 'virtual photography'. The selected theme stands back elegantly, highlighting what's most important; every product and content-page. Worldwide shipping & PayPal Checkout.", 'https://messmer-pen.de/', 'Visit live today', 'cat_code card--highlight', true)
 
                     +card('mkm', 'Vue.js, Dash.js, JWT, Browserify, REST-API, ES6', '11/2019 until Summer 2021', '☁️ Mekomaga', 'Collaboration made in Germany — in a team of two a platform for DRM-protected media management was conceptualized, designed and developed from A to Z. Built according to the strictest German data protection laws with the latest DRM technologies and persistent authentication. Collaborate securely — present your media: “Upload files, put together a show and share it with customers and interested parties using a special shareable link. You can combine different file types in one show and you always have control over who can view and comment on them.”. The project was completed with a complementary, custom Webflow-based homepage.', '', 'Start today: 30 days free trial available', 'cat_code card--highlight', true, '', 'true', 'https://dribbble.com/jarbely/collections/3272747-Mekomaga')
 
-                    +card('tc', 'Wordpress Development & Design, Performance Enhancement, Hosting & CDN Tuning, Serverside GTM', 'ongoing since 02/2021', '👩🏼‍⚕️ TeleClinic', "TeleClinic is Germany’s leading doctor on-demand platform with integrated pharmacies. The fastest, safest and most affordable way to see a doctor online and get medication. — I've joined the remote team as a full-stack designer and help heave the web experience to the next level. For that I am to improve every aspect of the frontend experience, by enhancing performance, designing and building new and delightful-to-use landing-pages and modules, streamlining the design language and continue to enhance visual fidelity while keeping in line with the existing style guide.", 'https://www.teleclinic.com/behandlungen/', 'Book your online-doctor appointment today', 'cat_code card--highlight', true)
+                    +card('tc', 'Wordpress Development & Design, Performance Enhancement, Hosting & CDN Tuning, Serverside GTM', '02/2021 until 04/2023', '👩🏼‍⚕️ TeleClinic', "TeleClinic is Germany’s leading doctor on-demand platform with integrated pharmacies. The fastest, safest and most affordable way to see a doctor online and get medication. — I've joined the remote team as a full-stack designer and help heave the web experience to the next level. For that I am to improve every aspect of the frontend experience, by enhancing performance, designing and building new and delightful-to-use landing-pages and modules, streamlining the design language and continue to enhance visual fidelity while keeping in line with the existing style guide.", 'https://www.teleclinic.com/behandlungen/', 'Book your online-doctor appointment today', 'cat_code card--highlight', true)
                     
                     +card('nnl', 'Ionic Framework & REST-API', '02/2019 until Spring 2021', '🏞 German National Parks App', 'A hybrid app for iOS and Android is being developed on behalf of the Nationale Naturlandschaften e.V. This brings all German national parks, biosphere reserves, nature parks and certified wilderness areas to all common mobile devices. Based on latest tech. and with elements of “gamification”, a modern, beautiful, customizable and fast user experience is crafted. The main intention is to inspire younger target groups in particular for the topic of “national natural landscapes”. The app is connected to the existing WordPress backend of the website via REST API and GraphQL.', '#kontakt', 'You can request to join the TestFlight testphase on iOS', 'cat_code card--highlight', false, '', 'true', 'https://dribbble.com/jarbely/collections/4356704-App-Nationale-Naturlandschaften')
 
                     //- Branding Category
-                    +card('imaya', 'Branding', 'Summer 2021', '🌿 Immaya Organics', "Carefully crafted branding and product design for an Indonesian organic-food company that strives to help local farmers and villagers by bringing their high-quality products to customers who seek sophisticated, modern & healthy organic food. IMMAYA products stand out to high-expectation customers and fit their lifestyle choices.", '#', 'Check out the complete creative brief', 'cat_design card--highlight', true)
+                    //-+card('imaya', 'Branding', 'Summer 2021', '🌿 Immaya Organics', "Carefully crafted branding and product design for an Indonesian organic-food company that strives to help local farmers and villagers by bringing their high-quality products to customers who seek sophisticated, modern & healthy organic food. IMMAYA products stand out to high-expectation customers and fit their lifestyle choices.", '#', 'Check out the complete creative brief', 'cat_design card--highlight', true)
 
                 div.c.c--overflow
                     //- Code Category
                     
                     +card('jotti', 'Shopify, B2G', 'Autumn 2022', 'Flüchtlingsheim.de', 'The customer, JOTTI GmbH, provides products and services that a to quickly and reliably set up housing for those seeking refuge. The target audience for this webshop are provincial governments.', 'https://xn--flchtlingsheim-hsb.de/', 'Visit Shop', 'cat_code', true)
 
-                    +card('em', 'Design', 'since Summer 2022', 'easymoney.com', 'Easymoney offers private individuals the opportunity to invest their money into peer to peer loans backed by UK property in a tax-efficient manner. They are part of the easy® family of companies, one of Europe’s best-known brands. Our newly crafted design prepares users to successfully finish a mandatory quiz when registering and increases the perceived valency of the brand.', '', 'Take a look at the new design', 'cat_code', true)
+                    +card('em', 'Design', 'Summer 2022', 'easymoney.com', 'Easymoney offers private individuals the opportunity to invest their money into peer to peer loans backed by UK property in a tax-efficient manner. They are part of the easy® family of companies, one of Europe’s best-known brands. Our newly crafted design prepares users to successfully finish a mandatory quiz when registering and increases the perceived valency of the brand.', '', 'Take a look at the new design', 'cat_code', true)
                     
                     +card('gumb', 'Relaunch, Sys-Admin, Support', 'Winter 2019/20', 'Gumb (Teamplanbuch)', 'Whether you are a sports club, a fishing club or a brass band, with Gumb you have the right app to organize your meetings, gatherings and events. Gumb is a scheduling app available on all your devices.', 'https://gumb.app', 'Visit Website', 'cat_code', true)
                     
-                    +card('ih', 'Frontend, Design, Performance & Workflow', '02/2018', 'Interhome', 'Interhome offers more than 50k quality-tested vacation-homes online. Working with the Interchalet Team in Freiburg, we significantly contributed to the new and responsive Website, which was designed and developed implementing SCRUM and iterativ improvements.', 'projekte/2018/interhome', 'Read Project Report (German)', 'cat_code')
+                    +card('ih', 'Frontend, Design, Performance & Workflow', '02/2018', 'Interhome', 'Interhome offers more than 50k quality-tested vacation-homes online. Working with the Interchalet Team in Freiburg, I significantly contributed to the new and responsive Website, which was designed and developed implementing SCRUM and iterativ improvements.', 'projekte/2018/interhome', 'Read Project Report (German)', 'cat_code')
 
                     +card('bymagellan', 'Sophisticated. Minimalist. Perfection.', '10/2017', 'Art of Magellan', "The Design Language developed for our 'Magellan Code & Design Consulting' Brand & Portfolio Website represents our sophisticated, minimalist and ambitious approach. Whether that's Coding, Designing or Consulting, our Brand & Portfolio represent us, and convey to our Clients a powerful first impression.", 'blog/2019/bymagellan', 'Continue to read', 'cat_code')
 
                     +card('tariffuxx', 'Design & Development', '04/2017', 'Tariffuxx.de', 'The German market leader in B2B-Services for tariff comparisons in the communications sector requested a reworked CI, unified and overhauled online design (B2B & B2C) as well as matching print products for a fresh new appearance across multiple digital and analog channels.', 'https://tariffuxx.de', 'Visit Website', 'cat_code', true, '', 'true', 'https://dribbble.com/shots/4502341-Price-Comparison-Website-Design-Bright-Colorful')
 
-                    +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen we designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
+                    +card('messmer', 'Design, Development & SEO', '02/2017', 'Messmer Pen Careers', 'For the Messmer Pen GmbH in Emmendingen I designed & developed a new and responsive career website with WordPress CMS-Implementation. For that, a custom theme was developed. Employees can now easily edit and create new content.', 'projekte/2017/messmerkarriere', 'Read Case Study (German)', 'cat_code', '', '', 'true', 'https://dribbble.com/shots/4599630-Quality-Pen-Company-Career-Website')
                     
                     +card('ph', 'Design', '2016 - 2017', 'Profi-Homepage', 'For the Constance Agency Profi-Homepage of the Mediafavoriten GmbH in the south of Germany a selection of different Screendesigns have been crafted to serve their need to react quickly to new webdesign assignments coming from different industry sectors.', 'projekte/2016/ph', 'Have a look', 'cat_code')
                     
@@ -161,11 +161,11 @@ html(lang="en")
                     
                     //- Branding Category
                     
-                    +card('memoire', 'Branding', '2023', 'Mémoire', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', 'cat_design', true)
+                    //-+card('memoire', 'Branding', '2023', 'Mémoire', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', 'cat_design', true)
 
                     //-+card('rasanatura', 'Branding', '2018', 'Rasa Natura.', 'The minimalist, clean, and modern wordmark is a match tor the creative brief, a leaf on the last "a" adds the natural feeling into the logo. With the addition of a supergraphic, it can add much more elements into the brand identity.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Take a look (PDF - 7.5MB)', 'cat_design', true)
 
-                    +card('vimala', 'Branding', '2023', 'Vimala', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', 'cat_design', true)
+                    //-+card('vimala', 'Branding', '2023', 'Vimala', 'This just in: a project description will be added shortly. Check out more by hitting the link in this card.', 'https://1drv.ms/u/s!Av3isFzLcfReiZ4EldkJ-eCH2RZqDA?e=UGKEfc', 'Find out more', 'cat_design', true)
 
                     //-+card('rezept', 'Print Design', '11/2016', 'Recipe Template', 'During a Uni. Typography course, this recipe template design was created. The goal was to explain how to quickly prepare a difficult and exotic recipe through the utilization of good print design and typography. This design was done using Adobe InDesign and Illustrator.', 'https://www.dropbox.com/s/lfcks258pevespk/jonathan_arbely_rezept.pdf?dl=0', 'Open Recipe (PDF - 7.5MB)', 'cat_design', true)
                     
@@ -214,9 +214,9 @@ html(lang="en")
                     //-+ticket('gglmyb', 'Infographic', 'Google My Business', 'https://www.profi-homepage.de/infografik-google-my-business/', 'Discover Online', 'cat_design')
             hr
             section.team#team
-                h3 About us
-                div.subtitle__wrapper
-                    span.subtitle Pick your team. One or both.
+                h3 About myself
+                //-div.subtitle__wrapper
+                    span.subtitle -
                 br
                 br
                 br
@@ -232,35 +232,19 @@ html(lang="en")
                             span.portfolio__content__rank Freelance Developer & Designer
                             br
                             p.portfolio__content__text--quote „Make overachieving a habit.“
-                            p.portfolio__content__text Since 2013, I'm actively working as a freelance Full-Stack Web & App Developer & Designer. I've worked with different clients coming from a broad range of industries on an array of challenging and interesting projects. As a web enthusiast, I'm constantly developing myself and like delving into topics related to development, design and best practices as well as trying out new things. My goal is to attain and keep a deep understanding of the technologies that power our digitized online world.
+                            p.portfolio__content__text Since 2013, I'm working as a freelance Full-Stack Web & App Developer & Designer. I've worked with different clients coming from a broad range of industries on an array of challenging and interesting projects. As a web enthusiast, I'm constantly developing myself and like delving into topics related to development, design and best practices as well as trying out new things. My goal is to attain and keep a deep understanding of the technologies that power our digitized online world.
                             p.portfolio__content__text--edu Bachelor of Science at the Faculty of „Digital Media“ at Furtwangen University.
                             br
                             svg.portfolio__content__leaf
                                 use(xlink:href='#leaf')
                             a.portfolio__content__cta.btn.btn--light(href='mailto:jonathan@bymagellan.co' target='_blank') jonathan@bymagellan.co
-                            
-                    div.portfolio
-                        img.portfolio__image.lightmode(src='/assets/images/pixel/magellan-valeriaraffa.png' data-tilt)
-                        img.portfolio__image.darkmode(src='/assets/images/pixel/magellan-valeriaraffa-dark.png' data-tilt)
-                        div.portfolio__content
-                            svg.portfolio__content__ornament
-                                use(xlink:href='#ornament')
-                            span.portfolio__content__name Valeria Raffa
-                            span.portfolio__content__rank Freelance Developer
-                            br
-                            p.portfolio__content__text--quote „Clean code is great UX“
-                            p.portfolio__content__text Since 2017 I have been developing websites & apps as a freelancer and have testing and optimized their UX. My stack includes Vue.js, the Ionic Framework and Java applications. I improve software through analysis and user testing of the user experience and have optimized some of the successful projects we have done in the past that are used online by thousands every day. Every day is an opportunity for us to learn and improve. And that is the motto we follow.
-                            p.portfolio__content__text--edu Bachelor of Science at the Faculty of „Business Information Systems“ at Furtwangen University.
-                            br
-                            svg.portfolio__content__leaf
-                                use(xlink:href='#leaf')
-                            a.portfolio__content__cta.btn.btn--light(href='mailto:valeria@bymagellan.co' target='_blank') valeria@bymagellan.co
+
             br
             hr
             section.contact#kontakt
                 h3 Contact
                 div.subtitle__wrapper
-                    span.subtitle Whether you're representing an international corporation or a regional club, your project is our ambition.
+                    span.subtitle Whether you're representing an international corporation or a regional club, your project is my ambition.
                         br
                 div.subtitle__wrapper
                     .gps__wrapper.flex
@@ -338,7 +322,7 @@ html(lang="en")
             section.testimonials#testimonials
                 h3 Testimonials
                 div.subtitle__wrapper
-                    span.subtitle What companies think about our work.
+                    span.subtitle What companies think about my work.
                 //-.c
                     span.goldbar
                 br

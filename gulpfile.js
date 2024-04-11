@@ -4,7 +4,7 @@
 // Required packages (dev-dependencies)
 var gulp = require('gulp'),
     pug = require('gulp-pug'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     maps = require('gulp-sourcemaps'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
